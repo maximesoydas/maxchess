@@ -13,15 +13,6 @@ Open a terminal and cd yourself to the project's folder
 then you can run the menu.py file with 
 
 ```cmd
-python3 ./maxchess/controller/menu.py 
-python3 -m maxchess.main 
-```
-
-NOTE: Python versions below 3 should also work fine
-
-
-# test app
-
-```
-python3 -m pytest
+cd maxchess
+python3 app.py
 ```
