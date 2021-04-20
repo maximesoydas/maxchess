@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <script src="script.js"></script>
+</head>
+<style>
+* {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  text-align: center;
+  align-items: center;
+}
+.content-table {
+  border-collapse: collapse;
+  margin: 0 0 0 12vh;
+  font-size: 1.9em;
+  min-width: 170vh;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+h1{
+  background-color: whitesmoke;
+  background-size: 1vh;
+  color: #333;
+  margin-bottom: 10vh;
+  margin-top: 5vh;
+  margin-left: 60vh;
+  margin-right: 60vh;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  border-radius:90% 0% 90% 0% ;
+  opacity: 65%;
+
+}
+
+body{
+min-height: 130vh;
+position: relative;
+background-image: url(chess_bg.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+max-height: 50vh;
+}
+.content-table thead tr {
+  background-color: #333;
+  color: whitesmoke;
+  text-align: center;
+  font-weight: bold;
+  opacity: 95%;
+}
+
+.content-table th {
+  background-color: #333;
+  color: whitesmoke;
+  border-radius: 0.5%;
+  opacity: 90%;
+  font-size: 0.7em;
+  }
+
+.content-table td {
+  padding: 20px 15px;
+  background-color: whitesmoke;
+  opacity: 80%;
+  border-radius: 0.5%;
+  font-size: 0.6em;
+  }
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #333;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #333;
+}
+
+</style>
+<body>
+<h1> The Tournament </h1>
+
+<table class="content-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>SURNAME</th>
+        <th>BIRTHDAY</th>
+        <th>GENDER</th>
+        <th>RANK</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for player in players %}
+       <td>{{ player.id }}</td>
+       <td>{{ player.name }}</td>
+       <td>{{ player.surname }}</td>
+       <td>{{ player.birthday }}</td>
+       <td>{{ player.gender }}</td>   
+       <td>{{ player.rank }}</td>
+       {% endfor %}
+      </tr>
+    </tbody>
+</table>
+</body>
+</html>

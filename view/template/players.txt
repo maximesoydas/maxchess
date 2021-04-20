@@ -1,0 +1,5 @@
+ID   | NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
++-------+-------+-------+-------+-------+------------+
+{% for player in players %} | {{ player.ids }}| {{ player.name }} | {{ player.surname }} | {{ player.birthday }} | {{ player.gender }} | {{ player.rank }}
++-------+-------+-------+-------+-------+------------+
+ {% endfor %}
