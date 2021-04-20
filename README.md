@@ -20,4 +20,5 @@ python3 app.py
 # TODO
 
 -Finalize the TUI with curses module
+
 -Configure Tournament Class in model/tournament.py
