@@ -1,1 +1,37 @@
-{"players": {"1": {"ids": "1", "name": "Steve", "surname": "Stevenson", "birthday": "04/11/1995", "gender": "Mael", "rank": "high"}, "2": {"ids": "2", "name": "Steve", "surname": "Jacob", "birthday": "04/11/1995", "gender": "Mal", "rank": "Male"}, "3": {"ids": "3", "name": "Steve", "surname": "Jacob", "birthday": "04/11/1995", "gender": "male", "rank": "high"}}}
+{
+    "players": {
+        "1": {
+            "ids": "1",
+            "name": "Steve",
+            "surname": "Stevenson",
+            "birthday": "04/11/1995",
+            "gender": "Mael",
+            "rank": "high"
+        },
+        "3": {
+            "ids": "3",
+            "name": "Steve",
+            "surname": "Jacob",
+            "birthday": "04/11/1995",
+            "gender": "male",
+            "rank": "high"
+        },
+    "tournaments": {
+        "1": {
+            "ids": "1",
+            "name": "Steve",
+            "surname": "Stevenson",
+            "birthday": "04/11/1995",
+            "gender": "Mael",
+            "rank": "high"
+        },
+        "3": {
+            "ids": "3",
+            "name": "Steve",
+            "surname": "Jacob",
+            "birthday": "04/11/1995",
+            "gender": "male",
+            "rank": "high"
+        }
+    }
+}

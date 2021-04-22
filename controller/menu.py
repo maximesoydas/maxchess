@@ -2,6 +2,9 @@ from view import menu
 from view import players as Players
 from controller import player as Player
 
+
+
+#class Menu:
 def main():
     menu.main()
     option = int(input("\n\nOption : "))
