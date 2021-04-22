@@ -9,7 +9,6 @@ def add(n=1):
     '''
     for i in range (n):
         model.Player(
-            ids= input("\nEnter Player Unique ID/Position (1-8 only): "),
             name=input("\nEnter Player Name: "),
             surname=input("\nEnter Player Surname: "),
             birthday=input("Enter Player Birthday: "),

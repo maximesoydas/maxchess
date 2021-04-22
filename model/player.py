@@ -3,8 +3,7 @@ from tinydb import TinyDB, Query
 
 
 class Player:
-    def __init__(self, ids, name, surname, birthday, gender, rank):
-        self.ids = ids
+    def __init__(self, name, surname, birthday, gender, rank):
         self.name = name
         self.surname = surname
         self.birthday = birthday
@@ -17,7 +16,6 @@ class Player:
         Renvoie la réprésentation sérialisée du joueur
         '''
         return {
-            'ids' : self.ids,
             'name' : self.name,
             'surname' : self.surname,
             'birthday' : self.birthday,

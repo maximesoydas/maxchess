@@ -14,7 +14,7 @@ def view_text():
     ic(tmpl)
     assert tmpl.exists(), "Template not found !!"
     #output = tmpl.open().read()
-
+    ic(player.all.items)
     player_table = templateEnv.get_template('players.txt').render(players = player.all.items)
     ic(player_table)
 
@@ -27,7 +27,7 @@ def view_html():
     ic(tmpl)
     assert tmpl.exists(), "Template not found !!"
     #output = tmpl.open().read()
-
+    ic(player.all.items)
     player_table = templateEnv.get_template('players.html').render(players = player.all.items)
 
     with open(f"./view/tables/players.html", "w") as f:
