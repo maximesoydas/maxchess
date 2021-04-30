@@ -32,7 +32,7 @@ class Table:
         #self.db.insert_multiple(self.items)
         table = db.table(self.name)
         table.truncate()
-        ic(self.items)
+        #ic(self.items)
         #ic(self.items[0].doc_id)
         table.insert_multiple(self.items)
 
@@ -43,4 +43,3 @@ class Table:
         '''
         table = db.table(self.name)
         self.items = table.all()
-        ic(self.items[0].doc_id)

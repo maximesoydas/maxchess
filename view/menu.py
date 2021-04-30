@@ -31,12 +31,43 @@ def tournament():
     
     ♙ Welcome to the tournaments' Menu ♙
 
-    [1] Create Tournament
+    [1] Start Tournament
     [2] View Players' Table
     [3] Exit to Main Menu ↵
 
     """)
 
+def round():
+    print("""
+    
+    ♙ Welcome to the First Round's Menu ♙
+
+    [1] Start First Round
+    [2] View Rounds
+    [3] Delete Rounds 
+    [4] Exit to Main Menu ↵
+
+    """)
+
+def rounds():
+    print("""
+    
+    ♙ Welcome to the Rounds' Menu ♙
+
+    [1] Start Next Round
+    [3] Exit to Main Menu ↵
+
+    """)
+
+def rounds_results():
+    print("""
+    
+    ♙ Welcome to the Rounds' Menu ♙
+
+    [1] View all Rounds Results
+    [3] Exit to Main Menu ↵
+
+    """)
 
 def reports():
     print("""
