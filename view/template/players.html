@@ -36,10 +36,11 @@ h1{
 }
 
 body{
-min-height: 127.5vh;
+min-height: 90.5vh;
+min-width: 130vh;
 position: relative;
 background-image: url(chess_bg.jpg);
-background-size: contain;
+background-size: 195vh;
 background-repeat: no-repeat;
 max-height: 50vh;
 }
@@ -49,6 +50,19 @@ max-height: 50vh;
   text-align: center;
   font-weight: bold;
   opacity: 95%;
+}
+.button {
+  margin-left: 170vh;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+ 
+.button:hover {
+  text-decoration:none;
+  background:#eee;
 }
 
 .content-table th {
@@ -88,6 +102,9 @@ max-height: 50vh;
 
 </style>
 <body>
+<form class="button"; action="rounds.html">
+  <input type="submit" value="First Round" />
+</form>
 <h1>♞ The Players ♞</h1>
 
 <table class="content-table">
