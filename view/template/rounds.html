@@ -19,7 +19,6 @@
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
-
 h1{
   background-color: whitesmoke;
   background-size: 1vh;
@@ -35,14 +34,12 @@ h1{
 
 }
 
-body{
-min-height: 90.5vh;
-min-width: 130vh;
-position: relative;
-background-image: url(chess_bg.jpg);
-background-size: 195vh;
-background-repeat: no-repeat;
-max-height: 50vh;
+html { 
+  background: url(max_chess.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .content-table thead tr {
   background-color: #333;
@@ -129,16 +126,16 @@ text-decoration: none;
         <tr>
           <th style="background: white;"></th>
           <th style="background: white;"></th>
-          <th style="color:#333;  padding: 2vh; background-color: white;"> MATCHES ({{ round.name }}) </th>
+          <th style="color:#333; padding: 2vh; background-color: white;"> MATCHES ({{ round.name }}) </th>
           <th style="background: white;"></th>
         </tr>
         <br> 
         <br> 
         <tr>
-          <th></th>
           <th>POSITION</th>
-          <th>SURNAME</th>
           <th>RANK</th>
+          <th>SURNAME</th>
+          <th>SCORE</th>
         </tr>
       </thead>
       <tr>
@@ -152,80 +149,80 @@ text-decoration: none;
       <th style="background: white; padding: 1.5vh;"></th>
       <th style="background: white; padding: 1.5vh;"></th>
       </tr>
-      <td></td>
-      <td> {{ round.matches[0][0] }}</td> 
-      <td> Mrs/Mr.{{ round.surname[0]}}</td>
-      <td> {{ round.matches[0][1] }}</td>
+      <td> {{ round.matches[0][0][0] }}</td> 
+      <td> {{ round.matches[0][0][1] }}</td>
+      <td><b> Mrs/Mr.{{ round.surname[0]}}</b></td>
+      <td>{{ round.score }}</td>
       <tr>
         <th style="background: white;opacity: 50%;"></th>
         <th style="background: white;opacity: 50%;"></th>
-        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"> <i>VS</i> <br></th>
+        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"> <b> <i>VS</i></b> <br></th>
         <th style="background: white;opacity: 50%;"></th>
       </tr>
-      <td></td>
-      <td> {{ round.matches[1][0] }}</td>
-      <td> Mrs/Mr.{{ round.surname[1] }} </td>
-      <td> {{ round.matches[1][1] }}</td>
-      <tr>
-        <th style="background: white; padding: 1.5vh;"></th>
-        <th style="background: white; padding: 1.5vh;"></th>
-        <th style="background: white; padding: 1.5vh;"></th>
-        <th style="background: white; padding: 1.5vh;"></th>
-      </tr>
-      <td></td>
-      <td> {{ round.matches[2][0] }}</td>
-      <td> Mrs/Mr.{{ round.surname[2] }}</td>
-      <td> {{ round.matches[2][1] }}</td>
-      <tr>
-        <th style="background: white;opacity: 50%;"></th>
-        <th style="background: white;opacity: 50%;"></th>
-        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"> <i>VS</i> <br></th>
-        <th style="background: white;opacity: 50%;"></th>
-      </tr>
-      <td></td>
-      <td> {{ round.matches[3][0] }}</td>
-      <td> Mrs/Mr.{{ round.surname[3] }}</td>
-      <td> {{ round.matches[3][1] }}</td>
+      <td> {{ round.matches[0][1][0] }}</td>
+      <td> {{ round.matches[0][1][1] }}</td>
+      <td><b>  Mrs/Mr.{{ round.surname[1] }}</b></td>
+      <td>{{ round.score }}</td>
       <tr>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
       </tr>
-      <td></td>
-      <td> {{ round.matches[4][0] }}</td>
-      <td> Mrs/Mr.{{ round.surname[4] }}</td>
-      <td> {{ round.matches[4][1] }}</td>
+      <td> {{ round.matches[1][0][0] }}</td>
+      <td> {{ round.matches[1][0][1] }}</td>
+      <td><b>  Mrs/Mr.{{ round.surname[2] }}</b></td>
+      <td>{{ round.score }}</td>
       <tr>
         <th style="background: white;opacity: 50%;"></th>
         <th style="background: white;opacity: 50%;"></th>
-        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"> <i>VS</i> <br></th>
+        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"> <b> <i>VS</i></b><br></th>
         <th style="background: white;opacity: 50%;"></th>
       </tr>
-      <td></td>
-      <td> {{ round.matches[5][0] }}</td>
-      <td> Mrs/Mr.{{ round.surname[5] }}</td>
-      <td> {{ round.matches[5][1] }}</td>
+      <td> {{ round.matches[1][1][0] }}</td>
+      <td> {{ round.matches[1][1][1] }}</td>
+      <td> <b> Mrs/Mr.{{ round.surname[3] }}</b></td>
+      <td>{{ round.score }}</td>
       <tr>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
       </tr>
-      <td></td>
-      <td> {{ round.matches[6][0] }}</td>
-      <td> Mrs/Mr.{{ round.surname[6] }}</td>
-      <td> {{ round.matches[6][1] }}</td>
+      <td> {{ round.matches[2][0][0] }}</td>
+      <td> {{ round.matches[2][0][1] }}</td>
+      <td> <b> Mrs/Mr.{{ round.surname[4] }}</b></td>
+      <td>{{ round.score }}</td>
       <tr>
         <th style="background: white;opacity: 50%;"></th>
         <th style="background: white;opacity: 50%;"></th>
-        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"> <i>VS</i> <br></th>
+        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"><b>  <i>VS</i> </b><br></th>
         <th style="background: white;opacity: 50%;"></th>
       </tr>
-      <td></td>
-      <td> {{ round.matches[7][0] }}</td>
-      <td> Mrs/Mr.{{ round.surname[7] }}</td>
-      <td> {{ round.matches[7][1] }}</td>
+      <td> {{ round.matches[2][1][0] }}</td>
+      <td> {{ round.matches[2][1][1] }}</td>
+      <td> <b> Mrs/Mr.{{ round.surname[5] }}</b></td>
+      <td>{{ round.score }}</td>
+      <tr>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+      </tr>
+      <td> {{ round.matches[3][0][0] }}</td>
+      <td> {{ round.matches[3][0][1] }}</td>
+      <td><b> Mrs/Mr.{{ round.surname[6] }}</b></td>
+      <td>{{ round.score }}</td>
+      <tr>
+        <th style="background: white;opacity: 50%;"></th>
+        <th style="background: white;opacity: 50%;"></th>
+        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"><b>  <i>VS</i></b> <br></th>
+        <th style="background: white;opacity: 50%;"></th>
+      </tr>
+      <td> {{ round.matches[3][1][0] }}</td>
+      <td> {{ round.matches[3][1][1] }}</td>
+      <td> <b> Mrs/Mr.{{ round.surname[7] }}</b></td>
+      <td>{{ round.score }}</td>
       <tr>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>

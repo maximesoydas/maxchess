@@ -1,23 +1,23 @@
 ID     |     NAME       |    START TIME           |     END TIME  
 +-------+-------+-------+-------+-------+------------+------------+------------+
-#1     |     Round1    |   05/01/2021 20:27:48 |    05/01/2021 20:33:00
+#     |     Round1    |   05/07/2021 12:28:25 |    05/07/2021 12:33:25
 +-------+-------+-------+-------+-------+------------+------------+------------+
                             |   MATCHES  |
 -------------------------------------------------------------------------------+
-             POSITION: [1] | Mrs/Mr.Soy | RANK: ['900']
+             POSITION: 1 | Mrs/Mr.Daniels | RANK: 900
                                   VS
-             POSITION: [5] | Mrs/Mr.Steven | RANK: ['700']
+             POSITION: 5 | Mrs/Mr.Soy | RANK: 700
 -------------------------------------------------------------------------------+
-             POSITION: [2] | Mrs/Mr.Stevenson | RANK: ['800'] 
+             POSITION: 2 | Mrs/Mr.Steven | RANK: 800 
                                   VS 
-             POSITION: [6] | Mrs/Mr.Rick | RANK: ['600']
+             POSITION: 6 | Mrs/Mr.Stevenson | RANK: 600
 -------------------------------------------------------------------------------+
-             POSITION: [3] | Mrs/Mr.Lawson || RANK: ['800']
+             POSITION: 3 | Mrs/Mr.Perolto || RANK: 800
                                   VS 
-             POSITION: [7] | Mrs/Mr.Daniels || RANK: ['400']
+             POSITION: 7 | Mrs/Mr.Rick || RANK: 400
 -------------------------------------------------------------------------------+
-             POSITION: [4] | Mrs/Mr.Perolto || RANK: ['700'] 
+             POSITION: 4 | Mrs/Mr.Jacobs || RANK: 700 
                                   VS 
-             POSITION: [8] | Mrs/Mr.Jacobs || RANK: ['300']
+             POSITION: 8 | Mrs/Mr.Lawson || RANK: 300
 -------------------------------------------------------------------------------+
  

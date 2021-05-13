@@ -10,12 +10,11 @@ from operator import itemgetter
 from datetime import datetime
 from model import database
 pp = pprint.PrettyPrinter(indent=4)
-db = TinyDB('maxchess_db.json')
+db = TinyDB('maxchess_db_test.json')
 q = Query()
 TinyDB.default_table_name = 'rounds'
 from model import database
 from tinydb import TinyDB, Query
-import test4 as delete
 
 
 class Rounds:
@@ -54,7 +53,7 @@ def first_matches():
     '''
     Sort your players list by rank
     '''
-    db = TinyDB('maxchess_db.json')
+    db = TinyDB('maxchess_db_test.json')
     db.drop_table('round')
     TinyDB.default_table_name = 'players'
     players = db.search(where('rank') > '1000000')
@@ -64,37 +63,17 @@ def first_matches():
     Create players list of first round matchup
     '''
     players_list = []
-    matches = []
     n = 0
     for i in players:
-        n = n+1
-        rank = i["rank"]
-        player_id = n
-        tmp_list = []
-        tmp_list.append(player_id)
-        tmp_list.append(rank)
-        player_tuple = (tmp_list[0:1], tmp_list[1:2])
-        players_list.append(player_tuple)
-    
-    match1 = []
-    match1.append(players_list[0])
-    match1.append(players_list[4])
-    matches.append(match1)
+        n = n + 1
+        players_list.append([str(n), i["rank"]])
 
-    match2 = []
-    match2.append(players_list[1])
-    match2.append(players_list[5])
-    matches.append(match2)
-
-    match3 = []
-    match3.append(players_list[2])
-    match3.append(players_list[6])
-    matches.append(match3)
-
-    match4 = []
-    match4.append(players_list[3])
-    match4.append(players_list[7])
-    matches.append(match4)
+    matches = [
+	(players_list[0],players_list[4]),
+	(players_list[1],players_list[5]),
+	(players_list[2],players_list[6]),
+	(players_list[3],players_list[7]),
+    ]
 
     return matches
 
@@ -103,7 +82,6 @@ def add_first_round():
     '''
     Add first Round
     '''
-    delete.delete()
     matches = first_matches()
     print(matches[0])
     now = datetime.now()

@@ -4,20 +4,20 @@ ID     |     NAME       |    START TIME           |     END TIME
 +-------+-------+-------+-------+-------+------------+------------+------------+
                             |   MATCHES  |
 -------------------------------------------------------------------------------+
-             POSITION: {{ round.matches[0][0] }} | Mrs/Mr.{{ round.surname[0] }} | RANK: {{ round.matches[0][1] }}
+             POSITION: {{ round.matches[0][0][0] }} | Mrs/Mr.{{ round.surname[0] }} | RANK: {{ round.matches[0][0][1] }}
                                   VS
-             POSITION: {{ round.matches[1][0] }} | Mrs/Mr.{{ round.surname[1] }} | RANK: {{ round.matches[1][1] }}
+             POSITION: {{ round.matches[0][1][0] }} | Mrs/Mr.{{ round.surname[1] }} | RANK: {{ round.matches[0][1][1] }}
 -------------------------------------------------------------------------------+
-             POSITION: {{ round.matches[2][0] }} | Mrs/Mr.{{ round.surname[2] }} | RANK: {{ round.matches[2][1] }} 
+             POSITION: {{ round.matches[1][0][0] }} | Mrs/Mr.{{ round.surname[2] }} | RANK: {{ round.matches[1][0][1] }} 
                                   VS 
-             POSITION: {{ round.matches[3][0] }} | Mrs/Mr.{{ round.surname[3] }} | RANK: {{ round.matches[3][1] }}
+             POSITION: {{ round.matches[1][1][0] }} | Mrs/Mr.{{ round.surname[3] }} | RANK: {{ round.matches[1][1][1] }}
 -------------------------------------------------------------------------------+
-             POSITION: {{ round.matches[4][0] }} | Mrs/Mr.{{ round.surname[4] }} || RANK: {{ round.matches[4][1] }}
+             POSITION: {{ round.matches[2][0][0] }} | Mrs/Mr.{{ round.surname[4] }} || RANK: {{ round.matches[2][0][1] }}
                                   VS 
-             POSITION: {{ round.matches[5][0] }} | Mrs/Mr.{{ round.surname[5] }} || RANK: {{ round.matches[5][1] }}
+             POSITION: {{ round.matches[2][1][0] }} | Mrs/Mr.{{ round.surname[5] }} || RANK: {{ round.matches[2][1][1] }}
 -------------------------------------------------------------------------------+
-             POSITION: {{ round.matches[6][0] }} | Mrs/Mr.{{ round.surname[6] }} || RANK: {{ round.matches[6][1] }} 
+             POSITION: {{ round.matches[3][0][0] }} | Mrs/Mr.{{ round.surname[6] }} || RANK: {{ round.matches[3][0][1] }} 
                                   VS 
-             POSITION: {{ round.matches[7][0] }} | Mrs/Mr.{{ round.surname[7] }} || RANK: {{ round.matches[7][1] }}
+             POSITION: {{ round.matches[3][1][0] }} | Mrs/Mr.{{ round.surname[7] }} || RANK: {{ round.matches[3][1][1] }}
 -------------------------------------------------------------------------------+
  {% endfor %}
