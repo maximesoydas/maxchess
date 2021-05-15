@@ -138,7 +138,7 @@ def set_scores(matches):
     return scoreboard
 
 
-def add_first_round():
+def add_round():
 
     # Fetch the round_name
     round_name = f"Round{input('Enter Round Number : ')}"

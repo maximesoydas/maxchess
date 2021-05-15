@@ -1,23 +1,87 @@
 ID     |     NAME       |    START TIME           |     END TIME  
 +-------+-------+-------+-------+-------+------------+------------+------------+
-#     |     Round1    |   05/07/2021 12:28:25 |    05/07/2021 12:33:25
+#1     |     Round1    |   05/13/2021 03:55:12 |    05/13/2021 04:00:12
 +-------+-------+-------+-------+-------+------------+------------+------------+
-                            |   MATCHES  |
+                            |   ROUND 1 SCOREBOARD  |
 -------------------------------------------------------------------------------+
-             POSITION: 1 | Mrs/Mr.Daniels | RANK: 900
-                                  VS
-             POSITION: 5 | Mrs/Mr.Soy | RANK: 700
+        POSITION: 1 | Mrs/Mr.Daniels | RANK: 900 | SCORE :  1.0     
+                       
+        POSITION: 2 | Mrs/Mr.Steven | RANK: 800 | SCORE :  1.0
+
+        POSITION: 3 | Mrs/Mr.Stevenson | RANK: 700 | SCORE :  1.0  
+
+        POSITION: 4 | Mrs/Mr.Soy | RANK: 800 | SCORE :  0.5
+
+        POSITION: 5 | Mrs/Mr.Rick | RANK: 600 | SCORE :  0.5   
+
+        POSITION: 6 | Mrs/Mr.Perolto | RANK: 700 | SCORE :  0
+
+        POSITION: 7 | Mrs/Mr.Jacobs | RANK: 400 | SCORE :  0  
+
+        POSITION: 8 | Mrs/Mr.Lawson | RANK: 300 | SCORE :  0
+
 -------------------------------------------------------------------------------+
-             POSITION: 2 | Mrs/Mr.Steven | RANK: 800 
-                                  VS 
-             POSITION: 6 | Mrs/Mr.Stevenson | RANK: 600
+ #2     |     Round2    |   05/13/2021 03:55:51 |    05/13/2021 04:00:51
++-------+-------+-------+-------+-------+------------+------------+------------+
+                            |   ROUND 2 SCOREBOARD  |
 -------------------------------------------------------------------------------+
-             POSITION: 3 | Mrs/Mr.Perolto || RANK: 800
-                                  VS 
-             POSITION: 7 | Mrs/Mr.Rick || RANK: 400
+        POSITION: 1 | Mrs/Mr.Daniels | RANK: 900 | SCORE :  2.0     
+                       
+        POSITION: 2 | Mrs/Mr.Stevenson | RANK: 700 | SCORE :  2.0
+
+        POSITION: 3 | Mrs/Mr.Rick | RANK: 600 | SCORE :  1.5  
+
+        POSITION: 4 | Mrs/Mr.Steven | RANK: 800 | SCORE :  1.0
+
+        POSITION: 5 | Mrs/Mr.Jacobs | RANK: 400 | SCORE :  1.0   
+
+        POSITION: 6 | Mrs/Mr.Soy | RANK: 800 | SCORE :  0.5
+
+        POSITION: 7 | Mrs/Mr.Perolto | RANK: 700 | SCORE :  0  
+
+        POSITION: 8 | Mrs/Mr.Lawson | RANK: 300 | SCORE :  0
+
 -------------------------------------------------------------------------------+
-             POSITION: 4 | Mrs/Mr.Jacobs || RANK: 700 
-                                  VS 
-             POSITION: 8 | Mrs/Mr.Lawson || RANK: 300
+ #3     |     Round3    |   05/13/2021 03:57:05 |    05/13/2021 04:02:05
++-------+-------+-------+-------+-------+------------+------------+------------+
+                            |   ROUND 3 SCOREBOARD  |
+-------------------------------------------------------------------------------+
+        POSITION: 1 | Mrs/Mr.Daniels | RANK: 900 | SCORE :  3.0     
+                       
+        POSITION: 2 | Mrs/Mr.Rick | RANK: 600 | SCORE :  2.5
+
+        POSITION: 3 | Mrs/Mr.Stevenson | RANK: 700 | SCORE :  2.0  
+
+        POSITION: 4 | Mrs/Mr.Jacobs | RANK: 400 | SCORE :  1.5
+
+        POSITION: 5 | Mrs/Mr.Steven | RANK: 800 | SCORE :  1.0   
+
+        POSITION: 6 | Mrs/Mr.Soy | RANK: 800 | SCORE :  1.0
+
+        POSITION: 7 | Mrs/Mr.Perolto | RANK: 700 | SCORE :  1.0  
+
+        POSITION: 8 | Mrs/Mr.Lawson | RANK: 300 | SCORE :  0
+
+-------------------------------------------------------------------------------+
+ #4     |     Round4    |   05/13/2021 03:57:38 |    05/13/2021 04:02:38
++-------+-------+-------+-------+-------+------------+------------+------------+
+                            |   ROUND 4 SCOREBOARD  |
+-------------------------------------------------------------------------------+
+        POSITION: 1 | Mrs/Mr.Daniels | RANK: 900 | SCORE :  4.0     
+                       
+        POSITION: 2 | Mrs/Mr.Rick | RANK: 600 | SCORE :  2.5
+
+        POSITION: 3 | Mrs/Mr.Jacobs | RANK: 400 | SCORE :  2.5  
+
+        POSITION: 4 | Mrs/Mr.Steven | RANK: 800 | SCORE :  2.0
+
+        POSITION: 5 | Mrs/Mr.Stevenson | RANK: 700 | SCORE :  2.0   
+
+        POSITION: 6 | Mrs/Mr.Perolto | RANK: 700 | SCORE :  1.5
+
+        POSITION: 7 | Mrs/Mr.Soy | RANK: 800 | SCORE :  1.0  
+
+        POSITION: 8 | Mrs/Mr.Lawson | RANK: 300 | SCORE :  0.5
+
 -------------------------------------------------------------------------------+
  

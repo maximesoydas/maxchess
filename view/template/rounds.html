@@ -103,126 +103,134 @@ text-decoration: none;
   <form class="button" action="players.html">
     <input type="submit" value="View Players" />
 </form>
-<h1>♞ First Round ♞</h1>
+<h1>♞ SCOREBOARD ♞</h1>
 
-<table class="content-table">
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>NAME</th>
-        <th>START TIME</th>
-        <th>END TIME</th>
-      </tr>
-    </thead>
-    <tbody>
       {% for round in rounds %}
+      <table class="content-table">
+        <thead>
+          <tr><br></tr>
+          <tr>
+            <th style="color:#333; padding: 2vh; background-color: white; font-size: 1em;"> ROUND {{round.doc_id}} </th>
+          </tr>
+          <tr><br></tr>
+        </thead>
+        <tbody>
+      <table class="content-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>START TIME</th>
+            <th>END TIME</th>
+          </tr>
+        </thead>
+        <tbody>
+      <tr>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+      </tr>
       <tr>
        <td>#{{ round.doc_id }}</td>
        <td>{{ round.name }}</td>
        <td>{{ round.datetime_start }}</td>
        <td>{{ round.datetime_end }}</td>
       </tr>
+      <tr>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+      </tr>
       <thead>
         <tr>
-          <th style="background: white;"></th>
-          <th style="background: white;"></th>
-          <th style="color:#333; padding: 2vh; background-color: white;"> MATCHES ({{ round.name }}) </th>
-          <th style="background: white;"></th>
-        </tr>
-        <br> 
-        <br> 
-        <tr>
           <th>POSITION</th>
-          <th>RANK</th>
           <th>SURNAME</th>
+          <th>RANK</th>
           <th>SCORE</th>
         </tr>
       </thead>
       <tr>
-        <th style="background: white; padding: 0.05vh;"></th>
-        <th style="background: white; padding: 0.05vh;"></th>
-        <th style="background: white; padding: 0.05vh;"></th>
-        <th style="background: white; padding: 0.05vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
       </tr>
-      <th style="background: white; padding: 1.5vh;"></th>
-      <th style="background: white; padding: 1.5vh;"></th>
-      <th style="background: white; padding: 1.5vh;"></th>
-      <th style="background: white; padding: 1.5vh;"></th>
-      </tr>
-      <td> {{ round.matches[0][0][0] }}</td> 
-      <td> {{ round.matches[0][0][1] }}</td>
-      <td><b> Mrs/Mr.{{ round.surname[0]}}</b></td>
-      <td>{{ round.score }}</td>
-      <tr>
-        <th style="background: white;opacity: 50%;"></th>
-        <th style="background: white;opacity: 50%;"></th>
-        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"> <b> <i>VS</i></b> <br></th>
-        <th style="background: white;opacity: 50%;"></th>
-      </tr>
-      <td> {{ round.matches[0][1][0] }}</td>
-      <td> {{ round.matches[0][1][1] }}</td>
-      <td><b>  Mrs/Mr.{{ round.surname[1] }}</b></td>
-      <td>{{ round.score }}</td>
+      <td> 1 </td> 
+      <td><b> Mrs/Mr.{{ round.players[0].surname }}</b></td>
+      <td> {{ round.players[0].rank }}</td>
+      <td>{{ round.players[0].score }}</td>
       <tr>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
       </tr>
-      <td> {{ round.matches[1][0][0] }}</td>
-      <td> {{ round.matches[1][0][1] }}</td>
-      <td><b>  Mrs/Mr.{{ round.surname[2] }}</b></td>
-      <td>{{ round.score }}</td>
-      <tr>
-        <th style="background: white;opacity: 50%;"></th>
-        <th style="background: white;opacity: 50%;"></th>
-        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"> <b> <i>VS</i></b><br></th>
-        <th style="background: white;opacity: 50%;"></th>
-      </tr>
-      <td> {{ round.matches[1][1][0] }}</td>
-      <td> {{ round.matches[1][1][1] }}</td>
-      <td> <b> Mrs/Mr.{{ round.surname[3] }}</b></td>
-      <td>{{ round.score }}</td>
+      <td> 2 </td>
+      <td><b>  Mrs/Mr.{{ round.players[1].surname }}</b></td>
+      <td> {{ round.players[1].rank }}</td>
+      <td>{{ round.players[1].score }}</td>
       <tr>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
       </tr>
-      <td> {{ round.matches[2][0][0] }}</td>
-      <td> {{ round.matches[2][0][1] }}</td>
-      <td> <b> Mrs/Mr.{{ round.surname[4] }}</b></td>
-      <td>{{ round.score }}</td>
-      <tr>
-        <th style="background: white;opacity: 50%;"></th>
-        <th style="background: white;opacity: 50%;"></th>
-        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"><b>  <i>VS</i> </b><br></th>
-        <th style="background: white;opacity: 50%;"></th>
-      </tr>
-      <td> {{ round.matches[2][1][0] }}</td>
-      <td> {{ round.matches[2][1][1] }}</td>
-      <td> <b> Mrs/Mr.{{ round.surname[5] }}</b></td>
-      <td>{{ round.score }}</td>
+      <td> 3 </td>
+      <td><b>  Mrs/Mr.{{ round.players[2].surname }}</b></td>
+      <td> {{ round.players[2].rank }}</td>
+      <td>{{ round.players[2].score }}</td>
       <tr>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>
       </tr>
-      <td> {{ round.matches[3][0][0] }}</td>
-      <td> {{ round.matches[3][0][1] }}</td>
-      <td><b> Mrs/Mr.{{ round.surname[6] }}</b></td>
-      <td>{{ round.score }}</td>
+      <td> 4 </td>
+      <td> <b> Mrs/Mr.{{ round.players[3].surname }}</b></td>
+      <td> {{ round.players[3].rank }}</td>
+      <td>{{ round.players[3].score }}</td>
       <tr>
-        <th style="background: white;opacity: 50%;"></th>
-        <th style="background: white;opacity: 50%;"></th>
-        <th style="font-size: 0.45em; font-style: bold;color:darkred;  padding: 1vh; background: white; opacity: 80%;"><b>  <i>VS</i></b> <br></th>
-        <th style="background: white;opacity: 50%;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
       </tr>
-      <td> {{ round.matches[3][1][0] }}</td>
-      <td> {{ round.matches[3][1][1] }}</td>
-      <td> <b> Mrs/Mr.{{ round.surname[7] }}</b></td>
-      <td>{{ round.score }}</td>
+      <td> 5 </td>
+      <td> <b> Mrs/Mr.{{ round.players[4].surname }}</b></td>
+      <td> {{ round.players[4].rank }}</td>
+      <td>{{ round.players[4].score }}</td>
+      <tr>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+      </tr>
+      <td> 6 </td>
+      <td> <b> Mrs/Mr.{{ round.players[5].surname }}</b></td>
+      <td> {{ round.players[5].rank }}</td>
+      <td>{{ round.players[5].score }}</td>
+      <tr>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+      </tr>
+      <td> 7 </td>
+      <td><b> Mrs/Mr.{{ round.players[6].surname }}</b></td>
+      <td> {{ round.players[6].rank }}</td>
+      <td>{{ round.players[6].score }}</td>
+      <tr>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+        <th style="background: white; padding: 1.5vh;"></th>
+      </tr>
+      <td> 8 </td>
+      <td> <b> Mrs/Mr.{{ round.players[7].surname }}</b></td>
+      <td> {{ round.players[7].rank }}</td>
+      <td>{{ round.players[7].score }}</td>
       <tr>
         <th style="background: white; padding: 1.5vh;"></th>
         <th style="background: white; padding: 1.5vh;"></th>

@@ -78,7 +78,7 @@ def rounds():
     while round_option != 0:
         if round_option == 1:
             # Start First Round
-            round_controller.add_first_round()
+            round_controller.add_round()
             # round_view.view_text()
             break
         elif round_option == 2:

@@ -2,22 +2,23 @@ ID     |     NAME       |    START TIME           |     END TIME
 +-------+-------+-------+-------+-------+------------+------------+------------+
 {% for round in rounds %}#{{ round.doc_id }}     |     {{ round.name }}    |   {{ round.datetime_start }} |    {{ round.datetime_end }}
 +-------+-------+-------+-------+-------+------------+------------+------------+
-                            |   MATCHES  |
+                            |   ROUND {{ round.doc_id }} SCOREBOARD  |
 -------------------------------------------------------------------------------+
-             POSITION: {{ round.matches[0][0][0] }} | Mrs/Mr.{{ round.surname[0] }} | RANK: {{ round.matches[0][0][1] }}
-                                  VS
-             POSITION: {{ round.matches[0][1][0] }} | Mrs/Mr.{{ round.surname[1] }} | RANK: {{ round.matches[0][1][1] }}
--------------------------------------------------------------------------------+
-             POSITION: {{ round.matches[1][0][0] }} | Mrs/Mr.{{ round.surname[2] }} | RANK: {{ round.matches[1][0][1] }} 
-                                  VS 
-             POSITION: {{ round.matches[1][1][0] }} | Mrs/Mr.{{ round.surname[3] }} | RANK: {{ round.matches[1][1][1] }}
--------------------------------------------------------------------------------+
-             POSITION: {{ round.matches[2][0][0] }} | Mrs/Mr.{{ round.surname[4] }} || RANK: {{ round.matches[2][0][1] }}
-                                  VS 
-             POSITION: {{ round.matches[2][1][0] }} | Mrs/Mr.{{ round.surname[5] }} || RANK: {{ round.matches[2][1][1] }}
--------------------------------------------------------------------------------+
-             POSITION: {{ round.matches[3][0][0] }} | Mrs/Mr.{{ round.surname[6] }} || RANK: {{ round.matches[3][0][1] }} 
-                                  VS 
-             POSITION: {{ round.matches[3][1][0] }} | Mrs/Mr.{{ round.surname[7] }} || RANK: {{ round.matches[3][1][1] }}
+        POSITION: 1 | Mrs/Mr.{{ round.players[0].surname }} | RANK: {{ round.players[0].rank }} | SCORE :  {{ round.players[0].score }}     
+                       
+        POSITION: 2 | Mrs/Mr.{{ round.players[1].surname }} | RANK: {{ round.players[1].rank }} | SCORE :  {{ round.players[1].score }}
+
+        POSITION: 3 | Mrs/Mr.{{ round.players[2].surname }} | RANK: {{ round.players[2].rank }} | SCORE :  {{ round.players[2].score }}  
+
+        POSITION: 4 | Mrs/Mr.{{ round.players[3].surname }} | RANK: {{ round.players[3].rank }} | SCORE :  {{ round.players[3].score }}
+
+        POSITION: 5 | Mrs/Mr.{{ round.players[4].surname }} | RANK: {{ round.players[4].rank }} | SCORE :  {{ round.players[4].score }}   
+
+        POSITION: 6 | Mrs/Mr.{{ round.players[5].surname }} | RANK: {{ round.players[5].rank }} | SCORE :  {{ round.players[5].score }}
+
+        POSITION: 7 | Mrs/Mr.{{ round.players[6].surname }} | RANK: {{ round.players[6].rank }} | SCORE :  {{ round.players[6].score }}  
+
+        POSITION: 8 | Mrs/Mr.{{ round.players[7].surname }} | RANK: {{ round.players[7].rank }} | SCORE :  {{ round.players[7].score }}
+
 -------------------------------------------------------------------------------+
  {% endfor %}
