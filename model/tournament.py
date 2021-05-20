@@ -3,12 +3,14 @@ from tinydb import TinyDB, Query
 
 
 class Tournament:
-    def __init__(self, name, adress, date, rounds, pre_rounds, rank):
+    def __init__(self, name, place, date, rounds_number, timing_method, description,rounds):
         self.name = name
-        self.surname = surname
-        self.birthday = birthday
-        self.gender = gender
-        self.rank = rank
+        self.place = place
+        self.date = date
+        self.rounds_number = rounds_number
+        self.timing_method = timing_method
+        self.description = description
+        self.rounds = rounds
 
 
     def serialize(self):
@@ -17,10 +19,12 @@ class Tournament:
         '''
         return {
             'name' : self.name,
-            'surname' : self.surname,
-            'birthday' : self.birthday,
-            'gender' : self.gender,
-            'rank' : self.rank,
+            'place' : self.place,
+            'date' : self.date,
+            'rounds_number' : self.rounds_number,
+            'timing_method' : self.timing_method,
+            'description' : self.description,
+            'rounds' : self.rounds,
         }
 
     def save(self):
@@ -32,4 +36,4 @@ class Tournament:
         all.save()
 
 
-all = database.Table('players')
+all = database.Table('tournament')

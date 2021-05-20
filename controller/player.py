@@ -1,6 +1,9 @@
 from model import player as model
-from tinydb import TinyDB, Query
-
+from model import players_list as player_model
+from tinydb import TinyDB, Query, where
+from view import menu
+from operator import *
+import json
 
 
 def add(n=1):
@@ -13,18 +16,35 @@ def add(n=1):
             surname=input("\nEnter Player Surname: "),
             birthday=input("Enter Player Birthday: "),
             gender=input("\nEnter Player Gender: "),
-            rank=input("\nEnter Player Rank: "),
+            rank=int(input("\nEnter Player Rank: ")),
         ).save()
-        print('Players Added Successfully !')        
-
+        print('Players Added Successfully !')
+    db = TinyDB('maxchess_db.json')
+    TinyDB.default_table_name = 'players'
+    players_list = db.search(where('rank') > -1)
+    players_list.sort(key=itemgetter('rank'), reverse=True)
+    list_name=input("\nEnter Player_List Name: ")
+    player_model.Players_list(
+        list_name=list_name,
+        players=players_list,
+    ).save()
+    db = TinyDB('maxchess_db.json')
+    TinyDB.default_table_name = 'players'
+    db.drop_table('players')
+    list_name = list_name[0]
+    print(list_name)
+    return list_name
 
 def remove_name():
+    """
+    Remove players list by players list name
+    """
     db = TinyDB('maxchess_db.json')
     q = Query()
-    TinyDB.default_table_name = 'players'
-    name = (input("Enter Player Name : "))
-    surname = (input("Enter Player Surname : "))
-    player_name = db.get((q.name == name and q.surname == surname))
+    TinyDB.default_table_name = 'players_lists'
+    list_name = (input("Enter Players List Name : "))
+    player_name = db.get((q.list_name == list_name))
+    print(player_name)
     if player_name == None:
         print('\nPlayer Not Found\nTry Again !\n')
         remove_name()
@@ -34,7 +54,7 @@ def remove_name():
         while option != 0:
             if option == 1:
                 # Remove by Name & Surname
-                db.remove((q.name == name and q.surname == surname))
+                db.remove((q.list_name == list_name))
                 print(f'\nPlayer:\n\n{player_name}\nSuccesfully Deleted !')
                 quit()
                 break
@@ -53,11 +73,16 @@ def remove_name():
                 remove_name()
                 break
             
+
+
 def remove_id():
+    """
+    Remove players list by players list id
+    """
     db = TinyDB('maxchess_db.json')
     q = Query()
-    TinyDB.default_table_name = 'players'
-    id_num = int(input("\nEnter Player ID : "))
+    TinyDB.default_table_name = 'players_lists'
+    id_num = int(input("\nEnter Player List ID : "))
     # Seach by id
     player_id = db.get(doc_id=id_num)
     if player_id is None:

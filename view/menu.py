@@ -11,8 +11,32 @@ def main():
 
     """)
 
+# CREATE TOURNAMENT
+def tournament():
+    print("""
+    
+    ♙ Welcome to the tournaments' Menu ♙
 
+    [1] Start New Tournament
+    [2] Resume Tournament
+    [3] Exit to Main Menu ↵
 
+    """)
+
+def tournament_players():
+    print("""
+        
+    ♙ Create New Tournament ♙
+
+    [1] Create New Players List
+    [2] Use Existing Players List
+    [3] Exit to Main Menu ↵
+
+    
+    
+    """)
+
+# CREATE PLAYERS
 def player():
     print("""
     
@@ -26,17 +50,9 @@ def player():
     """)
 
 
-def tournament():
-    print("""
-    
-    ♙ Welcome to the tournaments' Menu ♙
 
-    [1] Start Tournament
-    [2] View Players' Table
-    [3] Exit to Main Menu ↵
 
-    """)
-
+# CREATE ROUNDS
 def round():
     print("""
     
@@ -68,6 +84,9 @@ def rounds_results():
     [3] Exit to Main Menu ↵
 
     """)
+
+
+# CREATE REPORTS
 
 def reports():
     print("""

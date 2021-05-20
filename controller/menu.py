@@ -3,6 +3,7 @@ from view import players as player_view
 from view import rounds as round_view
 from controller import player as player_controller
 from controller import rounds as round_controller
+from controller import tournament as tournament_controller
 
 
 #class Menu:
@@ -14,7 +15,7 @@ def main():
             player()
             break
         elif option == 2:
-            rounds()
+            tournament()
             break
         elif option == 3:
             reports()
@@ -72,6 +73,32 @@ def player():
             menu.player()
             break
     
+
+def tournament():
+    menu.tournament()
+    tournament_option = int(input("\n\nOption : "))
+    while tournament_option != 0:
+        if tournament_option == 1:
+            # Start New Tournament
+            tournament_controller.new_tournament()
+            break
+        elif tournament_option == 2:
+            # Resume Existing Tournament
+            tournament_name = tournament_controller.tournament_name()
+            tournament_controller.existing_tournament(tournament_name)
+            break
+        elif tournament_option == 3:
+            #Delete Rounds Table
+            main() 
+            break
+        else:
+            print('Invalid Number')
+            main()
+            break
+
+
+
+
 def rounds():
     menu.round()
     round_option = int(input("\n\nOption : "))
@@ -92,9 +119,7 @@ def rounds():
             break
             
         elif round_option == 4:
-            main.menu()
-            quit()
-            break
+            main()
         else:
             print('Invalid Number')
             break
