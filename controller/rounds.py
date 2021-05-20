@@ -1,5 +1,7 @@
 from model import rounds as round_model
 from model import player_tournament as player_model
+from controller import tournament as tournament_controller
+from controller import player as player_controller
 from tinydb import TinyDB, Query, where
 import datetime
 from datetime import timedelta
@@ -7,7 +9,7 @@ from operator import *
 import operator
 
 
-def sort_players(round_name):
+def sort_players(round_name, list_name):
     '''
     Sort players by Rank if it is First Round, otherwise,
     Sort by Score and/or by Rank if the Score is even
@@ -21,13 +23,13 @@ def sort_players(round_name):
         }
     ]
     '''
+    q = Query()
     if round_name == "Round1" :
         #define database, and players table
         db = TinyDB('maxchess_db.json')
-        TinyDB.default_table_name = 'players'
-        # search by rank
-        sorted_players = db.search(where('rank') > '0')
-        
+        TinyDB.default_table_name = 'players_lists'
+        players_list = db.get((q.list_name == list_name))
+        sorted_players = players_list['players']
         # sort by rank
         sorted_players.sort(key=itemgetter('rank'), reverse=True)
     else:
@@ -39,7 +41,8 @@ def sort_players(round_name):
         round_name = f'Round{int(round_name) - 1}'
         sorted_players = db.search(where('name') == round_name)
         # sort by rank & score
-        sorted_players = sorted_players[0]['players']
+        sorted_players = sorted_players
+        print(sorted_players)
         sorted_players.sort(key=itemgetter('rank'), reverse=True)
         sorted_players.sort(key=itemgetter('score'), reverse=True)
 
@@ -65,12 +68,12 @@ def set_time():
     return (datetime_start, datetime_end)
 
     
-def set_matches(round_name):
+def set_matches(round_name, list_name):
     '''
     creates the matches list
     '''
     # global sorted_players
-    sorted_players = sort_players(round_name)
+    sorted_players = sort_players(round_name, list_name)
     # # retrieve all surnames from players list
     n = 0
     players_list = []
@@ -137,13 +140,37 @@ def set_scores(matches):
     scoreboard = matches
     return scoreboard
 
+def get_players():
+
+    print('''
+    [1] Use Existing Players
+    [2] Create New Players
+    ''')
+    players_option_nb = int(input("\n\nOption : "))
+    while players_option_nb != 0:
+        if players_option_nb == 1:
+            list_name = input('Enter Existing Players List Name : ')
+            break
+        elif players_option_nb == 2:
+            list_name = player_controller.add(8)
+            break
+        else:
+            print('Invalid Number')
+            add_round()
+            break
+    return list_name
 
 def add_round():
 
     # Fetch the round_name
     round_name = f"Round{input('Enter Round Number : ')}"
+    if round_name == "Round1":
+        list_name = get_players()
+    else:
+        list_name = ""
+
     (datetime_start, datetime_end) = set_time()
-    (matches) = set_matches(round_name)
+    (matches) = set_matches(round_name, list_name)
     (scoreboard) = set_scores(matches)
 
     # Update players_list for this tournament's round
@@ -171,7 +198,6 @@ def add_round():
     # sort by rank & score
     round_players.sort(key=itemgetter('rank'), reverse=True)
     round_players.sort(key=itemgetter('score'), reverse=True)
-    print(round_players)
     db.drop_table('players_list')
     print("Score Added Successfully !")
 
