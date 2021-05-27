@@ -7,28 +7,24 @@ from view import menu
 from operator import *
 import json
 
-
-    
-def tournament_name():
-    name=input("\nEnter Tournament Name: ")
-    return name
-
 def new_tournament():
     '''
     Add Tournament
     '''
-    name = tournament_name()
+    name=input("\nEnter Tournament Name: ")
     place=input("\nEnter Tournament Place: ")
     date=input("Enter Tournament Date (dd/mm/yyyy): ")
     rounds_number=4
     timing_method="Blitz"
     description=input("Enter Description:")
+    rounds_table = []
     print('''
     [1] Start Tournament Later
     [2] Start Tournament Now   
     [3] Exit to main menu
     ''')
     option_number= int(input("Enter Option Number: "))
+    
     while option_number != 0:
         if option_number == 1:
             temp_tournament_model.temp_tournament(
@@ -43,25 +39,30 @@ def new_tournament():
             menu.main()
             break
         elif option_number == 2:
+            round_num = 0
             for rounds in range(4):
-                round_controller.add_round()
-                db = TinyDB('maxchess_db.json')
-                TinyDB.default_table_name = 'Rounds'
-                rounds_table = db.all()
-                tournament_model.Tournament(
-                    name= name,
-                    place= place,
-                    date= date,
-                    rounds_number= rounds_number,
-                    timing_method= timing_method,
-                    description= description,
-                    rounds= rounds_table,
-                ).save()
+                round_num = round_num + 1
+                round_name = f"Round{round_num}"
+                round_controller.add_round(round_name)
+            db = TinyDB('maxchess_db.json')
+            TinyDB.default_table_name = 'Rounds'
+            rounds = db.all()
+            rounds_table.append(rounds)
             db = TinyDB('maxchess_db.json')
             TinyDB.default_table_name = 'Rounds'
             db.drop_table('Rounds')
+            tournament_model.Tournament(
+                name= name,
+                place= place,
+                date= date,
+                rounds_number= rounds_number,
+                timing_method= timing_method,
+                description= description,
+                rounds= rounds_table,
+            ).save()
             print('Round Added Successfully !')
-            print('Tournament Added Successfully')
+            print('Tournament Updated Successfully')
+            menu.main()
         else:
             menu.main()
             break

@@ -6,22 +6,13 @@ from tinydb import TinyDB, Query, where
 import datetime
 from datetime import timedelta
 from operator import *
-import operator
+import itertools
 
 
 def sort_players(round_name, list_name):
     '''
     Sort players by Rank if it is First Round, otherwise,
     Sort by Score and/or by Rank if the Score is even
-    [
-        {
-        'name': 'Bethy',
-        'surname': 'Daniels',
-        'birthday': '07/08/1984',
-        'gender': 'Female',
-        'rank': '900'
-        }
-    ]
     '''
     q = Query()
     if round_name == "Round1" :
@@ -42,9 +33,9 @@ def sort_players(round_name, list_name):
         sorted_players = db.search(where('name') == round_name)
         # sort by rank & score
         sorted_players = sorted_players
-        print(sorted_players)
-        sorted_players.sort(key=itemgetter('rank'), reverse=True)
+        sorted_players = sorted_players[0]['players']
         sorted_players.sort(key=itemgetter('score'), reverse=True)
+        print(sorted_players)
 
     return sorted_players
 
@@ -75,7 +66,6 @@ def set_matches(round_name, list_name):
     # global sorted_players
     sorted_players = sort_players(round_name, list_name)
     # # retrieve all surnames from players list
-    n = 0
     players_list = []
 
     for i in sorted_players:
@@ -83,14 +73,12 @@ def set_matches(round_name, list_name):
         name = i['name']
         birthday = i['birthday']
         gender = i['gender']
-        n = n + 1
         if round_name == "Round1":
             score = 0
         else:
             score = i['score']
-        # ASK MATCH 1v5 : L / W / E
-        players_list.append([str(n), name, surname, birthday, gender, i["rank"], score])
-
+        players_list.append([name, surname, birthday, gender, i["rank"], score])
+        
     if round_name == 'Round1':
         matches = [
         (players_list[0],players_list[4]),
@@ -107,10 +95,10 @@ def set_matches(round_name, list_name):
         ]
     print(f'''
     \n\nThe Next Matches are:\n\n
-    {matches[0][0][2]} VS {matches[0][1][2]}\n
-    {matches[1][0][2]} VS {matches[1][1][2]}\n
-    {matches[2][0][2]} VS {matches[2][1][2]}\n
-    {matches[3][0][2]} VS {matches[3][1][2]}\n
+    {matches[0][0][0]} {matches[0][0][1]} VS {matches[0][1][0]} {matches[0][1][1]}\n
+    {matches[1][0][0]} {matches[1][0][1]} VS {matches[1][1][0]} {matches[1][1][1]}\n
+    {matches[2][0][0]} {matches[2][0][1]} VS {matches[2][1][0]} {matches[2][1][1]}\n
+    {matches[3][0][0]} {matches[3][0][1]} VS {matches[3][1][0]} {matches[3][1][1]}\n
     ''')
     enter_score = input("\nPress 'ENTER' To Set the Scores\n")
     return matches
@@ -120,31 +108,32 @@ def set_scores(matches):
 
     for (player1, player2) in matches:
         # get players names
-        player1_name = player1[2]
-        player2_name = player2[2]
+        player1_name = player1[1]
+        player2_name = player2[1]
         print(f'\nScore of match:\n {player1_name} vs {player2_name} ?\n')
         winner = input(f"\nWho won the match:\n\n[1] for {player1_name}\n[2] for {player2_name}\n[0] for Even \n\n Option Number : ")
         if winner == '1':
-            player1[6] += 1.0
+            player1[5] += 1.0
         # if 2 : player2 += 1
         elif winner == '2':
-            player2[6] += 1.0
+            player2[5] += 1.0
         # if 0 : 0.5 each (even)
         elif winner == '0':
-            player1[6] += 0.5
-            player2[6] += 0.5 
+            player1[5] += 0.5
+            player2[5] += 0.5 
         else:
             print("Wrong option number !")
             quit
 
     scoreboard = matches
+    print(scoreboard)
     return scoreboard
 
 def get_players():
 
     print('''
     [1] Use Existing Players
-    [2] Create New Players
+    [2] Create 8 New Players
     ''')
     players_option_nb = int(input("\n\nOption : "))
     while players_option_nb != 0:
@@ -160,10 +149,10 @@ def get_players():
             break
     return list_name
 
-def add_round():
+def add_round(round_name):
 
     # Fetch the round_name
-    round_name = f"Round{input('Enter Round Number : ')}"
+    round_name = round_name
     if round_name == "Round1":
         list_name = get_players()
     else:
@@ -174,37 +163,30 @@ def add_round():
     (scoreboard) = set_scores(matches)
 
     # Update players_list for this tournament's round
+    updated_players = []
     for i in range(4):
         for player in scoreboard[i]:
-            player_model.Player_tournament(
-                position = player[0],
-                name= player[1],
-                surname= player[2],
-                birthday= player[3],
-                gender=player[4],
-                rank=player[5],
-                score = player[6]
-            ).save()
-
+            updated_player = {
+            'name': player[0],
+            'surname': player[1],
+            'birthday': player[2],
+            'gender': player[3],
+            'rank': player[4],
+            'score': player[5]
+            }
+            dictionary_copy = updated_player.copy()
+            updated_players.append(dictionary_copy)
+    updated_players.sort(key=itemgetter('rank'), reverse=True)
+    updated_players.sort(key=itemgetter('score'), reverse=True)
 
 
     '''
     Create Round
     '''
-
-    db = TinyDB('maxchess_db.json')
-    TinyDB.default_table_name = 'players_list'
-    round_players = db.search(where('score') > -1)
-    # sort by rank & score
-    round_players.sort(key=itemgetter('rank'), reverse=True)
-    round_players.sort(key=itemgetter('score'), reverse=True)
-    db.drop_table('players_list')
-    print("Score Added Successfully !")
-
     matches_list = []
     for match in (scoreboard):
-        matches_list.append([match[0][2], match[0][6]])
-        matches_list.append([match[1][2], match[1][6]])
+        matches_list.append([match[0][1], match[0][5]])
+        matches_list.append([match[1][1], match[1][5]])
  
     round_matches = [
         (matches_list[0],matches_list[1]),
@@ -218,7 +200,7 @@ def add_round():
         datetime_start= datetime_start,
         datetime_end= datetime_end,
         matches= round_matches,
-        players= round_players
+        players= updated_players
     ).save()
 
 
