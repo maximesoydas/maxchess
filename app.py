@@ -1,8 +1,8 @@
-from controller import menu
+from controller import tournament
 
 def main():
-   main = menu.main
-   main()
+   main = tournament.check_tournament()
+   return main()
 
 if __name__ == "__main__":
     main()

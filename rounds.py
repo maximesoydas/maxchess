@@ -23,40 +23,20 @@ def sort_players(round_name, list_name):
         sorted_players = players_list['players']
         # sort by rank
         sorted_players.sort(key=itemgetter('rank'), reverse=True)
-    elif round_name == "Round2":
-        #define database, and rounds table
-        db = TinyDB('maxchess_db.json')
-        TinyDB.default_table_name = 'tournament'
-        #get previous round data
-        round_name = round_name.replace('Round', '')
-        round_name = f'Round{int(round_name) - 1}'
-        sorted_players = db.search(where('rounds')[0][0]['name'] == round_name)
-        sorted_players = sorted_players[0]['rounds'][0][0]['players']
-        sorted_players.sort(key=itemgetter('score'), reverse=True)
-    elif round_name == "Round3":
-        #define database, and rounds table
-        db = TinyDB('maxchess_db.json')
-        TinyDB.default_table_name = 'tournament'
-        #get previous round data
-        round_name = round_name.replace('Round', '')
-        round_name = f'Round{int(round_name) - 1}'
-        sorted_players = db.search(where('rounds')[0][1]['name'] == round_name)
-        sorted_players = sorted_players[0]['rounds'][0][1]['players']
-        sorted_players.sort(key=itemgetter('score'), reverse=True)
-    elif round_name == "Round4":
-        #define database, and rounds table
-        db = TinyDB('maxchess_db.json')
-        TinyDB.default_table_name = 'tournament'
-        #get previous round data
-        round_name = round_name.replace('Round', '')
-        round_name = f'Round{int(round_name) - 1}'
-        print(round_name)
-        sorted_players = db.search(where('rounds')[0][2]['name'] == round_name)
-        sorted_players = sorted_players[0]['rounds'][0][2]['players']
-        sorted_players.sort(key=itemgetter('score'), reverse=True)
     else:
-        print('Inccorect Round name')
-    
+        #define database, and rounds table
+        db = TinyDB('maxchess_db.json')
+        TinyDB.default_table_name = 'Rounds'
+        #get previous round data
+        round_name = round_name.replace('Round', '')
+        round_name = f'Round{int(round_name) - 1}'
+        sorted_players = db.search(where('name') == round_name)
+        # sort by rank & score
+        sorted_players = sorted_players
+        sorted_players = sorted_players[0]['players']
+        sorted_players.sort(key=itemgetter('score'), reverse=True)
+        print(sorted_players)
+
     return sorted_players
 
 def set_time():
@@ -146,6 +126,7 @@ def set_scores(matches):
             quit
 
     scoreboard = matches
+    print(scoreboard)
     return scoreboard
 
 def get_players():
