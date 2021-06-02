@@ -61,9 +61,13 @@ def new_tournament():
         document_id= this_tournament.doc_id
         # update the tournament table's rounds to the rounds_table list
         db.update({'rounds': rounds_table}, Query().rounds.exists(), doc_ids=[document_id])
+    tournament_data = db.get(doc_id=document_id)
+    best_player_name = tournament_data['rounds'][0][-1]['players'][0]['name']
+    best_player_surname = tournament_data['rounds'][0][-1]['players'][0]['surname']
     print('Round Added Successfully !')
     print('Tournament Updated Successfully')
-    menu.main()
+    print(f"Winner of this Tournament is {best_player_name} {best_player_surname}")
+    quit()
 
 
 
@@ -96,9 +100,13 @@ def existing_tournament(document_id):
         # update the tournament table's rounds to the rounds_table list
         db.update({'rounds': rounds_table}, Query().rounds.exists(), doc_ids=[document_id])
         rounds_table = []
+    tournament_data = db.get(doc_id=document_id)
+    best_player_name = tournament_data['rounds'][0][-1]['players'][0]['name']
+    best_player_surname = tournament_data['rounds'][0][-1]['players'][0]['surname']
     print('Round Added Successfully !')
     print('Tournament Updated Successfully')
-    menu.main()
+    print(f"Winner of this Tournament is {best_player_name} {best_player_surname}")
+    quit()
     # update the tournament table's rounds to the rounds_table list
     # db.update({'rounds': rounds_table}, Query().rounds.exists(), doc_ids=[document_id])
 
