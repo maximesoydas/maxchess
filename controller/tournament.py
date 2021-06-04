@@ -72,15 +72,11 @@ def new_tournament():
 
 
 
-def existing_tournament(document_id):
+def existing_tournament(tournament_id, round_num):
     # else fetch tournament data
     db = TinyDB('maxchess_db.json')
     TinyDB.default_table_name = 'tournament'
-    tournament_data = db.get(doc_id=document_id)
-    print(tournament_data)
-    round_name = tournament_data['rounds'][0][-1]['name']
-    print(round_name)
-    round_num = round_name.replace('Round', '')
+    tournament_data = db.get(doc_id=tournament_id)
     # re-update the rounds_table variable with the latest table data
     rounds_table = tournament_data['rounds'][0]
     for round in range(4-int(round_num)):
@@ -98,62 +94,36 @@ def existing_tournament(document_id):
         db = TinyDB('maxchess_db.json')
         TinyDB.default_table_name = 'tournament'
         # update the tournament table's rounds to the rounds_table list
-        db.update({'rounds': rounds_table}, Query().rounds.exists(), doc_ids=[document_id])
+        db.update({'rounds': rounds_table}, Query().rounds.exists(), doc_ids=[tournament_id])
         rounds_table = []
-    tournament_data = db.get(doc_id=document_id)
+    tournament_data = db.get(doc_id=tournament_id)
     best_player_name = tournament_data['rounds'][0][-1]['players'][0]['name']
     best_player_surname = tournament_data['rounds'][0][-1]['players'][0]['surname']
     print('Round Added Successfully !')
     print('Tournament Updated Successfully')
     print(f"Winner of this Tournament is {best_player_name} {best_player_surname}")
-    quit()
-    # update the tournament table's rounds to the rounds_table list
-    # db.update({'rounds': rounds_table}, Query().rounds.exists(), doc_ids=[document_id])
+    return menu.main()
 
+
+def tournament_exists():
+
+    pass
 
 def check_tournament():
-    q = Query()
     db = TinyDB('maxchess_db.json')
     # check if tournament table exists
     TinyDB.default_table_name = 'tournament'
-    db.all()
-    if db.all():
-        print('tournament table exists')
-        # check which round number exists if round 4 call the app menu
-        while True: 
-            try:
-                db.search(where('rounds')[0][3]['name'] == "Round4")
-                print("Tournament Round 4 exists")
-                menu.main()
-                break
-            except IndexError:
-                try:
-                    db.search(where('rounds')[0][2]['name'] == "Round3")
-                    document_id = db.all()
-                    document_id = document_id[-1].doc_id
-                    print(document_id)
-                    print("Tournament Round 3 exists")
-                    # fetch tournament doc_id
-                    print("please finish this tournament before starting a new one")
-                    existing_tournament(document_id)
-                    break
-                except IndexError:
-                    try:
-                        db.search(where('rounds')[0][1]['name'] == "Round2")
-                        print("Tournament Round 2 exists")
-                        print("please finish this tournament before starting a new one")
-                        existing_tournament()
-                        break
-                    except IndexError:
-                        try:
-                            db.search(where('rounds')[0][0]['name'] == "Round1")
-                            print("Tournament Round 1 exists")
-                            print("please finish this tournament before starting a new one")
-                            existing_tournament()
-                            break
-                        except IndexError:
-                            menu.main()
-                            break
+    all_tournaments = db.all()
+    if all_tournaments:
+        tournament_id = all_tournaments[-1].doc_id
+        rounds = all_tournaments[-1]['rounds'][0]
+        if len(rounds) < 4:            
+            while len(rounds) < 4:
+                round_num = len(rounds) 
+                print(f'Previous Tournament Found ! \nPlease Enter Round {round_num + 1} Before starting a new tournament')
+                existing_tournament(tournament_id, round_num)
+        else:
+            menu.main()
     else:
-        print('no "tournament" table found')
-        menu.main()    
+        menu.main()
+
