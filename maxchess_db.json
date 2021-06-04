@@ -64,18 +64,18 @@
     },
     "tournament": {
         "1": {
-            "name": "Tournament1",
-            "place": "Paris",
-            "date": "02/06/2021",
+            "name": "1",
+            "place": "1",
+            "date": "1",
             "rounds_number": 4,
             "timing_method": "Blitz",
-            "description": "Maxchess",
+            "description": "1",
             "rounds": [
                 [
                     {
                         "name": "Round1",
-                        "datetime_start": "06/02/2021 23:14:28",
-                        "datetime_end": "06/02/2021 23:19:28",
+                        "datetime_start": "06/04/2021 14:22:54",
+                        "datetime_end": "06/04/2021 14:27:54",
                         "matches": [
                             [
                                 [
@@ -90,11 +90,11 @@
                             [
                                 [
                                     "Soy",
-                                    0
+                                    1.0
                                 ],
                                 [
                                     "Rick",
-                                    1.0
+                                    0
                                 ]
                             ],
                             [
@@ -110,11 +110,11 @@
                             [
                                 [
                                     "Stevenson",
-                                    0
+                                    1.0
                                 ],
                                 [
                                     "Lawson",
-                                    1.0
+                                    0
                                 ]
                             ]
                         ],
@@ -128,6 +128,14 @@
                                 "score": 1.0
                             },
                             {
+                                "name": "Max",
+                                "surname": "Soy",
+                                "birthday": "04/11/1995",
+                                "gender": "Male",
+                                "rank": "800",
+                                "score": 1.0
+                            },
+                            {
                                 "name": "John",
                                 "surname": "Steven",
                                 "birthday": "04/12/1989",
@@ -136,28 +144,12 @@
                                 "score": 1.0
                             },
                             {
-                                "name": "Jack",
-                                "surname": "Rick",
-                                "birthday": "05/04/1993",
+                                "name": "Steve",
+                                "surname": "Stevenson",
+                                "birthday": "06/12/1990",
                                 "gender": "Male",
-                                "rank": "600",
+                                "rank": "700",
                                 "score": 1.0
-                            },
-                            {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Max",
-                                "surname": "Soy",
-                                "birthday": "04/11/1995",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 0
                             },
                             {
                                 "name": "Richard",
@@ -168,11 +160,11 @@
                                 "score": 0
                             },
                             {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
+                                "name": "Jack",
+                                "surname": "Rick",
+                                "birthday": "05/04/1993",
                                 "gender": "Male",
-                                "rank": "700",
+                                "rank": "600",
                                 "score": 0
                             },
                             {
@@ -181,14 +173,22 @@
                                 "birthday": "05/05/1985",
                                 "gender": "Male",
                                 "rank": "400",
+                                "score": 0
+                            },
+                            {
+                                "name": "Meredith",
+                                "surname": "Lawson",
+                                "birthday": "09/11/1999",
+                                "gender": "Female",
+                                "rank": "300",
                                 "score": 0
                             }
                         ]
                     },
                     {
                         "name": "Round2",
-                        "datetime_start": "06/02/2021 23:14:31",
-                        "datetime_end": "06/02/2021 23:19:31",
+                        "datetime_start": "06/04/2021 14:22:55",
+                        "datetime_end": "06/04/2021 14:27:55",
                         "matches": [
                             [
                                 [
@@ -196,38 +196,38 @@
                                     2.0
                                 ],
                                 [
-                                    "Steven",
+                                    "Soy",
                                     1.0
                                 ]
                             ],
                             [
                                 [
+                                    "Steven",
+                                    2.0
+                                ],
+                                [
+                                    "Stevenson",
+                                    1.0
+                                ]
+                            ],
+                            [
+                                [
+                                    "Perolto",
+                                    1.0
+                                ],
+                                [
                                     "Rick",
+                                    0
+                                ]
+                            ],
+                            [
+                                [
+                                    "Jacobs",
                                     1.0
                                 ],
                                 [
                                     "Lawson",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Soy",
-                                    1.0
-                                ],
-                                [
-                                    "Perolto",
                                     0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Stevenson",
-                                    0
-                                ],
-                                [
-                                    "Jacobs",
-                                    1.0
                                 ]
                             ]
                         ],
@@ -241,20 +241,12 @@
                                 "score": 2.0
                             },
                             {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 2.0
-                            },
-                            {
                                 "name": "John",
                                 "surname": "Steven",
                                 "birthday": "04/12/1989",
                                 "gender": "Male",
                                 "rank": "800",
-                                "score": 1.0
+                                "score": 2.0
                             },
                             {
                                 "name": "Max",
@@ -265,11 +257,19 @@
                                 "score": 1.0
                             },
                             {
-                                "name": "Jack",
-                                "surname": "Rick",
-                                "birthday": "05/04/1993",
+                                "name": "Steve",
+                                "surname": "Stevenson",
+                                "birthday": "06/12/1990",
                                 "gender": "Male",
-                                "rank": "600",
+                                "rank": "700",
+                                "score": 1.0
+                            },
+                            {
+                                "name": "Richard",
+                                "surname": "Perolto",
+                                "birthday": "07/04/1987",
+                                "gender": "Male",
+                                "rank": "700",
                                 "score": 1.0
                             },
                             {
@@ -281,46 +281,56 @@
                                 "score": 1.0
                             },
                             {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
+                                "name": "Jack",
+                                "surname": "Rick",
+                                "birthday": "05/04/1993",
                                 "gender": "Male",
-                                "rank": "700",
+                                "rank": "600",
                                 "score": 0
                             },
                             {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
+                                "name": "Meredith",
+                                "surname": "Lawson",
+                                "birthday": "09/11/1999",
+                                "gender": "Female",
+                                "rank": "300",
                                 "score": 0
                             }
                         ]
                     },
                     {
                         "name": "Round3",
-                        "datetime_start": "06/02/2021 23:14:35",
-                        "datetime_end": "06/02/2021 23:19:35",
+                        "datetime_start": "06/04/2021 14:22:57",
+                        "datetime_end": "06/04/2021 14:27:57",
                         "matches": [
                             [
                                 [
                                     "Daniels",
-                                    2.0
+                                    3.0
                                 ],
                                 [
-                                    "Lawson",
-                                    3.0
+                                    "Steven",
+                                    2.0
                                 ]
                             ],
                             [
                                 [
-                                    "Steven",
-                                    1.0
-                                ],
-                                [
                                     "Soy",
                                     2.0
+                                ],
+                                [
+                                    "Stevenson",
+                                    1.0
+                                ]
+                            ],
+                            [
+                                [
+                                    "Perolto",
+                                    2.0
+                                ],
+                                [
+                                    "Jacobs",
+                                    1.0
                                 ]
                             ],
                             [
@@ -329,36 +339,26 @@
                                     1.0
                                 ],
                                 [
-                                    "Jacobs",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Perolto",
+                                    "Lawson",
                                     0
-                                ],
-                                [
-                                    "Stevenson",
-                                    1.0
                                 ]
                             ]
                         ],
                         "players": [
-                            {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 3.0
-                            },
                             {
                                 "name": "Bethy",
                                 "surname": "Daniels",
                                 "birthday": "07/08/1984",
                                 "gender": "Female",
                                 "rank": "900",
+                                "score": 3.0
+                            },
+                            {
+                                "name": "John",
+                                "surname": "Steven",
+                                "birthday": "04/12/1989",
+                                "gender": "Male",
+                                "rank": "800",
                                 "score": 2.0
                             },
                             {
@@ -370,20 +370,12 @@
                                 "score": 2.0
                             },
                             {
-                                "name": "Marc",
-                                "surname": "Jacobs",
-                                "birthday": "05/05/1985",
+                                "name": "Richard",
+                                "surname": "Perolto",
+                                "birthday": "07/04/1987",
                                 "gender": "Male",
-                                "rank": "400",
+                                "rank": "700",
                                 "score": 2.0
-                            },
-                            {
-                                "name": "John",
-                                "surname": "Steven",
-                                "birthday": "04/12/1989",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 1.0
                             },
                             {
                                 "name": "Steve",
@@ -402,85 +394,77 @@
                                 "score": 1.0
                             },
                             {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
+                                "name": "Marc",
+                                "surname": "Jacobs",
+                                "birthday": "05/05/1985",
                                 "gender": "Male",
-                                "rank": "700",
+                                "rank": "400",
+                                "score": 1.0
+                            },
+                            {
+                                "name": "Meredith",
+                                "surname": "Lawson",
+                                "birthday": "09/11/1999",
+                                "gender": "Female",
+                                "rank": "300",
                                 "score": 0
                             }
                         ]
                     },
                     {
                         "name": "Round4",
-                        "datetime_start": "06/02/2021 23:14:38",
-                        "datetime_end": "06/02/2021 23:19:38",
+                        "datetime_start": "06/04/2021 14:22:58",
+                        "datetime_end": "06/04/2021 14:27:58",
                         "matches": [
                             [
                                 [
-                                    "Lawson",
+                                    "Daniels",
                                     4.0
                                 ],
                                 [
-                                    "Daniels",
+                                    "Steven",
                                     2.0
                                 ]
                             ],
                             [
                                 [
                                     "Soy",
-                                    2.0
-                                ],
-                                [
-                                    "Jacobs",
                                     3.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Steven",
-                                    2.0
-                                ],
-                                [
-                                    "Stevenson",
-                                    1.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Rick",
-                                    1.0
                                 ],
                                 [
                                     "Perolto",
+                                    2.0
+                                ]
+                            ],
+                            [
+                                [
+                                    "Stevenson",
+                                    2.0
+                                ],
+                                [
+                                    "Rick",
                                     1.0
+                                ]
+                            ],
+                            [
+                                [
+                                    "Jacobs",
+                                    2.0
+                                ],
+                                [
+                                    "Lawson",
+                                    0
                                 ]
                             ]
                         ],
                         "players": [
-                            {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 4.0
-                            },
-                            {
-                                "name": "Marc",
-                                "surname": "Jacobs",
-                                "birthday": "05/05/1985",
-                                "gender": "Male",
-                                "rank": "400",
-                                "score": 3.0
-                            },
                             {
                                 "name": "Bethy",
                                 "surname": "Daniels",
                                 "birthday": "07/08/1984",
                                 "gender": "Female",
                                 "rank": "900",
-                                "score": 2.0
+                                "score": 4.0
                             },
                             {
                                 "name": "Max",
@@ -488,7 +472,7 @@
                                 "birthday": "04/11/1995",
                                 "gender": "Male",
                                 "rank": "800",
-                                "score": 2.0
+                                "score": 3.0
                             },
                             {
                                 "name": "John",
@@ -499,20 +483,28 @@
                                 "score": 2.0
                             },
                             {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 1.0
-                            },
-                            {
                                 "name": "Richard",
                                 "surname": "Perolto",
                                 "birthday": "07/04/1987",
                                 "gender": "Male",
                                 "rank": "700",
-                                "score": 1.0
+                                "score": 2.0
+                            },
+                            {
+                                "name": "Steve",
+                                "surname": "Stevenson",
+                                "birthday": "06/12/1990",
+                                "gender": "Male",
+                                "rank": "700",
+                                "score": 2.0
+                            },
+                            {
+                                "name": "Marc",
+                                "surname": "Jacobs",
+                                "birthday": "05/05/1985",
+                                "gender": "Male",
+                                "rank": "400",
+                                "score": 2.0
                             },
                             {
                                 "name": "Jack",
@@ -521,6 +513,14 @@
                                 "gender": "Male",
                                 "rank": "600",
                                 "score": 1.0
+                            },
+                            {
+                                "name": "Meredith",
+                                "surname": "Lawson",
+                                "birthday": "09/11/1999",
+                                "gender": "Female",
+                                "rank": "300",
+                                "score": 0
                             }
                         ]
                     }
@@ -529,482 +529,17 @@
             "status": true
         },
         "2": {
-            "name": "Tournament 2",
-            "place": "06/06/2021",
-            "date": "06/06/2021",
+            "name": "2",
+            "place": "2",
+            "date": "2",
             "rounds_number": 4,
             "timing_method": "Blitz",
-            "description": "Maxchess",
-            "rounds": [
-                [
-                    {
-                        "name": "Round1",
-                        "datetime_start": "06/02/2021 23:15:14",
-                        "datetime_end": "06/02/2021 23:20:14",
-                        "matches": [
-                            [
-                                [
-                                    "Daniels",
-                                    1.0
-                                ],
-                                [
-                                    "Perolto",
-                                    0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Soy",
-                                    0
-                                ],
-                                [
-                                    "Rick",
-                                    1.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Steven",
-                                    1.0
-                                ],
-                                [
-                                    "Jacobs",
-                                    0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Stevenson",
-                                    0
-                                ],
-                                [
-                                    "Lawson",
-                                    1.0
-                                ]
-                            ]
-                        ],
-                        "players": [
-                            {
-                                "name": "Bethy",
-                                "surname": "Daniels",
-                                "birthday": "07/08/1984",
-                                "gender": "Female",
-                                "rank": "900",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "John",
-                                "surname": "Steven",
-                                "birthday": "04/12/1989",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Jack",
-                                "surname": "Rick",
-                                "birthday": "05/04/1993",
-                                "gender": "Male",
-                                "rank": "600",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Max",
-                                "surname": "Soy",
-                                "birthday": "04/11/1995",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 0
-                            },
-                            {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 0
-                            },
-                            {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 0
-                            },
-                            {
-                                "name": "Marc",
-                                "surname": "Jacobs",
-                                "birthday": "05/05/1985",
-                                "gender": "Male",
-                                "rank": "400",
-                                "score": 0
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Round2",
-                        "datetime_start": "06/02/2021 23:15:17",
-                        "datetime_end": "06/02/2021 23:20:17",
-                        "matches": [
-                            [
-                                [
-                                    "Daniels",
-                                    2.0
-                                ],
-                                [
-                                    "Steven",
-                                    1.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Rick",
-                                    1.0
-                                ],
-                                [
-                                    "Lawson",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Soy",
-                                    1.0
-                                ],
-                                [
-                                    "Perolto",
-                                    0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Stevenson",
-                                    0
-                                ],
-                                [
-                                    "Jacobs",
-                                    1.0
-                                ]
-                            ]
-                        ],
-                        "players": [
-                            {
-                                "name": "Bethy",
-                                "surname": "Daniels",
-                                "birthday": "07/08/1984",
-                                "gender": "Female",
-                                "rank": "900",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "John",
-                                "surname": "Steven",
-                                "birthday": "04/12/1989",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Max",
-                                "surname": "Soy",
-                                "birthday": "04/11/1995",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Jack",
-                                "surname": "Rick",
-                                "birthday": "05/04/1993",
-                                "gender": "Male",
-                                "rank": "600",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Marc",
-                                "surname": "Jacobs",
-                                "birthday": "05/05/1985",
-                                "gender": "Male",
-                                "rank": "400",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 0
-                            },
-                            {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 0
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Round3",
-                        "datetime_start": "06/02/2021 23:15:20",
-                        "datetime_end": "06/02/2021 23:20:20",
-                        "matches": [
-                            [
-                                [
-                                    "Daniels",
-                                    3.0
-                                ],
-                                [
-                                    "Lawson",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Steven",
-                                    1.0
-                                ],
-                                [
-                                    "Soy",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Rick",
-                                    2.0
-                                ],
-                                [
-                                    "Jacobs",
-                                    1.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Perolto",
-                                    0
-                                ],
-                                [
-                                    "Stevenson",
-                                    1.0
-                                ]
-                            ]
-                        ],
-                        "players": [
-                            {
-                                "name": "Bethy",
-                                "surname": "Daniels",
-                                "birthday": "07/08/1984",
-                                "gender": "Female",
-                                "rank": "900",
-                                "score": 3.0
-                            },
-                            {
-                                "name": "Max",
-                                "surname": "Soy",
-                                "birthday": "04/11/1995",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "Jack",
-                                "surname": "Rick",
-                                "birthday": "05/04/1993",
-                                "gender": "Male",
-                                "rank": "600",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "John",
-                                "surname": "Steven",
-                                "birthday": "04/12/1989",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Marc",
-                                "surname": "Jacobs",
-                                "birthday": "05/05/1985",
-                                "gender": "Male",
-                                "rank": "400",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 0
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Round4",
-                        "datetime_start": "06/02/2021 23:15:24",
-                        "datetime_end": "06/02/2021 23:20:24",
-                        "matches": [
-                            [
-                                [
-                                    "Lawson",
-                                    4.0
-                                ],
-                                [
-                                    "Daniels",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Soy",
-                                    2.0
-                                ],
-                                [
-                                    "Jacobs",
-                                    3.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Steven",
-                                    2.0
-                                ],
-                                [
-                                    "Stevenson",
-                                    1.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Rick",
-                                    1.0
-                                ],
-                                [
-                                    "Perolto",
-                                    1.0
-                                ]
-                            ]
-                        ],
-                        "players": [
-                            {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 4.0
-                            },
-                            {
-                                "name": "Marc",
-                                "surname": "Jacobs",
-                                "birthday": "05/05/1985",
-                                "gender": "Male",
-                                "rank": "400",
-                                "score": 3.0
-                            },
-                            {
-                                "name": "Bethy",
-                                "surname": "Daniels",
-                                "birthday": "07/08/1984",
-                                "gender": "Female",
-                                "rank": "900",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "Max",
-                                "surname": "Soy",
-                                "birthday": "04/11/1995",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "John",
-                                "surname": "Steven",
-                                "birthday": "04/12/1989",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Jack",
-                                "surname": "Rick",
-                                "birthday": "05/04/1993",
-                                "gender": "Male",
-                                "rank": "600",
-                                "score": 1.0
-                            }
-                        ]
-                    }
-                ]
-            ],
-            "status": true
-        },
-        "3": {
-            "name": "Tournament 3",
-            "place": "Paris",
-            "date": "05/05/2022",
-            "rounds_number": 4,
-            "timing_method": "Blitz",
-            "description": "Maxchess",
+            "description": "2",
             "rounds": [
                 {
                     "name": "Round1",
-                    "datetime_start": "06/02/2021 23:15:43",
-                    "datetime_end": "06/02/2021 23:20:43",
+                    "datetime_start": "06/04/2021 14:24:29",
+                    "datetime_end": "06/04/2021 14:29:29",
                     "matches": [
                         [
                             [
@@ -1116,73 +651,65 @@
                 },
                 {
                     "name": "Round2",
-                    "datetime_start": "06/02/2021 23:15:47",
-                    "datetime_end": "06/02/2021 23:20:47",
+                    "datetime_start": "06/04/2021 14:24:30",
+                    "datetime_end": "06/04/2021 14:29:30",
                     "matches": [
                         [
                             [
                                 "Daniels",
-                                2.0
-                            ],
-                            [
-                                "Steven",
-                                1.0
-                            ]
-                        ],
-                        [
-                            [
-                                "Rick",
                                 1.0
                             ],
-                            [
-                                "Lawson",
-                                2.0
-                            ]
-                        ],
-                        [
                             [
                                 "Soy",
                                 1.0
+                            ]
+                        ],
+                        [
+                            [
+                                "Steven",
+                                1.0
                             ],
                             [
+                                "Stevenson",
+                                2.0
+                            ]
+                        ],
+                        [
+                            [
                                 "Perolto",
+                                1.0
+                            ],
+                            [
+                                "Rick",
                                 0
                             ]
                         ],
                         [
                             [
-                                "Stevenson",
+                                "Jacobs",
                                 0
                             ],
                             [
-                                "Jacobs",
+                                "Lawson",
                                 1.0
                             ]
                         ]
                     ],
                     "players": [
                         {
+                            "name": "Steve",
+                            "surname": "Stevenson",
+                            "birthday": "06/12/1990",
+                            "gender": "Male",
+                            "rank": "700",
+                            "score": 2.0
+                        },
+                        {
                             "name": "Bethy",
                             "surname": "Daniels",
                             "birthday": "07/08/1984",
                             "gender": "Female",
                             "rank": "900",
-                            "score": 2.0
-                        },
-                        {
-                            "name": "Meredith",
-                            "surname": "Lawson",
-                            "birthday": "09/11/1999",
-                            "gender": "Female",
-                            "rank": "300",
-                            "score": 2.0
-                        },
-                        {
-                            "name": "John",
-                            "surname": "Steven",
-                            "birthday": "04/12/1989",
-                            "gender": "Male",
-                            "rank": "800",
                             "score": 1.0
                         },
                         {
@@ -1194,19 +721,11 @@
                             "score": 1.0
                         },
                         {
-                            "name": "Jack",
-                            "surname": "Rick",
-                            "birthday": "05/04/1993",
+                            "name": "John",
+                            "surname": "Steven",
+                            "birthday": "04/12/1989",
                             "gender": "Male",
-                            "rank": "600",
-                            "score": 1.0
-                        },
-                        {
-                            "name": "Marc",
-                            "surname": "Jacobs",
-                            "birthday": "05/05/1985",
-                            "gender": "Male",
-                            "rank": "400",
+                            "rank": "800",
                             "score": 1.0
                         },
                         {
@@ -1215,80 +734,88 @@
                             "birthday": "07/04/1987",
                             "gender": "Male",
                             "rank": "700",
+                            "score": 1.0
+                        },
+                        {
+                            "name": "Meredith",
+                            "surname": "Lawson",
+                            "birthday": "09/11/1999",
+                            "gender": "Female",
+                            "rank": "300",
+                            "score": 1.0
+                        },
+                        {
+                            "name": "Jack",
+                            "surname": "Rick",
+                            "birthday": "05/04/1993",
+                            "gender": "Male",
+                            "rank": "600",
                             "score": 0
                         },
                         {
-                            "name": "Steve",
-                            "surname": "Stevenson",
-                            "birthday": "06/12/1990",
+                            "name": "Marc",
+                            "surname": "Jacobs",
+                            "birthday": "05/05/1985",
                             "gender": "Male",
-                            "rank": "700",
+                            "rank": "400",
                             "score": 0
                         }
                     ]
                 },
                 {
                     "name": "Round3",
-                    "datetime_start": "06/02/2021 23:15:51",
-                    "datetime_end": "06/02/2021 23:20:51",
+                    "datetime_start": "06/04/2021 14:24:32",
+                    "datetime_end": "06/04/2021 14:29:32",
                     "matches": [
                         [
                             [
                                 "Daniels",
-                                2.0
-                            ],
-                            [
-                                "Lawson",
                                 3.0
-                            ]
-                        ],
-                        [
+                            ],
                             [
                                 "Steven",
                                 2.0
-                            ],
-                            [
-                                "Soy",
-                                1.0
                             ]
                         ],
                         [
                             [
-                                "Rick",
+                                "Soy",
                                 1.0
                             ],
                             [
-                                "Jacobs",
+                                "Stevenson",
                                 2.0
                             ]
                         ],
                         [
                             [
                                 "Perolto",
-                                1.0
+                                2.0
                             ],
                             [
-                                "Stevenson",
+                                "Jacobs",
+                                1.0
+                            ]
+                        ],
+                        [
+                            [
+                                "Rick",
                                 0
+                            ],
+                            [
+                                "Lawson",
+                                1.0
                             ]
                         ]
                     ],
                     "players": [
-                        {
-                            "name": "Meredith",
-                            "surname": "Lawson",
-                            "birthday": "09/11/1999",
-                            "gender": "Female",
-                            "rank": "300",
-                            "score": 3.0
-                        },
                         {
                             "name": "Bethy",
                             "surname": "Daniels",
                             "birthday": "07/08/1984",
                             "gender": "Female",
                             "rank": "900",
-                            "score": 2.0
+                            "score": 3.0
                         },
                         {
                             "name": "John",
@@ -1299,11 +826,19 @@
                             "score": 2.0
                         },
                         {
-                            "name": "Marc",
-                            "surname": "Jacobs",
-                            "birthday": "05/05/1985",
+                            "name": "Steve",
+                            "surname": "Stevenson",
+                            "birthday": "06/12/1990",
                             "gender": "Male",
-                            "rank": "400",
+                            "rank": "700",
+                            "score": 2.0
+                        },
+                        {
+                            "name": "Richard",
+                            "surname": "Perolto",
+                            "birthday": "07/04/1987",
+                            "gender": "Male",
+                            "rank": "700",
                             "score": 2.0
                         },
                         {
@@ -1315,11 +850,19 @@
                             "score": 1.0
                         },
                         {
-                            "name": "Richard",
-                            "surname": "Perolto",
-                            "birthday": "07/04/1987",
+                            "name": "Marc",
+                            "surname": "Jacobs",
+                            "birthday": "05/05/1985",
                             "gender": "Male",
-                            "rank": "700",
+                            "rank": "400",
+                            "score": 1.0
+                        },
+                        {
+                            "name": "Meredith",
+                            "surname": "Lawson",
+                            "birthday": "09/11/1999",
+                            "gender": "Female",
+                            "rank": "300",
                             "score": 1.0
                         },
                         {
@@ -1328,14 +871,6 @@
                             "birthday": "05/04/1993",
                             "gender": "Male",
                             "rank": "600",
-                            "score": 1.0
-                        },
-                        {
-                            "name": "Steve",
-                            "surname": "Stevenson",
-                            "birthday": "06/12/1990",
-                            "gender": "Male",
-                            "rank": "700",
                             "score": 0
                         }
                     ]
@@ -1343,16 +878,16 @@
                 [
                     {
                         "name": "Round4",
-                        "datetime_start": "06/02/2021 23:16:01",
-                        "datetime_end": "06/02/2021 23:21:01",
+                        "datetime_start": "06/04/2021 14:25:12",
+                        "datetime_end": "06/04/2021 14:30:12",
                         "matches": [
                             [
                                 [
-                                    "Lawson",
+                                    "Daniels",
                                     4.0
                                 ],
                                 [
-                                    "Daniels",
+                                    "Steven",
                                     2.0
                                 ]
                             ],
@@ -1362,54 +897,54 @@
                                     2.0
                                 ],
                                 [
-                                    "Jacobs",
+                                    "Perolto",
                                     3.0
                                 ]
                             ],
                             [
                                 [
-                                    "Steven",
+                                    "Stevenson",
                                     2.0
                                 ],
                                 [
-                                    "Stevenson",
+                                    "Rick",
                                     1.0
                                 ]
                             ],
                             [
                                 [
-                                    "Rick",
+                                    "Jacobs",
                                     1.0
                                 ],
                                 [
-                                    "Perolto",
+                                    "Lawson",
                                     1.0
                                 ]
                             ]
                         ],
                         "players": [
                             {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
+                                "name": "Bethy",
+                                "surname": "Daniels",
+                                "birthday": "07/08/1984",
                                 "gender": "Female",
-                                "rank": "300",
+                                "rank": "900",
                                 "score": 4.0
                             },
                             {
-                                "name": "Marc",
-                                "surname": "Jacobs",
-                                "birthday": "05/05/1985",
+                                "name": "Richard",
+                                "surname": "Perolto",
+                                "birthday": "07/04/1987",
                                 "gender": "Male",
-                                "rank": "400",
+                                "rank": "700",
                                 "score": 3.0
                             },
                             {
-                                "name": "Bethy",
-                                "surname": "Daniels",
-                                "birthday": "07/08/1984",
-                                "gender": "Female",
-                                "rank": "900",
+                                "name": "John",
+                                "surname": "Steven",
+                                "birthday": "04/12/1989",
+                                "gender": "Male",
+                                "rank": "800",
                                 "score": 2.0
                             },
                             {
@@ -1421,114 +956,12 @@
                                 "score": 2.0
                             },
                             {
-                                "name": "John",
-                                "surname": "Steven",
-                                "birthday": "04/12/1989",
+                                "name": "Steve",
+                                "surname": "Stevenson",
+                                "birthday": "06/12/1990",
                                 "gender": "Male",
-                                "rank": "800",
+                                "rank": "700",
                                 "score": 2.0
-                            },
-                            {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Jack",
-                                "surname": "Rick",
-                                "birthday": "05/04/1993",
-                                "gender": "Male",
-                                "rank": "600",
-                                "score": 1.0
-                            }
-                        ]
-                    }
-                ]
-            ],
-            "status": true
-        },
-        "4": {
-            "name": "Tournament 4",
-            "place": "1",
-            "date": "1",
-            "rounds_number": 4,
-            "timing_method": "Blitz",
-            "description": "1",
-            "rounds": [
-                [
-                    {
-                        "name": "Round1",
-                        "datetime_start": "06/02/2021 23:28:12",
-                        "datetime_end": "06/02/2021 23:33:12",
-                        "matches": [
-                            [
-                                [
-                                    "Daniels",
-                                    0
-                                ],
-                                [
-                                    "Perolto",
-                                    1.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Soy",
-                                    0
-                                ],
-                                [
-                                    "Rick",
-                                    1.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Steven",
-                                    0
-                                ],
-                                [
-                                    "Jacobs",
-                                    1.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Stevenson",
-                                    1.0
-                                ],
-                                [
-                                    "Lawson",
-                                    0
-                                ]
-                            ]
-                        ],
-                        "players": [
-                            {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 1.0
                             },
                             {
                                 "name": "Jack",
@@ -1545,30 +978,6 @@
                                 "gender": "Male",
                                 "rank": "400",
                                 "score": 1.0
-                            },
-                            {
-                                "name": "Bethy",
-                                "surname": "Daniels",
-                                "birthday": "07/08/1984",
-                                "gender": "Female",
-                                "rank": "900",
-                                "score": 0
-                            },
-                            {
-                                "name": "Max",
-                                "surname": "Soy",
-                                "birthday": "04/11/1995",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 0
-                            },
-                            {
-                                "name": "John",
-                                "surname": "Steven",
-                                "birthday": "04/12/1989",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 0
                             },
                             {
                                 "name": "Meredith",
@@ -1576,346 +985,7 @@
                                 "birthday": "09/11/1999",
                                 "gender": "Female",
                                 "rank": "300",
-                                "score": 0
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Round2",
-                        "datetime_start": "06/02/2021 23:28:15",
-                        "datetime_end": "06/02/2021 23:33:15",
-                        "matches": [
-                            [
-                                [
-                                    "Daniels",
-                                    2.0
-                                ],
-                                [
-                                    "Steven",
-                                    1.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Rick",
-                                    1.0
-                                ],
-                                [
-                                    "Lawson",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Soy",
-                                    1.0
-                                ],
-                                [
-                                    "Perolto",
-                                    0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Stevenson",
-                                    0
-                                ],
-                                [
-                                    "Jacobs",
-                                    1.0
-                                ]
-                            ]
-                        ],
-                        "players": [
-                            {
-                                "name": "Bethy",
-                                "surname": "Daniels",
-                                "birthday": "07/08/1984",
-                                "gender": "Female",
-                                "rank": "900",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "John",
-                                "surname": "Steven",
-                                "birthday": "04/12/1989",
-                                "gender": "Male",
-                                "rank": "800",
                                 "score": 1.0
-                            },
-                            {
-                                "name": "Max",
-                                "surname": "Soy",
-                                "birthday": "04/11/1995",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Jack",
-                                "surname": "Rick",
-                                "birthday": "05/04/1993",
-                                "gender": "Male",
-                                "rank": "600",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Marc",
-                                "surname": "Jacobs",
-                                "birthday": "05/05/1985",
-                                "gender": "Male",
-                                "rank": "400",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 0
-                            },
-                            {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 0
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Round3",
-                        "datetime_start": "06/02/2021 23:28:18",
-                        "datetime_end": "06/02/2021 23:33:18",
-                        "matches": [
-                            [
-                                [
-                                    "Daniels",
-                                    3.0
-                                ],
-                                [
-                                    "Lawson",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Steven",
-                                    1.0
-                                ],
-                                [
-                                    "Soy",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Rick",
-                                    2.0
-                                ],
-                                [
-                                    "Jacobs",
-                                    1.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Perolto",
-                                    0
-                                ],
-                                [
-                                    "Stevenson",
-                                    1.0
-                                ]
-                            ]
-                        ],
-                        "players": [
-                            {
-                                "name": "Bethy",
-                                "surname": "Daniels",
-                                "birthday": "07/08/1984",
-                                "gender": "Female",
-                                "rank": "900",
-                                "score": 3.0
-                            },
-                            {
-                                "name": "Max",
-                                "surname": "Soy",
-                                "birthday": "04/11/1995",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "Jack",
-                                "surname": "Rick",
-                                "birthday": "05/04/1993",
-                                "gender": "Male",
-                                "rank": "600",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "John",
-                                "surname": "Steven",
-                                "birthday": "04/12/1989",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Marc",
-                                "surname": "Jacobs",
-                                "birthday": "05/05/1985",
-                                "gender": "Male",
-                                "rank": "400",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 0
-                            }
-                        ]
-                    },
-                    {
-                        "name": "Round4",
-                        "datetime_start": "06/02/2021 23:28:21",
-                        "datetime_end": "06/02/2021 23:33:21",
-                        "matches": [
-                            [
-                                [
-                                    "Lawson",
-                                    3.0
-                                ],
-                                [
-                                    "Daniels",
-                                    3.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Soy",
-                                    3.0
-                                ],
-                                [
-                                    "Jacobs",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Steven",
-                                    1.0
-                                ],
-                                [
-                                    "Stevenson",
-                                    2.0
-                                ]
-                            ],
-                            [
-                                [
-                                    "Rick",
-                                    2.0
-                                ],
-                                [
-                                    "Perolto",
-                                    0
-                                ]
-                            ]
-                        ],
-                        "players": [
-                            {
-                                "name": "Bethy",
-                                "surname": "Daniels",
-                                "birthday": "07/08/1984",
-                                "gender": "Female",
-                                "rank": "900",
-                                "score": 3.0
-                            },
-                            {
-                                "name": "Max",
-                                "surname": "Soy",
-                                "birthday": "04/11/1995",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 3.0
-                            },
-                            {
-                                "name": "Meredith",
-                                "surname": "Lawson",
-                                "birthday": "09/11/1999",
-                                "gender": "Female",
-                                "rank": "300",
-                                "score": 3.0
-                            },
-                            {
-                                "name": "Steve",
-                                "surname": "Stevenson",
-                                "birthday": "06/12/1990",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "Jack",
-                                "surname": "Rick",
-                                "birthday": "05/04/1993",
-                                "gender": "Male",
-                                "rank": "600",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "Marc",
-                                "surname": "Jacobs",
-                                "birthday": "05/05/1985",
-                                "gender": "Male",
-                                "rank": "400",
-                                "score": 2.0
-                            },
-                            {
-                                "name": "John",
-                                "surname": "Steven",
-                                "birthday": "04/12/1989",
-                                "gender": "Male",
-                                "rank": "800",
-                                "score": 1.0
-                            },
-                            {
-                                "name": "Richard",
-                                "surname": "Perolto",
-                                "birthday": "07/04/1987",
-                                "gender": "Male",
-                                "rank": "700",
-                                "score": 0
                             }
                         ]
                     }
