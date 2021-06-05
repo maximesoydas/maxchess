@@ -41,8 +41,7 @@ def new_tournament():
     ).save()
     round_num = 0
     for rounds in range(4):
-        # reset the rounds_table to an empty list (avoiding duplicates)
-        rounds_table = []
+        # rounds_table = []
         round_num = round_num + 1
         round_name = f"Round{round_num}"
         # after fecthing the correct round_name
@@ -51,8 +50,9 @@ def new_tournament():
         db = TinyDB('maxchess_db.json')
         TinyDB.default_table_name = 'Rounds'
         rounds = db.all()
+        print(rounds)
         # append current round to the rounds_table list
-        rounds_table.append(rounds)
+        # rounds_table.append(rounds)
         db.drop_table('Rounds')
         db = TinyDB('maxchess_db.json')
         TinyDB.default_table_name = 'tournament'
@@ -60,7 +60,9 @@ def new_tournament():
         this_tournament.doc_id
         document_id= this_tournament.doc_id
         # update the tournament table's rounds to the rounds_table list
-        db.update({'rounds': rounds_table}, Query().rounds.exists(), doc_ids=[document_id])
+        # db.update({'rounds': rounds_table}, Query().rounds.exists(), doc_ids=[document_id])
+        db.update({'rounds': rounds}, Query().rounds.exists(), doc_ids=[document_id])
+
     tournament_data = db.get(doc_id=document_id)
     best_player_name = tournament_data['rounds'][0][-1]['players'][0]['name']
     best_player_surname = tournament_data['rounds'][0][-1]['players'][0]['surname']
@@ -78,36 +80,36 @@ def existing_tournament(tournament_id, round_num):
     TinyDB.default_table_name = 'tournament'
     tournament_data = db.get(doc_id=tournament_id)
     # re-update the rounds_table variable with the latest table data
-    rounds_table = tournament_data['rounds'][0]
+    rounds_table = tournament_data['rounds']
+    print(rounds_table)
     for round in range(4-int(round_num)):
         round_num = int(round_num) + 1
         round_name = f"Round{round_num}"
         # after fecthing the correct round_name
         # call the add_round() function
+        print(round_name)
         round_controller.add_round(round_name)
         db = TinyDB('maxchess_db.json')
         TinyDB.default_table_name = 'Rounds'
         rounds = db.all()
-        # append current round to the rounds_table list
-        rounds_table.append(rounds)
         db.drop_table('Rounds')
+        print('this is rounds')
+        print(rounds)
+        # append current round to the rounds_table list
+        rounds_table.append(rounds[-1])
+        print('this is rounds_table')
+        print(rounds_table)
         db = TinyDB('maxchess_db.json')
         TinyDB.default_table_name = 'tournament'
         # update the tournament table's rounds to the rounds_table list
         db.update({'rounds': rounds_table}, Query().rounds.exists(), doc_ids=[tournament_id])
-        rounds_table = []
     tournament_data = db.get(doc_id=tournament_id)
-    best_player_name = tournament_data['rounds'][0][-1]['players'][0]['name']
-    best_player_surname = tournament_data['rounds'][0][-1]['players'][0]['surname']
-    print('Round Added Successfully !')
+    best_player_name = tournament_data['rounds'][-1]['players'][0]['name']
+    best_player_surname = tournament_data['rounds'][-1]['players'][0]['surname']
     print('Tournament Updated Successfully')
     print(f"Winner of this Tournament is {best_player_name} {best_player_surname}")
-    return menu.main()
+    quit()
 
-
-def tournament_exists():
-
-    pass
 
 def check_tournament():
     db = TinyDB('maxchess_db.json')
@@ -116,10 +118,11 @@ def check_tournament():
     all_tournaments = db.all()
     if all_tournaments:
         tournament_id = all_tournaments[-1].doc_id
-        rounds = all_tournaments[-1]['rounds'][0]
+        rounds = all_tournaments[-1]['rounds']
+        print(len(rounds))
         if len(rounds) < 4:            
             while len(rounds) < 4:
-                round_num = len(rounds) 
+                round_num = len(rounds)
                 print(f'Previous Tournament Found ! \nPlease Enter Round {round_num + 1} Before starting a new tournament')
                 existing_tournament(tournament_id, round_num)
         else:
