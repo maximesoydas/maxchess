@@ -1,0 +1,9 @@
+ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
++-------+-------+-------+-------+-------+------------+------------+------------+
+{% for tournament in tournament %}{% if loop.last %}#{{ tournament.doc_id }} | {{ tournament.name }} | {{ tournament.date }} | {{ tournament.rounds_number }} | {{ tournament.timing_method }} | {{ tournament.description }}
++-------+-------+-------+-------+-------+------------+------------+------------+
+                          FINAL    ROUND 
+                            SCOREBOARD
++-------+-------+-------+-------+-------+------------+------------+------------+ {% for round in tournament.rounds %}{% if loop.last %}{% for player in round.players %}
+    POSITION: {{ loop.index }}  |  Mrs/Mr.{{ player.surname }}  |  RANK: {{ player.rank }}  |  SCORE :  {{ player.score }} {% endfor %}{% endif %}{% endfor %}{% endif %}{% endfor %}
+

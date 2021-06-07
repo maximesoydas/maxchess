@@ -18,8 +18,7 @@ def tournament():
     ♙ Welcome to the tournaments' Menu ♙
 
     [1] Start New Tournament
-    [2] Resume Tournament
-    [3] Exit to Main Menu ↵
+    [2] Exit to Main Menu ↵
 
     """)
 
@@ -42,47 +41,23 @@ def player():
     
     ♙ Welcome to the players' Menu ♙
 
-    [1] Add Player
-    [2] View Players
-    [3] Delete Players
-    [4] Exit to Main Menu ↵
-
-    """)
-
-
-
-
-# CREATE ROUNDS
-def round():
-    print("""
-    
-    ♙ Welcome to the First Round's Menu ♙
-
-    [1] Start First Round
-    [2] View Rounds
-    [3] Delete Rounds 
-    [4] Exit to Main Menu ↵
-
-    """)
-
-def rounds():
-    print("""
-    
-    ♙ Welcome to the Rounds' Menu ♙
-
-    [1] Start Next Round
+    [1] Add Players List (8 Players)
+    [2] Delete Players List
     [3] Exit to Main Menu ↵
 
     """)
 
-def rounds_results():
+# Remove Players
+def remove_players():
     print("""
     
-    ♙ Welcome to the Rounds' Menu ♙
-
-    [1] View all Rounds Results
-    [3] Exit to Main Menu ↵
-
+    Remove Players List by:
+    
+    [1] Players List ID
+    [2] Players List Name
+    [3] All Players List
+    [4] Exit ↵
+    
     """)
 
 
@@ -93,7 +68,27 @@ def reports():
     
     ♙ Welcome to the reports' Menu ♙
 
-    [1] View Reports
+    [1] View Players Reports
+    [2] View Tournament Reports
+    [3] Exit to Main Menu ↵
+
+    """)
+
+def players_reports():
+    print("""
+    ♙ Players reports' Menu ♙
+    [1] View Latest Players report
+    [2] View All Players Reports
+    [3] Exit to Main Menu ↵
+
+    """)
+
+
+def tournament_reports():
+    print("""
+    ♙ Tournament reports' Menu ♙
+    [1] View Latest Tournament report
+    [2] View All Tournament Reports
     [3] Exit to Main Menu ↵
 
     """)

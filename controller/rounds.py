@@ -1,13 +1,8 @@
 from model import rounds as round_model
-from model import player_tournament as player_model
-from controller import tournament as tournament_controller
 from controller import player as player_controller
 from tinydb import TinyDB, Query, where
 import datetime
-from datetime import timedelta
 from operator import *
-import itertools
-
 
 def sort_players(round_name, list_name):
     '''
@@ -30,9 +25,10 @@ def sort_players(round_name, list_name):
         #get previous round data
         round_name = round_name.replace('Round', '')
         round_name = f'Round{int(round_name) - 1}'
-        print(round_name)
         sorted_players = db.search(where('rounds')[0]['name'] == round_name)
-        sorted_players = sorted_players[0]['rounds'][0]['players']
+        print(sorted_players)
+        print(sorted_players[-1])
+        sorted_players = sorted_players[-1]['rounds'][0]['players']
         sorted_players.sort(key=itemgetter('score'), reverse=True)
     elif round_name == "Round3":
         #define database, and rounds table
@@ -41,9 +37,8 @@ def sort_players(round_name, list_name):
         #get previous round data
         round_name = round_name.replace('Round', '')
         round_name = f'Round{int(round_name) - 1}'
-        print(round_name)
         sorted_players = db.search(where('rounds')[1]['name'] == round_name)
-        sorted_players = sorted_players[0]['rounds'][1]['players']
+        sorted_players = sorted_players[-1]['rounds'][1]['players']
         sorted_players.sort(key=itemgetter('score'), reverse=True)
     elif round_name == "Round4":
         #define database, and rounds table
@@ -52,9 +47,8 @@ def sort_players(round_name, list_name):
         #get previous round data
         round_name = round_name.replace('Round', '')
         round_name = f'Round{int(round_name) - 1}'
-        print(round_name)
         sorted_players = db.search(where('rounds')[2]['name'] == round_name)
-        sorted_players = sorted_players[0]['rounds'][2]['players']
+        sorted_players = sorted_players[-1]['rounds'][2]['players']
         sorted_players.sort(key=itemgetter('score'), reverse=True)
     else:
         print('Inccorect Round name')

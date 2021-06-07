@@ -1,9 +1,9 @@
-{% for player in players %} 
-ID    |    PLAYERS LIST NAME     | 
+
+{% for player in players %} {% if loop.last %}ID    |    PLAYERS LIST NAME     | 
 +-------+-------+-------+-------+-------+------------+
 {{ player.doc_id }}     |         {{ player.list_name }}        | 
 +-------+-------+-------+-------+-------+------------+
 NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
 +-------+-------+-------+-------+-------+------------+
 {% for player in player.players %}{{ player.surname }}  |   {{ player.birthday }}   |   {{ player.gender }} |   {{ player.rank }}
-{% endfor %}{% endfor %}
+{% endfor %}{% endif %}{% endfor %}

@@ -10,12 +10,12 @@ templateEnv = Environment(loader=templateLoader)
 
 
 def view_text():
-    tmpl = Path(__file__).parent / 'template' / 'players.txt'
+    tmpl = Path(__file__).parent / 'template' / 'last_players.txt'
     # ic(tmpl)
     assert tmpl.exists(), "Template not found !!"
     #output = tmpl.open().read()
     # ic(player.all.items)
-    player_table = templateEnv.get_template('players.txt').render(players = player.all.items)
+    player_table = templateEnv.get_template('last_players.txt').render(players = player.all.items)
     ic(player_table)
 
     with open(f"./view/tables/players.txt", "w") as f:

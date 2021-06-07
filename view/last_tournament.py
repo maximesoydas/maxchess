@@ -10,30 +10,30 @@ templateEnv = Environment(loader=templateLoader)
 
 
 def view_text():
-    tmpl = Path(__file__).parent / 'template' / 'tournaments.txt'
+    tmpl = Path(__file__).parent / 'template' / 'last_tournament.txt'
     # ic(tmpl)
     assert tmpl.exists(), "Template not found !!"
     #output = tmpl.open().read()
     # ic(rounds.all.items)
-    tournaments = templateEnv.get_template('tournaments.txt').render(tournament = tournament.all.items)
+    tournaments = templateEnv.get_template('last_tournament.txt').render(tournament = tournament.all.items)
     ic(tournaments)
 
-    with open(f"./view/tables/rounds.txt", "w") as f:
+    with open(f"./view/tables/last_tournament.txt", "w") as f:
         f.write(tournaments)
     # jinja !!!
 
 def view_html():
-    tmpl = Path(__file__).parent / 'template' / 'tournaments.html'
+    tmpl = Path(__file__).parent / 'template' / 'last_tournament.html'
     # ic(tmpl)
     assert tmpl.exists(), "Template not found !!"
     #output = tmpl.open().read()
     # ic(rounds.all.items)
-    tournaments = templateEnv.get_template('tournaments.html').render(rounds = tournament.all.items)
+    tournaments = templateEnv.get_template('last_tournament.html').render(rounds = tournament.all.items)
 
     with open(f"./view/tables/rounds.html", "w") as f:
         f.write(tournaments)
     # jinja !!!
-    url_path = os.path.abspath("./view/tables/tournaments.html")
+    url_path = os.path.abspath("./view/tables/last_tournament.html")
     print("The Rounds table has been created and can be viewed in your browser (view/tables/rounds.html)")
     url = f'file://{url_path}'
     webbrowser.open(url, new=2)  # open in new tab
