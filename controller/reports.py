@@ -11,7 +11,7 @@ def players_latest_report():
     Returns the latest players list in console and web view
     """
     last_player_view.view_text()
-    # player_view.view_html() 
+    last_player_view.view_html() 
 
 
 def players_all_reports():
@@ -20,7 +20,7 @@ def players_all_reports():
     """
     print('all players view')
     player_view.view_text()
-    # player_view.view_html()
+    player_view.view_html()
 
 def tournament_latest_report():
     """ 
@@ -28,11 +28,11 @@ def tournament_latest_report():
     """
     print("this is the latest tournament")
     last_tournament_view.view_text()
-    # tournament_view.view_html()
+    last_tournament_view.view_html()
 
 def tournament_all_reports():
     """ 
     Returns the last round(4) of all tournaments list in console and web view
     """
     tournament_view.view_text()
-    # tournament_view.view_html()
+    tournament_view.view_html()

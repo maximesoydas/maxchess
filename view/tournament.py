@@ -28,9 +28,9 @@ def view_html():
     assert tmpl.exists(), "Template not found !!"
     #output = tmpl.open().read()
     # ic(rounds.all.items)
-    tournaments = templateEnv.get_template('tournaments.html').render(rounds = tournament.all.items)
+    tournaments = templateEnv.get_template('tournaments.html').render(tournament = tournament.all.items)
 
-    with open(f"./view/tables/rounds.html", "w") as f:
+    with open(f"./view/tables/tournaments.html", "w") as f:
         f.write(tournaments)
     # jinja !!!
     url_path = os.path.abspath("./view/tables/tournaments.html")

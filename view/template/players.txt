@@ -5,5 +5,5 @@ ID    |    PLAYERS LIST NAME     |
 +-------+-------+-------+-------+-------+------------+
 NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
 +-------+-------+-------+-------+-------+------------+
-{% for player in player.players %}{{ player.surname }}  |   {{ player.birthday }}   |   {{ player.gender }} |   {{ player.rank }}
+{% for player in player.players %}{{ player.name }}  |  {{ player.surname }}  |   {{ player.birthday }}   |   {{ player.gender }} |   {{ player.rank }}
 {% endfor %}{% endfor %}

@@ -28,12 +28,12 @@ def view_html():
     assert tmpl.exists(), "Template not found !!"
     #output = tmpl.open().read()
     # ic(rounds.all.items)
-    tournaments = templateEnv.get_template('last_tournament.html').render(rounds = tournament.all.items)
+    tournaments = templateEnv.get_template('last_tournament.html').render(tournament = tournament.all.items)
 
-    with open(f"./view/tables/rounds.html", "w") as f:
+    with open(f"./view/tables/last_tournament.html", "w") as f:
         f.write(tournaments)
     # jinja !!!
     url_path = os.path.abspath("./view/tables/last_tournament.html")
-    print("The Rounds table has been created and can be viewed in your browser (view/tables/rounds.html)")
+    print("The Last Tournament table has been created and can be viewed in your browser (view/tables/rounds.html)")
     url = f'file://{url_path}'
     webbrowser.open(url, new=2)  # open in new tab

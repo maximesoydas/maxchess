@@ -12,9 +12,9 @@
 }
 .content-table {
   border-collapse: collapse;
-  margin: 0 0 0 12vh;
+  margin: 0vh 0 0 30vh;
   font-size: 1.9em;
-  min-width: 170vh;
+  min-width: 135vh;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
@@ -35,13 +35,12 @@ h1{
 
 }
 
-body{
-min-height: 130vh;
-position: relative;
-background-image: url(chess_bg.jpg);
-background-size: contain;
-background-repeat: no-repeat;
-max-height: 50vh;
+html { 
+  background: url(max_chess.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 .content-table thead tr {
   background-color: #333;
@@ -49,6 +48,19 @@ max-height: 50vh;
   text-align: center;
   font-weight: bold;
   opacity: 95%;
+}
+.button {
+  margin-left: 170vh;
+  display: inline-block;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+ 
+.button:hover {
+  text-decoration:none;
+  background:#eee;
 }
 
 .content-table th {
@@ -60,11 +72,11 @@ max-height: 50vh;
   }
 
 .content-table td {
-  padding: 20px 15px;
+  padding: 15px 5px;
   background-color: whitesmoke;
   opacity: 80%;
   border-radius: 0.5%;
-  font-size: 0.6em;
+  font-size: 0.7em;
   }
 
 .content-table tbody tr {
@@ -73,10 +85,12 @@ max-height: 50vh;
 
 .content-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
+  opacity: 90%;
 }
 
 .content-table tbody tr:last-of-type {
   border-bottom: 2px solid #333;
+  opacity: 90%;
 }
 
 .content-table tbody tr.active-row {
@@ -86,12 +100,38 @@ max-height: 50vh;
 
 </style>
 <body>
-<h1> The Players </h1>
+<form class="button"; action="tournaments.html">
+  <input type="submit" value="All Tournaments" />
+</form>
+<form class="button"; action="last_tournament.html">
+  <input type="submit" value="Last Tournament" />
+</form>
+<form class="button"; action="last_players.html">
+  <input type="submit" value="Last Players List" />
+</form>
+<h1>♞ The Players ♞</h1>
 
 <table class="content-table">
+  {% for player in players %} {% if loop.last %}
     <thead>
       <tr>
-        <th>ID</th>
+        <th></th>
+        <th></th>
+        <th>PLAYERS LIST N°{{ loop.index }}</th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tbody>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td>{{ player.list_name }}</td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+      <tr>
         <th>NAME</th>
         <th>SURNAME</th>
         <th>BIRTHDAY</th>
@@ -100,16 +140,17 @@ max-height: 50vh;
       </tr>
     </thead>
     <tbody>
+      {% for player in player.players %}
       <tr>
-        {% for player in players %}
-       <td>{{ player.id }}</td>
        <td>{{ player.name }}</td>
        <td>{{ player.surname }}</td>
        <td>{{ player.birthday }}</td>
        <td>{{ player.gender }}</td>   
-       <td>{{ player.rank }}</td>
-       {% endfor %}
+       <td>{{ player.rank }}</td>     
       </tr>
+      {% endfor %}
+      {% endif %}
+      {% endfor %}
     </tbody>
 </table>
 </body>

@@ -100,8 +100,8 @@ html {
 
 </style>
 <body>
-  <form class="button"; action="last_tournament.html">
-    <input type="submit" value="Last Tournament" />
+  <form class="button"; action="tournaments.html">
+    <input type="submit" value="All Tournament" />
   </form>
   <form class="button"; action="last_players.html">
     <input type="submit" value="Last Players List" />
@@ -109,16 +109,23 @@ html {
   <form class="button"; action="players.html">
     <input type="submit" value="All Players" />
   </form>
-<h1>♞ The Tournament ♞</h1>
+<h1>♞ The Last Tournament ♞</h1>
 
 <table class="content-table">
-  {% for tournament in tournament %}
+  
+       
+       
+       
+       
+       
+       
+       
   <thead>
     <tr>
       <th></th>
       <th></th>
       <th></th>
-      <th> <br> TOURNAMENT N°{{ tournament.doc_id}} <br><br></th>
+      <th> <br> TOURNAMENT N°8 <br><br></th>
       <th></th>
       <th></th>
     </tr>
@@ -135,12 +142,12 @@ html {
   </thead>
     <tbody>
       <tr>
-       <td>{{ tournament.doc_id }}</td>
-       <td>{{ tournament.name }}</td>
-       <td>{{ tournament.date }}</td>
-       <td>{{ tournament.rounds_number }}</td>
-       <td>{{ tournament.timing_method }}</td>   
-       <td>{{ tournament.description }}</td>
+       <td>8</td>
+       <td></td>
+       <td></td>
+       <td>4</td>
+       <td>Blitz</td>   
+       <td></td>
       </tr>
     </tbody>
     <thead>
@@ -163,19 +170,86 @@ html {
         <th>RANK</th>
       </tr>
     </thead>
-    {% for round in tournament.rounds %}{% if loop.last %}{% for player in round.players %}
+    
+       
+       
+       
     <tbody>
       <tr>
-       <td>{{ loop.index }} </td>
-       <td>{{ player.name }}</td>
-       <td>{{ player.surname }}</td>
-       <td>{{ player.birthday }}</td>
-       <td>{{ player.score }}</td>   
-       <td>{{ player.rank }}</td>
-       {% endfor %}
-       {% endif %}
-       {% endfor %}
-       {% endfor %}
+       <td>1 </td>
+       <td>Bethy</td>
+       <td>Daniels</td>
+       <td>07/08/1984</td>
+       <td>4.0</td>   
+       <td>900</td>
+       
+    <tbody>
+      <tr>
+       <td>2 </td>
+       <td>Meredith</td>
+       <td>Lawson</td>
+       <td>09/11/1999</td>
+       <td>3.0</td>   
+       <td>300</td>
+       
+    <tbody>
+      <tr>
+       <td>3 </td>
+       <td>Max</td>
+       <td>Soy</td>
+       <td>04/11/1995</td>
+       <td>2.0</td>   
+       <td>800</td>
+       
+    <tbody>
+      <tr>
+       <td>4 </td>
+       <td>John</td>
+       <td>Steven</td>
+       <td>04/12/1989</td>
+       <td>2.0</td>   
+       <td>800</td>
+       
+    <tbody>
+      <tr>
+       <td>5 </td>
+       <td>Jack</td>
+       <td>Rick</td>
+       <td>05/04/1993</td>
+       <td>2.0</td>   
+       <td>600</td>
+       
+    <tbody>
+      <tr>
+       <td>6 </td>
+       <td>Steve</td>
+       <td>Stevenson</td>
+       <td>06/12/1990</td>
+       <td>1.0</td>   
+       <td>700</td>
+       
+    <tbody>
+      <tr>
+       <td>7 </td>
+       <td>Richard</td>
+       <td>Perolto</td>
+       <td>07/04/1987</td>
+       <td>1.0</td>   
+       <td>700</td>
+       
+    <tbody>
+      <tr>
+       <td>8 </td>
+       <td>Marc</td>
+       <td>Jacobs</td>
+       <td>05/05/1985</td>
+       <td>1.0</td>   
+       <td>400</td>
+       
+       
+       
+       
+       
       </tr>
     </tbody>
 </table>

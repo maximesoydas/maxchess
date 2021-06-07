@@ -112,12 +112,13 @@ html {
 <h1>♞ The Players ♞</h1>
 
 <table class="content-table">
-  {% for player in players %}
+   
+       
     <thead>
       <tr>
         <th></th>
         <th></th>
-        <th>PLAYERS LIST N°{{ loop.index }}</th>
+        <th>PLAYERS LIST N°2</th>
         <th></th>
         <th></th>
       </tr>
@@ -126,7 +127,7 @@ html {
         <tr>
           <td></td>
           <td></td>
-          <td>{{ player.list_name }}</td>
+          <td>Maxchess Players 1</td>
           <td></td>
           <td></td>
         </tr>
@@ -140,16 +141,73 @@ html {
       </tr>
     </thead>
     <tbody>
-      {% for player in player.players %}
+      
       <tr>
-       <td>{{ player.name }}</td>
-       <td>{{ player.surname }}</td>
-       <td>{{ player.birthday }}</td>
-       <td>{{ player.gender }}</td>   
-       <td>{{ player.rank }}</td>     
+       <td>Lenny</td>
+       <td>Vaughan</td>
+       <td>04/11/1945</td>
+       <td>Male</td>   
+       <td>1050</td>     
       </tr>
-      {% endfor %}
-      {% endfor %}
+      
+      <tr>
+       <td>Karuna</td>
+       <td>Pun</td>
+       <td>09/07/1983</td>
+       <td>Female</td>   
+       <td>950</td>     
+      </tr>
+      
+      <tr>
+       <td>Maxime</td>
+       <td>Soydas</td>
+       <td>04/11/1995</td>
+       <td>Male</td>   
+       <td>900</td>     
+      </tr>
+      
+      <tr>
+       <td>Kyle</td>
+       <td>Lardix</td>
+       <td>05/05/1979</td>
+       <td>Male</td>   
+       <td>760</td>     
+      </tr>
+      
+      <tr>
+       <td>Johnny</td>
+       <td>McCain</td>
+       <td>05/05/1964</td>
+       <td>Male</td>   
+       <td>750</td>     
+      </tr>
+      
+      <tr>
+       <td>Raff</td>
+       <td>Center</td>
+       <td>08/07/1976</td>
+       <td>Male</td>   
+       <td>750</td>     
+      </tr>
+      
+      <tr>
+       <td>Jenny</td>
+       <td>Mckenzie</td>
+       <td>09/04/2000</td>
+       <td>Female</td>   
+       <td>450</td>     
+      </tr>
+      
+      <tr>
+       <td>Rick</td>
+       <td>Johnson</td>
+       <td>09/08/1985</td>
+       <td>Male</td>   
+       <td>400</td>     
+      </tr>
+      
+      
+      
     </tbody>
 </table>
 </body>

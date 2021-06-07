@@ -12,13 +12,14 @@
 }
 .content-table {
   border-collapse: collapse;
-  margin: 0vh 0 0 30vh;
+  margin: 0 0 0 12vh;
   font-size: 1.9em;
-  min-width: 135vh;
+  min-width: 170vh;
   border-radius: 5px 5px 0 0;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
+
 h1{
   background-color: whitesmoke;
   background-size: 1vh;
@@ -34,12 +35,13 @@ h1{
 
 }
 
-html { 
-  background: url(max_chess.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+body{
+min-height: 130vh;
+position: relative;
+background-image: url(chess_bg.jpg);
+background-size: contain;
+background-repeat: no-repeat;
+max-height: 50vh;
 }
 .content-table thead tr {
   background-color: #333;
@@ -57,26 +59,12 @@ html {
   font-size: 0.7em;
   }
 
-.button {
-margin-left: 170vh;
-display: inline-block;
-border: 1px solid #ccc;
-padding: 5px 10px;
-border-radius: 3px;
-text-decoration: none;
-}
-
-.button:hover {
-  text-decoration:none;
-  background:#eee;
-}
-
 .content-table td {
-  padding: 0.5px;
+  padding: 20px 15px;
   background-color: whitesmoke;
   opacity: 80%;
   border-radius: 0.5%;
-  font-size: 0.7em;
+  font-size: 0.6em;
   }
 
 .content-table tbody tr {
@@ -85,12 +73,10 @@ text-decoration: none;
 
 .content-table tbody tr:nth-of-type(even) {
   background-color: #f3f3f3;
-  opacity: 90%;
 }
 
 .content-table tbody tr:last-of-type {
   border-bottom: 2px solid #333;
-  opacity: 90%;
 }
 
 .content-table tbody tr.active-row {
@@ -100,12 +86,11 @@ text-decoration: none;
 
 </style>
 <body>
-  <form class="button" action="players.html">
-    <input type="submit" value="View Players" />
-</form>
-<h1>♞ SCOREBOARD ♞</h1>
+<h1> The Tournament </h1>
 
-      
+<table class="content-table">
+  
+      </tr>
     </tbody>
 </table>
 </body>

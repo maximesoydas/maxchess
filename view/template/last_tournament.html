@@ -100,56 +100,84 @@ html {
 
 </style>
 <body>
-<form class="button"; action="tournaments.html">
-  <input type="submit" value="All Tournaments" />
-</form>
-<form class="button"; action="last_tournament.html">
-  <input type="submit" value="Last Tournament" />
-</form>
-<form class="button"; action="last_players.html">
-  <input type="submit" value="Last Players List" />
-</form>
-<h1>♞ The Players ♞</h1>
+  <form class="button"; action="tournaments.html">
+    <input type="submit" value="All Tournament" />
+  </form>
+  <form class="button"; action="last_players.html">
+    <input type="submit" value="Last Players List" />
+  </form>
+  <form class="button"; action="players.html">
+    <input type="submit" value="All Players" />
+  </form>
+<h1>♞ The Last Tournament ♞</h1>
 
 <table class="content-table">
-  {% for player in players %}
+  {% for tournament in tournament %}{% if loop.last %}
+  <thead>
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th> <br> TOURNAMENT N°{{ tournament.doc_id}} <br><br></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NAME</th>
+      <th>DATE</th>
+      <th>ROUND NUMBER</th>
+      <th>TIME METHOD</th>
+      <th>DESCRIPTION</th>
+    </tr>
+  </thead>
+    <tbody>
+      <tr>
+       <td>{{ tournament.doc_id }}</td>
+       <td>{{ tournament.name }}</td>
+       <td>{{ tournament.date }}</td>
+       <td>{{ tournament.rounds_number }}</td>
+       <td>{{ tournament.timing_method }}</td>   
+       <td>{{ tournament.description }}</td>
+      </tr>
+    </tbody>
     <thead>
       <tr>
         <th></th>
         <th></th>
-        <th>PLAYERS LIST N°{{ loop.index }}</th>
+        <th></th>
+        <th> <br> FINAL ROUND <br> SCOREBOARD <br> <br></th>
         <th></th>
         <th></th>
       </tr>
-      <tbody>
-
-        <tr>
-          <td></td>
-          <td></td>
-          <td>{{ player.list_name }}</td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
+    </thead>
+    <thead>
       <tr>
+        <th>POSITION</th>
         <th>NAME</th>
         <th>SURNAME</th>
         <th>BIRTHDAY</th>
-        <th>GENDER</th>
+        <th>SCORE</th>
         <th>RANK</th>
       </tr>
     </thead>
+    {% for round in tournament.rounds %}{% if loop.last %}{% for player in round.players %}
     <tbody>
-      {% for player in player.players %}
       <tr>
+       <td>{{ loop.index }} </td>
        <td>{{ player.name }}</td>
        <td>{{ player.surname }}</td>
        <td>{{ player.birthday }}</td>
-       <td>{{ player.gender }}</td>   
-       <td>{{ player.rank }}</td>     
+       <td>{{ player.score }}</td>   
+       <td>{{ player.rank }}</td>
+       {% endfor %}
+       {% endif %}
+       {% endfor %}
+       {% endif %}
+       {% endfor %}
       </tr>
-      {% endfor %}
-      {% endfor %}
     </tbody>
 </table>
 </body>
