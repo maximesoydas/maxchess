@@ -1,6 +1,6 @@
 ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
 +-------+-------+-------+-------+-------+------------+------------+------------+
-#8 |  |  | 4 | Blitz | 
+#9 | Maxchess Tournoi 2 | 08/06/2021 | 4 | Blitz | Maxchess tournoi Gelannes
 +-------+-------+-------+-------+-------+------------+------------+------------+
                           FINAL    ROUND 
                             SCOREBOARD

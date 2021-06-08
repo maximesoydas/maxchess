@@ -1,30 +1,15 @@
- 
-ID    |    PLAYERS LIST NAME     | 
-+-------+-------+-------+-------+-------+------------+
-1     |         1        | 
-+-------+-------+-------+-------+-------+------------+
-NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
-+-------+-------+-------+-------+-------+------------+
-Max  |  Soy  |   04/11/1995   |   Male |   800
-John  |  Steven  |   04/12/1989   |   Male |   800
-Steve  |  Stevenson  |   06/12/1990   |   Male |   700
-Jack  |  Rick  |   05/04/1993   |   Male |   600
-Meredith  |  Lawson  |   09/11/1999   |   Female |   300
-Bethy  |  Daniels  |   07/08/1984   |   Female |   900
-Richard  |  Perolto  |   07/04/1987   |   Male |   700
-Marc  |  Jacobs  |   05/05/1985   |   Male |   400
- 
-ID    |    PLAYERS LIST NAME     | 
+
+  ID    |    PLAYERS LIST NAME     | 
 +-------+-------+-------+-------+-------+------------+
 2     |         Maxchess Players 1        | 
 +-------+-------+-------+-------+-------+------------+
 NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
 +-------+-------+-------+-------+-------+------------+
-Lenny  |  Vaughan  |   04/11/1945   |   Male |   1050
-Karuna  |  Pun  |   09/07/1983   |   Female |   950
-Maxime  |  Soydas  |   04/11/1995   |   Male |   900
-Kyle  |  Lardix  |   05/05/1979   |   Male |   760
-Johnny  |  McCain  |   05/05/1964   |   Male |   750
-Raff  |  Center  |   08/07/1976   |   Male |   750
-Jenny  |  Mckenzie  |   09/04/2000   |   Female |   450
-Rick  |  Johnson  |   09/08/1985   |   Male |   400
+Vaughan  |   04/11/1945   |   Male |   1050
+Pun  |   09/07/1983   |   Female |   950
+Soydas  |   04/11/1995   |   Male |   900
+Lardix  |   05/05/1979   |   Male |   760
+McCain  |   05/05/1964   |   Male |   750
+Center  |   08/07/1976   |   Male |   750
+Mckenzie  |   09/04/2000   |   Female |   450
+Johnson  |   09/08/1985   |   Male |   400
