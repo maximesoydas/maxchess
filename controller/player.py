@@ -1,6 +1,7 @@
 from model import player as model
 from model import players_list as player_model
 from tinydb import TinyDB, Query, where
+from controller import clear as clr
 from view import menu
 from operator import *
 import json
@@ -14,11 +15,13 @@ def add(n=1):
         model.Player(
             name=input("\nEnter Player Name: "),
             surname=input("\nEnter Player Surname: "),
-            birthday=input("Enter Player Birthday: "),
+            birthday=input("\nEnter Player Birthday: "),
             gender=input("\nEnter Player Gender: "),
             rank=int(input("\nEnter Player Rank: ")),
         ).save()
-        print('Players Added Successfully !')
+        clr.screen()
+        print(f'Player {i+1} Added Successfully !')
+        print(f"\nPlease Add Player {i+2}")
     db = TinyDB('maxchess_db.json')
     TinyDB.default_table_name = 'players'
     players_list = db.search(where('rank') > -1)
@@ -31,9 +34,7 @@ def add(n=1):
     db = TinyDB('maxchess_db.json')
     TinyDB.default_table_name = 'players'
     db.drop_table('players')
-    list_name = list_name[0]
-    print(list_name)
-    return list_name
+    return
 
 def remove_name():
     """
@@ -114,9 +115,9 @@ def remove_all():
     db = TinyDB('maxchess_db.json')
     q = Query()
     TinyDB.default_table_name = 'players'
-    if db.drop_table('players'):
-        print('Table Players Removed Successfully!')
+    if db.drop_table('players') == False:
+        print('No Players List found')
         quit()
     else:
-        print('no table named Players found')
+        print('All Players Lists successfully removed !')
         quit()

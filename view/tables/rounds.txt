@@ -4,160 +4,34 @@
 +-------+-------+-------+-------+-------+------------+------------+------------+
 ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
 +-------+-------+-------+-------+-------+------------+------------+------------+
-#1 | 1 | 1 | 4 | Blitz | 1
+#1 | Tournament 1 | 04/04/2021 | 4 | Blitz | Maxchess
 +-------+-------+-------+-------+-------+------------+------------+------------+
                           FINAL    ROUND 
                             SCOREBOARD
 +-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Daniels  |  RANK: 900  |  SCORE :  4.0 
-    POSITION: 2  |  Mrs/Mr.Soy  |  RANK: 800  |  SCORE :  3.0 
-    POSITION: 3  |  Mrs/Mr.Steven  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 4  |  Mrs/Mr.Perolto  |  RANK: 700  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.Stevenson  |  RANK: 700  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Jacobs  |  RANK: 400  |  SCORE :  2.0 
-    POSITION: 7  |  Mrs/Mr.Rick  |  RANK: 600  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Lawson  |  RANK: 300  |  SCORE :  0 
+    POSITION: 1  |  Mrs/Mr.Chess  |  RANK: 1000  |  SCORE :  4.0 
+    POSITION: 2  |  Mrs/Mr.Ham  |  RANK: 500  |  SCORE :  3.0 
+    POSITION: 3  |  Mrs/Mr.Soydas  |  RANK: 850  |  SCORE :  2.0 
+    POSITION: 4  |  Mrs/Mr.Vector  |  RANK: 750  |  SCORE :  2.0 
+    POSITION: 5  |  Mrs/Mr.JOhnny  |  RANK: 700  |  SCORE :  2.0 
+    POSITION: 6  |  Mrs/Mr.Stevenson  |  RANK: 750  |  SCORE :  1.0 
+    POSITION: 7  |  Mrs/Mr.Luck  |  RANK: 750  |  SCORE :  1.0 
+    POSITION: 8  |  Mrs/Mr.Mckenzie  |  RANK: 500  |  SCORE :  1.0 
 +-------+-------+-------+-------+-------+------------+------------+------------+
                           TOURNAMENT N°2
 +-------+-------+-------+-------+-------+------------+------------+------------+
 ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
 +-------+-------+-------+-------+-------+------------+------------+------------+
-#2 | 2 | 2 | 4 | Blitz | 2
+#2 | Tournament 2 | 05/05/2022 | 4 | Blitz | Maxchess
 +-------+-------+-------+-------+-------+------------+------------+------------+
                           FINAL    ROUND 
                             SCOREBOARD
 +-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Perolto  |  RANK: 700  |  SCORE :  3.0 
-    POSITION: 2  |  Mrs/Mr.Jacobs  |  RANK: 400  |  SCORE :  3.0 
-    POSITION: 3  |  Mrs/Mr.Lawson  |  RANK: 300  |  SCORE :  3.0 
-    POSITION: 4  |  Mrs/Mr.Steven  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.Rick  |  RANK: 600  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Daniels  |  RANK: 900  |  SCORE :  1.0 
-    POSITION: 7  |  Mrs/Mr.Soy  |  RANK: 800  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Stevenson  |  RANK: 700  |  SCORE :  1.0 
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          TOURNAMENT N°3
-+-------+-------+-------+-------+-------+------------+------------+------------+
-ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
-+-------+-------+-------+-------+-------+------------+------------+------------+
-#3 | 3 | 3 | 4 | Blitz | 3
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          FINAL    ROUND 
-                            SCOREBOARD
-+-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Daniels  |  RANK: 900  |  SCORE :  2.0 
-    POSITION: 2  |  Mrs/Mr.Soy  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 3  |  Mrs/Mr.Steven  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 4  |  Mrs/Mr.Perolto  |  RANK: 700  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.Stevenson  |  RANK: 700  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Rick  |  RANK: 600  |  SCORE :  2.0 
-    POSITION: 7  |  Mrs/Mr.Jacobs  |  RANK: 400  |  SCORE :  2.0 
-    POSITION: 8  |  Mrs/Mr.Lawson  |  RANK: 300  |  SCORE :  2.0 
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          TOURNAMENT N°4
-+-------+-------+-------+-------+-------+------------+------------+------------+
-ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
-+-------+-------+-------+-------+-------+------------+------------+------------+
-#4 | 4 | 4 | 4 | Blitz | 4
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          FINAL    ROUND 
-                            SCOREBOARD
-+-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Steven  |  RANK: 800  |  SCORE :  4.0 
-    POSITION: 2  |  Mrs/Mr.Rick  |  RANK: 600  |  SCORE :  3.0 
-    POSITION: 3  |  Mrs/Mr.Daniels  |  RANK: 900  |  SCORE :  2.0 
-    POSITION: 4  |  Mrs/Mr.Perolto  |  RANK: 700  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.Stevenson  |  RANK: 700  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Soy  |  RANK: 800  |  SCORE :  1.0 
-    POSITION: 7  |  Mrs/Mr.Jacobs  |  RANK: 400  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Lawson  |  RANK: 300  |  SCORE :  1.0 
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          TOURNAMENT N°5
-+-------+-------+-------+-------+-------+------------+------------+------------+
-ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
-+-------+-------+-------+-------+-------+------------+------------+------------+
-#5 | 5 | 5 | 4 | Blitz | 5
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          FINAL    ROUND 
-                            SCOREBOARD
-+-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Steven  |  RANK: 800  |  SCORE :  3.0 
-    POSITION: 2  |  Mrs/Mr.Lawson  |  RANK: 300  |  SCORE :  3.0 
-    POSITION: 3  |  Mrs/Mr.Daniels  |  RANK: 900  |  SCORE :  2.0 
-    POSITION: 4  |  Mrs/Mr.Soy  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.Rick  |  RANK: 600  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Jacobs  |  RANK: 400  |  SCORE :  2.0 
-    POSITION: 7  |  Mrs/Mr.Perolto  |  RANK: 700  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Stevenson  |  RANK: 700  |  SCORE :  1.0 
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          TOURNAMENT N°6
-+-------+-------+-------+-------+-------+------------+------------+------------+
-ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
-+-------+-------+-------+-------+-------+------------+------------+------------+
-#6 | 9 | 9 | 4 | Blitz | 9
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          FINAL    ROUND 
-                            SCOREBOARD
-+-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Daniels  |  RANK: 900  |  SCORE :  4.0 
-    POSITION: 2  |  Mrs/Mr.Lawson  |  RANK: 300  |  SCORE :  3.0 
-    POSITION: 3  |  Mrs/Mr.Soy  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 4  |  Mrs/Mr.Steven  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.Rick  |  RANK: 600  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Stevenson  |  RANK: 700  |  SCORE :  1.0 
-    POSITION: 7  |  Mrs/Mr.Perolto  |  RANK: 700  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Jacobs  |  RANK: 400  |  SCORE :  1.0 
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          TOURNAMENT N°7
-+-------+-------+-------+-------+-------+------------+------------+------------+
-ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
-+-------+-------+-------+-------+-------+------------+------------+------------+
-#7 | 45 | 45 | 4 | Blitz | 45
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          FINAL    ROUND 
-                            SCOREBOARD
-+-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Rick  |  RANK: 600  |  SCORE :  4.0 
-    POSITION: 2  |  Mrs/Mr.Daniels  |  RANK: 900  |  SCORE :  2.5 
-    POSITION: 3  |  Mrs/Mr.Stevenson  |  RANK: 700  |  SCORE :  2.5 
-    POSITION: 4  |  Mrs/Mr.Jacobs  |  RANK: 400  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.Lawson  |  RANK: 300  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Steven  |  RANK: 800  |  SCORE :  1.5 
-    POSITION: 7  |  Mrs/Mr.Perolto  |  RANK: 700  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Soy  |  RANK: 800  |  SCORE :  0.5 
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          TOURNAMENT N°8
-+-------+-------+-------+-------+-------+------------+------------+------------+
-ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
-+-------+-------+-------+-------+-------+------------+------------+------------+
-#8 |  |  | 4 | Blitz | 
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          FINAL    ROUND 
-                            SCOREBOARD
-+-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Daniels  |  RANK: 900  |  SCORE :  4.0 
-    POSITION: 2  |  Mrs/Mr.Lawson  |  RANK: 300  |  SCORE :  3.0 
-    POSITION: 3  |  Mrs/Mr.Soy  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 4  |  Mrs/Mr.Steven  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.Rick  |  RANK: 600  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Stevenson  |  RANK: 700  |  SCORE :  1.0 
-    POSITION: 7  |  Mrs/Mr.Perolto  |  RANK: 700  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Jacobs  |  RANK: 400  |  SCORE :  1.0 
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          TOURNAMENT N°9
-+-------+-------+-------+-------+-------+------------+------------+------------+
-ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
-+-------+-------+-------+-------+-------+------------+------------+------------+
-#9 | Maxchess Tournoi 2 | 08/06/2021 | 4 | Blitz | Maxchess tournoi Gelannes
-+-------+-------+-------+-------+-------+------------+------------+------------+
-                          FINAL    ROUND 
-                            SCOREBOARD
-+-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Daniels  |  RANK: 900  |  SCORE :  4.0 
-    POSITION: 2  |  Mrs/Mr.Lawson  |  RANK: 300  |  SCORE :  3.0 
-    POSITION: 3  |  Mrs/Mr.Soy  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 4  |  Mrs/Mr.Steven  |  RANK: 800  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.Rick  |  RANK: 600  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Stevenson  |  RANK: 700  |  SCORE :  1.0 
-    POSITION: 7  |  Mrs/Mr.Perolto  |  RANK: 700  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Jacobs  |  RANK: 400  |  SCORE :  1.0 
+    POSITION: 1  |  Mrs/Mr.Soydas  |  RANK: 850  |  SCORE :  4.0 
+    POSITION: 2  |  Mrs/Mr.Mckenzie  |  RANK: 500  |  SCORE :  3.0 
+    POSITION: 3  |  Mrs/Mr.Chess  |  RANK: 1000  |  SCORE :  2.0 
+    POSITION: 4  |  Mrs/Mr.Luck  |  RANK: 750  |  SCORE :  2.0 
+    POSITION: 5  |  Mrs/Mr.Stevenson  |  RANK: 750  |  SCORE :  2.0 
+    POSITION: 6  |  Mrs/Mr.Vector  |  RANK: 750  |  SCORE :  1.0 
+    POSITION: 7  |  Mrs/Mr.JOhnny  |  RANK: 700  |  SCORE :  1.0 
+    POSITION: 8  |  Mrs/Mr.Ham  |  RANK: 500  |  SCORE :  1.0 

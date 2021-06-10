@@ -16,7 +16,7 @@ def view_text():
     #output = tmpl.open().read()
     # ic(player.all.items)
     player_table = templateEnv.get_template('players.txt').render(players = player.all.items)
-    ic(player_table)
+    print(player_table)
 
     with open(f"./view/tables/players.txt", "w") as f:
         f.write(player_table)

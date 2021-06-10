@@ -18,7 +18,8 @@ def tournament():
     ♙ Welcome to the tournaments' Menu ♙
 
     [1] Start New Tournament
-    [2] Exit to Main Menu ↵
+    [2] Delete Tournament
+    [3] Exit to Main Menu ↵
 
     """)
 
@@ -32,6 +33,18 @@ def tournament_players():
     [3] Exit to Main Menu ↵
 
     
+    
+    """)
+
+def remove_tournament():
+    print("""
+    
+    Remove Tournament by:
+    
+    [1] Tournament ID
+    [2] Tournament Name
+    [3] All Tournaments
+    [4] Exit ↵
     
     """)
 

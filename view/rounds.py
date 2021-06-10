@@ -16,7 +16,7 @@ def view_text():
     #output = tmpl.open().read()
     # ic(rounds.all.items)
     round_table = templateEnv.get_template('rounds.txt').render(rounds = rounds.all.items)
-    ic(round_table)
+    print(round_table)
 
     with open(f"./view/tables/rounds.txt", "w") as f:
         f.write(round_table)

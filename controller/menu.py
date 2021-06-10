@@ -97,6 +97,33 @@ def tournament():
             tournament_controller.new_tournament()
             break
         elif tournament_option == 2:
+            clr.screen()
+            menu.remove_tournament()
+            delete_option = int(input("\n\nOption Number: "))
+            while delete_option != 0:
+                if delete_option == 1:
+                    clr.screen()
+                    tournament_controller.remove_id()
+                    break
+                elif delete_option == 2:
+                    clr.screen()
+                    tournament_controller.remove_name()
+                    break
+                elif delete_option == 3:
+                    clr.screen()
+                    tournament_controller.remove_all()
+                    break
+                elif delete_option == 4:
+                    clr.screen()
+                    quit()
+                    break
+                else:
+                    clr.screen()
+                    print('Invalid Number')
+                    menu.player()
+                    break
+            break
+        elif tournament_option == 3:
             # return to main menu
             clr.screen()
             main() 

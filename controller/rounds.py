@@ -3,6 +3,7 @@ from controller import player as player_controller
 from tinydb import TinyDB, Query, where
 import datetime
 from operator import *
+from controller import clear as clr
 
 def sort_players(round_name, list_name):
     '''
@@ -26,8 +27,6 @@ def sort_players(round_name, list_name):
         round_name = round_name.replace('Round', '')
         round_name = f'Round{int(round_name) - 1}'
         sorted_players = db.search(where('rounds')[0]['name'] == round_name)
-        print(sorted_players)
-        print(sorted_players[-1])
         sorted_players = sorted_players[-1]['rounds'][0]['players']
         sorted_players.sort(key=itemgetter('score'), reverse=True)
     elif round_name == "Round3":
@@ -51,7 +50,7 @@ def sort_players(round_name, list_name):
         sorted_players = sorted_players[-1]['rounds'][2]['players']
         sorted_players.sort(key=itemgetter('score'), reverse=True)
     else:
-        print('Inccorect Round name')
+        print('Wrong Round name')
     
     return sorted_players
 
@@ -151,10 +150,18 @@ def get_players():
     [2] Create 8 New Players
     ''')
     players_option_nb = int(input("\n\nOption : "))
+    q= Query()
     while players_option_nb != 0:
         if players_option_nb == 1:
             list_name = input('Enter Existing Players List Name : ')
-            break
+            db = TinyDB('maxchess_db.json')
+            TinyDB.default_table_name = 'players_lists'
+            if db.get((q.list_name == list_name)):
+                return list_name
+            else:
+                clr.screen()
+                print(f"\nPlayer list {list_name} Doesn't exist please Try Again !")
+                get_players()
         elif players_option_nb == 2:
             list_name = player_controller.add(8)
             break

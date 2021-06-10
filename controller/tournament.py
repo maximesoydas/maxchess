@@ -7,6 +7,7 @@ from tinydb import TinyDB, Query, where
 from view import menu
 from controller import menu
 from operator import *
+from pprint import *
 
 def new_tournament():
     '''
@@ -15,7 +16,7 @@ def new_tournament():
     # Fetch basic tournament info from inputs
     name=input("\nEnter Tournament Name: ")
     place=input("\nEnter Tournament Place: ")
-    date=input("Enter Tournament Date (dd/mm/yyyy): ")
+    date=input("\nEnter Tournament Date (dd/mm/yyyy): ")
     rounds_number=4
     timing_method="Blitz"
     description=input("Enter Description:")
@@ -86,10 +87,8 @@ def existing_tournament(tournament_id, round_num):
         TinyDB.default_table_name = 'Rounds'
         rounds = db.all()
         db.drop_table('Rounds')
-        print('this is rounds')
         # append current round to the rounds_table list
         rounds_table.append(rounds[-1])
-        print('this is rounds_table')
         db = TinyDB('maxchess_db.json')
         TinyDB.default_table_name = 'tournament'
         # update the tournament table's rounds to the rounds_table list
@@ -119,4 +118,102 @@ def check_tournament():
             menu.main()
     else:
         menu.main()
+
+
+def remove_name():
+    """
+    Remove players list by players list name
+    """
+    db = TinyDB('maxchess_db.json')
+    q = Query()
+    TinyDB.default_table_name = 'tournament'
+    tournament_name = (input("Enter Tournament Name : "))
+    tournament = db.get((q.name == tournament_name))
+    if tournament == None:
+        clr.screen()
+        print('\nTournament Not Found\nTry Again !\n')
+        remove_name()
+    else:
+        clr.screen()
+        print("\nRemove the following Tournament ?\n\n")
+        pprint(f"{tournament}")
+        print("\n\n[1] Yes \n[2] No (other tournament) \n[3] Exit \n")
+        option = int(input("\n\nOption Number: "))
+        while option != 0:
+            if option == 1:
+                clr.screen()
+                # Remove by Name & Surname
+                db.remove((q.name == tournament_name))
+                print(f'\nTournament Name {tournament_name}\nSuccesfully Deleted !')
+                quit()
+                break
+            elif option == 2:
+                clr.screen()
+                remove_name()
+                break
+            elif option == 3:
+                clr.screen()
+                menu.tournament()
+                break
+            elif option == '':
+                print('Invalid Number')
+                remove_name()
+                break
+            else:
+                print('Invalid Number')
+                remove_name()
+                break
+            
+
+
+def remove_id():
+    """
+    Remove players list by players list id
+    """
+    db = TinyDB('maxchess_db.json')
+    q = Query()
+    TinyDB.default_table_name = 'tournament'
+    id_num = int(input("\nEnter Tournament ID or Position: "))
+    # Seach by id
+    tournament_id = db.get(doc_id=id_num)
+    if tournament_id is None:
+        print('\nPlayer Not Found, Try Again !\n')
+        remove_id()
+    else:
+        pprint(f"\nRemove the following Tournament ?\n\n{tournament_id}\n\n[1] Yes\n[2] No (other tournament)\n[3] Exit\n")
+        option = int(input("\n\nOption Number: "))
+        while option != 0:
+            if option == 1:
+                # Remove by id
+                db.remove(doc_ids=[int(id_num)])
+                print(f'\Tournament:\n\nTournament {id_num}\nSuccesfully Deleted !')
+                quit()
+                break
+            elif option == 2:
+                remove_id()
+                break
+            elif option == 3:
+                menu.tournament()
+                break
+            elif option == '':
+                print('Invalid Number')
+                remove_name()
+                break
+            else:
+                print('Invalid Number')
+                remove_id()
+                break
+
+
+def remove_all():
+    db = TinyDB('maxchess_db.json')
+    q = Query()
+    TinyDB.default_table_name = 'tournament'
+    if db.drop_table('tournament') == False:
+        print('No Tournament Found')
+        quit()
+    else:
+        print('All Tournaments Removed Successfully!')
+        quit()
+
 

@@ -16,7 +16,7 @@ def view_text():
     #output = tmpl.open().read()
     # ic(rounds.all.items)
     tournaments = templateEnv.get_template('last_tournament.txt').render(tournament = tournament.all.items)
-    ic(tournaments)
+    print(tournaments)
 
     with open(f"./view/tables/last_tournament.txt", "w") as f:
         f.write(tournaments)
