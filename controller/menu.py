@@ -8,7 +8,6 @@ from controller import tournament as tournament_controller
 from controller import reports as report
 from controller import clear as clr
 
-#class Menu:
 def main():
     clr.screen()
     menu.main()

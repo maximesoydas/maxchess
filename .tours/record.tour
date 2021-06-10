@@ -1,0 +1,12 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "Record",
+  "steps": [
+    {
+      "file": "controller/menu.py",
+      "description": "Check the os",
+      "line": 12
+    }
+  ],
+  "ref": "main"
+}
