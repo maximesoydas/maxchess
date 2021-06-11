@@ -1,15 +1,18 @@
+
+
+
 ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
 +-------+-------+-------+-------+-------+------------+------------+------------+
-#1 | Tournament 1 | 04/04/2021 | 4 | Blitz | Maxchess
+#1 | Tournament 1 | 04/11/2021 | 4 | Blitz | Maxchess
 +-------+-------+-------+-------+-------+------------+------------+------------+
                           FINAL    ROUND 
                             SCOREBOARD
 +-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Chess  |  RANK: 1000  |  SCORE :  4.0 
-    POSITION: 2  |  Mrs/Mr.Ham  |  RANK: 500  |  SCORE :  3.0 
-    POSITION: 3  |  Mrs/Mr.Soydas  |  RANK: 850  |  SCORE :  2.0 
-    POSITION: 4  |  Mrs/Mr.Vector  |  RANK: 750  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.JOhnny  |  RANK: 700  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Stevenson  |  RANK: 750  |  SCORE :  1.0 
-    POSITION: 7  |  Mrs/Mr.Luck  |  RANK: 750  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Mckenzie  |  RANK: 500  |  SCORE :  1.0 
+    POSITION: 1  |  Mrs/Mr.Mckenzie  |  RANK: 100  |  SCORE :  4.0 
+    POSITION: 2  |  Mrs/Mr.Jacob  |  RANK: 450  |  SCORE :  3.0 
+    POSITION: 3  |  Mrs/Mr.Lavarel  |  RANK: 1500  |  SCORE :  2.0 
+    POSITION: 4  |  Mrs/Mr.Sylver  |  RANK: 855  |  SCORE :  2.0 
+    POSITION: 5  |  Mrs/Mr.Soydas  |  RANK: 850  |  SCORE :  2.0 
+    POSITION: 6  |  Mrs/Mr.Daniels  |  RANK: 750  |  SCORE :  1.0 
+    POSITION: 7  |  Mrs/Mr.Steve  |  RANK: 750  |  SCORE :  1.0 
+    POSITION: 8  |  Mrs/Mr.Boulder  |  RANK: 455  |  SCORE :  1.0 

@@ -1,15 +1,15 @@
-
-  ID    |    PLAYERS LIST NAME     | 
+ 
+ID    |    PLAYERS LIST NAME     | 
 +-------+-------+-------+-------+-------+------------+
-2     |         Maxchess Players 1        | 
+1     |         Max1        | 
 +-------+-------+-------+-------+-------+------------+
 NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
 +-------+-------+-------+-------+-------+------------+
-Vaughan  |   04/11/1945   |   Male |   1050
-Pun  |   09/07/1983   |   Female |   950
-Soydas  |   04/11/1995   |   Male |   900
-Lardix  |   05/05/1979   |   Male |   760
-McCain  |   05/05/1964   |   Male |   750
-Center  |   08/07/1976   |   Male |   750
-Mckenzie  |   09/04/2000   |   Female |   450
-Johnson  |   09/08/1985   |   Male |   400
+Tyson  |  Lavarel  |   05/08/195   |   Male |   1500
+Rick  |  Sylver  |   08/08/1995   |   Male |   855
+Max1  |  Soydas  |   04/11/1995   |   Male |   850
+John  |  Steve  |   05/05/1995   |   Male |   750
+Bethy  |  Daniels  |   150   |   Female |   750
+Bethany  |  Boulder  |   05/05/1995   |   Female |   455
+Robert  |  Jacob  |   05/05/1995   |   Male |   450
+Sylvie  |  Mckenzie  |   05/01/1995   |   Female |   100
