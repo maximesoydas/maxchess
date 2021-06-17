@@ -109,13 +109,13 @@ def set_matches(round_name, list_name):
         (players_list[6],players_list[7]),
         ]
     print(f'''
-    \n\nThe Next Matches are:\n\n
+    \n\nThe Next Matches are Sorted by Ranks and Score:\n\n
     {matches[0][0][0]} {matches[0][0][1]} VS {matches[0][1][0]} {matches[0][1][1]}\n
     {matches[1][0][0]} {matches[1][0][1]} VS {matches[1][1][0]} {matches[1][1][1]}\n
     {matches[2][0][0]} {matches[2][0][1]} VS {matches[2][1][0]} {matches[2][1][1]}\n
     {matches[3][0][0]} {matches[3][0][1]} VS {matches[3][1][0]} {matches[3][1][1]}\n
     ''')
-    enter_score = input("\nPress 'ENTER' To Set the Scores\n")
+    enter_score = input(f"\nPress 'ENTER' To Set the Scores for {round_name}\n")
     return matches
 
 

@@ -1,3 +1,6 @@
+
+
+
 {% for tournament in tournament %}
 +-------+-------+-------+-------+-------+------------+------------+------------+
                           TOURNAMENT N°{{ tournament.doc_id}}

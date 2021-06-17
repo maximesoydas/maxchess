@@ -24,10 +24,10 @@ def view_text():
 
 def view_html():
     tmpl = Path(__file__).parent / 'template' / 'last_players.html'
-    ic(tmpl)
+    # ic(tmpl)
     assert tmpl.exists(), "Template not found !!"
     #output = tmpl.open().read()
-    ic(player.all.items)
+    # ic(player.all.items)
     player_table = templateEnv.get_template('last_players.html').render(players = player.all.items)
 
     with open(f"./view/tables/last_players.html", "w") as f:

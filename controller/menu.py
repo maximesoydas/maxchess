@@ -142,11 +142,11 @@ def reports():
             players_reports_option = int(input("\n\nOption : "))
             if players_reports_option == 1:
                 report.players_latest_report()
-                print("You can view the html version by typing: \ngoogle-chrome view/tables/latest_players.html")
+                print("\nOn Windows You can view the html version by typing: \nstart view/tables/last_players.html")
                 quit()
             elif players_reports_option == 2:
                 report.players_all_reports()
-                print("You can view the html version by typing: \ngoogle-chrome view/tables/players.html")
+                print("\nOn Windows You can view the html version by typing: \nstart view/tables/players.html")
                 quit()
             else:
                 clr.screen()
@@ -156,11 +156,11 @@ def reports():
             tournaments_reports_option = int(input("\n\nOption : "))
             if tournaments_reports_option == 1:
                 report.tournament_latest_report()
-                print("You can view the html version by typing: \ngoogle-chrome view/tables/latest_tournament.html")
+                print("On Windows You can view the html version by typing: \nstart view/tables/last_tournament.html")
                 quit()
             elif tournaments_reports_option == 2:
                 report.tournament_all_reports()
-                print("You can view the html version by typing: \ngoogle-chrome view/tables/tournaments.html")
+                print("On Windows You can view the html version by typing: \nstart view/tables/tournaments.html")
                 quit()
             else:
                 clr.screen()

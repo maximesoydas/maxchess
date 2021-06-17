@@ -1,4 +1,6 @@
 
+
+
 {% for player in players %} {% if loop.last %}ID    |    PLAYERS LIST NAME     | 
 +-------+-------+-------+-------+-------+------------+
 {{ player.doc_id }}     |         {{ player.list_name }}        | 
