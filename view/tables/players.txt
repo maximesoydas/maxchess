@@ -1,15 +1,15 @@
- 
-ID    |    PLAYERS LIST NAME     | 
+
+  ID    |    PLAYERS LIST NAME     | 
 +-------+-------+-------+-------+-------+------------+
-1     |         Max1        | 
+2     |         Maxchess1        | 
 +-------+-------+-------+-------+-------+------------+
 NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
 +-------+-------+-------+-------+-------+------------+
-Tyson  |  Lavarel  |   05/08/195   |   Male |   1500
-Rick  |  Sylver  |   08/08/1995   |   Male |   855
-Max1  |  Soydas  |   04/11/1995   |   Male |   850
-John  |  Steve  |   05/05/1995   |   Male |   750
-Bethy  |  Daniels  |   150   |   Female |   750
-Bethany  |  Boulder  |   05/05/1995   |   Female |   455
-Robert  |  Jacob  |   05/05/1995   |   Male |   450
-Sylvie  |  Mckenzie  |   05/01/1995   |   Female |   100
+Ray  |   05/01/1964   |   Male |   955
+Soy  |   04/11/1995   |   Male |   950
+Vaughan  |   05/05/1970   |   Female |   850
+Miyata  |   05/12/1997   |   Female |   785
+Mckenzie  |   15/07/1996   |   Female |   755
+Letris  |   05/05/1968   |   Female |   755
+Stevenson  |   19/11/1995   |   Male |   655
+Reliss  |   14/05/2000   |   Male |   450

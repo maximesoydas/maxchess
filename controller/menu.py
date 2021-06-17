@@ -140,18 +140,17 @@ def reports():
         if option == 1:
             menu.players_reports()
             players_reports_option = int(input("\n\nOption : "))
-            print('players report')
             if players_reports_option == 1:
                 report.players_latest_report()
                 print("You can view the html version by typing: \ngoogle-chrome view/tables/latest_players.html")
                 quit()
             elif players_reports_option == 2:
-                print('players report')
                 report.players_all_reports()
                 print("You can view the html version by typing: \ngoogle-chrome view/tables/players.html")
                 quit()
             else:
-                quit()
+                clr.screen()
+                main()
         elif option == 2:
             menu.tournament_reports()
             tournaments_reports_option = int(input("\n\nOption : "))
@@ -164,7 +163,8 @@ def reports():
                 print("You can view the html version by typing: \ngoogle-chrome view/tables/tournaments.html")
                 quit()
             else:
-                quit()
+                clr.screen()
+                main()
         elif option == 3:
             clr.screen()
             main()
