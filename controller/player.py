@@ -12,7 +12,7 @@ def add(n=1):
     Add Player
     '''
     for i in range (n):
-        print(f"\nPlease Add Player {i+2}")
+        print(f"\nPlease Add Player {i+1}")
         model.Player(
             name=input("\nEnter Player Name: "),
             surname=input("\nEnter Player Surname: "),
@@ -34,7 +34,7 @@ def add(n=1):
     db = TinyDB('maxchess_db.json')
     TinyDB.default_table_name = 'players'
     db.drop_table('players')
-    return
+    return list_name
 
 def remove_name():
     """

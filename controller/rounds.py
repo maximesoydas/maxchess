@@ -169,6 +169,7 @@ def get_players():
             print('Invalid Number')
             add_round()
             break
+    print("this is list name !!!!!!!!!")
     return list_name
 
 def add_round(round_name):
@@ -177,6 +178,7 @@ def add_round(round_name):
     round_name = round_name
     if round_name == "Round1":
         list_name = get_players()
+        clr.screen()
     else:
         list_name = ""
 

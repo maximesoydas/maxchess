@@ -22,7 +22,6 @@ def new_tournament():
     description=input("Enter Description:")
     # first set the round_table empty then append round by round in the for loop
     rounds_table = []
-    status = True
     # delete previous tournaments Rounds table
     db = TinyDB('maxchess_db.json')
     TinyDB.default_table_name = 'Rounds'
@@ -36,7 +35,6 @@ def new_tournament():
         timing_method= timing_method,
         description= description,
         rounds= rounds_table,
-        status= status,
     ).save()
     round_num = 0
     for rounds in range(4):
