@@ -6,13 +6,9 @@ from view import menu
 from operator import *
 import json
 
-<<<<<<< HEAD
-class PlayerController:
-=======
 # input int  while ok int
 
 class PlayerController():
->>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
         
     def add(n=1):
         '''

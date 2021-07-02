@@ -5,10 +5,6 @@ import datetime
 from operator import *
 from controller import clear as clr
 
-<<<<<<< HEAD
-
-class roundsController:
-=======
 
 
 class RoundsController():
@@ -17,7 +13,6 @@ class RoundsController():
     Controls the Rounds' model
     Checks Round number, Sorts players, Gives out matchups, Calls Rounds model to save outcomes into the database
     '''
->>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
 
     def sort_players(round_name, list_name):
         '''
