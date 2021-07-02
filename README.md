@@ -34,3 +34,8 @@ maxchess.bat
 - [x] add batch script for Windows ( launch app by the app name)
 - [x] Check if the if loop exists for checking which os 
 - [x] fix jinja readability (see this [SO question](https://stackoverflow.com/questions/36870953/jinja2-how-to-remove-trailing-newline))
+- [ ] Elements have to be tailored for the user (dates have to be dates, ints have to be ints, strings have to be strings, option for gender ) -> Forcer les formats
+- [ ] rank/date/variables try except assert if not int -> verfier les types
+- [ ] add class to all files (mvc) -> 
+- [ ] elaborate a prettier print of reports -> optional
+- [ ] when tournament/reports/players ends (program ends) return to main menu for reports -> main.menu() instead of quit()
