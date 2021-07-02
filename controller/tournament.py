@@ -10,9 +10,6 @@ from operator import *
 from pprint import *
 
 
-<<<<<<< HEAD
-class TournamentController:
-=======
 class TournamentController():
 
     '''
@@ -20,7 +17,6 @@ class TournamentController():
     Retrieves general data inputs from user and calls the model to save the tournament into the database
     Calls the RoundsController, and saves each round into the tournament table
     '''
->>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
 
     def new_tournament():
         '''
