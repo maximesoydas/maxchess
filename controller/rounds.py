@@ -5,8 +5,19 @@ import datetime
 from operator import *
 from controller import clear as clr
 
+<<<<<<< HEAD
 
 class roundsController:
+=======
+
+
+class RoundsController():
+
+    '''
+    Controls the Rounds' model
+    Checks Round number, Sorts players, Gives out matchups, Calls Rounds model to save outcomes into the database
+    '''
+>>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
 
     def sort_players(round_name, list_name):
         '''
@@ -93,6 +104,7 @@ class roundsController:
             gender = i['gender']
             if round_name == "Round1":
                 score = 0
+<<<<<<< HEAD
             else:
                 score = i['score']
             players_list.append([name, surname, birthday, gender, i["rank"], score])
@@ -183,6 +195,98 @@ class roundsController:
             list_name = get_players()
             clr.screen()
         else:
+=======
+            else:
+                score = i['score']
+            players_list.append([name, surname, birthday, gender, i["rank"], score])
+            
+        if round_name == 'Round1':
+            matches = [
+            (players_list[0],players_list[4]),
+            (players_list[1],players_list[5]),
+            (players_list[2],players_list[6]),
+            (players_list[3],players_list[7]),
+            ]
+        else:
+            matches = [
+            (players_list[0],players_list[1]),
+            (players_list[2],players_list[3]),
+            (players_list[4],players_list[5]),
+            (players_list[6],players_list[7]),
+            ]
+        print(f'''
+        \n\nThe Next Matches are Sorted by Ranks and Score:\n\n
+        {matches[0][0][0]} {matches[0][0][1]} VS {matches[0][1][0]} {matches[0][1][1]}\n
+        {matches[1][0][0]} {matches[1][0][1]} VS {matches[1][1][0]} {matches[1][1][1]}\n
+        {matches[2][0][0]} {matches[2][0][1]} VS {matches[2][1][0]} {matches[2][1][1]}\n
+        {matches[3][0][0]} {matches[3][0][1]} VS {matches[3][1][0]} {matches[3][1][1]}\n
+        ''')
+        enter_score = input(f"\nPress 'ENTER' To Set the Scores for {round_name}\n")
+        return matches
+
+
+    def set_scores(matches):
+
+        for (player1, player2) in matches:
+            # get players names
+            player1_name = player1[1]
+            player2_name = player2[1]
+            print(f'\nScore of match:\n {player1_name} vs {player2_name} ?\n')
+            winner = input(f"\nWho won the match:\n\n[1] for {player1_name}\n[2] for {player2_name}\n[0] for Even \n\n Option Number : ")
+            if winner == '1':
+                player1[5] += 1.0
+            # if 2 : player2 += 1
+            elif winner == '2':
+                player2[5] += 1.0
+            # if 0 : 0.5 each (even)
+            elif winner == '0':
+                player1[5] += 0.5
+                player2[5] += 0.5 
+            else:
+                print("Wrong option number !")
+                quit
+
+        scoreboard = matches
+        return scoreboard
+
+    def get_players():
+
+        print('''
+        [1] Use Existing Players
+        [2] Create 8 New Players
+        ''')
+        players_option_nb = int(input("\n\nOption : "))
+        q= Query()
+        while players_option_nb != 0:
+            if players_option_nb == 1:
+                list_name = input('Enter Existing Players List Name : ')
+                db = TinyDB('maxchess_db.json')
+                TinyDB.default_table_name = 'players_lists'
+                if db.get((q.list_name == list_name)):
+                    return list_name
+                else:
+                    clr.screen()
+                    print(f"\nPlayer list {list_name} Doesn't exist please Try Again !")
+                    get_players()
+            elif players_option_nb == 2:
+                list_name = player_controller.add(8)
+                break
+            else:
+                print('Invalid Number')
+                add_round()
+                break
+        print("this is list name !!!!!!!!!")
+        return list_name
+
+    def add_round(round_name):
+
+        # Fetch the round_name
+        round_name = round_name
+        if round_name == "Round1":
+            list_name = get_players()
+            clr.screen()
+        else:
+>>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
             list_name = ""
 
         (datetime_start, datetime_end) = set_time()

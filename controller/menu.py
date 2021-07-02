@@ -8,9 +8,14 @@ from controller import tournament as tournament_controller
 from controller import reports as report
 from controller import clear as clr
 
+<<<<<<< HEAD
 
 class Menu:
         
+=======
+class MenuController():
+
+>>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
     def main():
         clr.screen()
         menu.main()
@@ -75,7 +80,11 @@ class Menu:
                         print('Invalid Number')
                         menu.player()
                         break
+<<<<<<< HEAD
             elif option == 3:
+=======
+            elif option == 4:
+>>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
                 clr.screen()
                 print("""
                 Thank you, Have a GREAT day!

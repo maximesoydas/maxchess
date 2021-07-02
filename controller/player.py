@@ -6,7 +6,13 @@ from view import menu
 from operator import *
 import json
 
+<<<<<<< HEAD
 class PlayerController:
+=======
+# input int  while ok int
+
+class PlayerController():
+>>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
         
     def add(n=1):
         '''
@@ -115,8 +121,13 @@ class PlayerController:
     def remove_all():
         db = TinyDB('maxchess_db.json')
         q = Query()
+<<<<<<< HEAD
         TinyDB.default_table_name = 'players_list'
         if db.drop_table('players_list') == False:
+=======
+        TinyDB.default_table_name = 'players'
+        if db.drop_table('players') == False:
+>>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
             print('No Players List found')
             quit()
         else:

@@ -5,7 +5,11 @@ from view import last_tournament as last_tournament_view
 import os
 import platform
 
+<<<<<<< HEAD
 class Reports:
+=======
+class ReportsController():
+>>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
         
     def players_latest_report():
         """ 
