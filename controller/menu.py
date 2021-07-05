@@ -74,15 +74,7 @@ class MenuController():
                         tools.check_range(option, 1-4)
                         menu.ViewMenu.player()
                         break
-<<<<<<< HEAD
             elif option == 3:
-=======
-<<<<<<< HEAD
-            elif option == 3:
-=======
-            elif option == 4:
->>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
->>>>>>> d84b8a5125f2695ca4f98c5b32b1434d012ce24b
                 clr.screen()
                 print("""
                 Thank you, Have a GREAT day!

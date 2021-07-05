@@ -1,191 +1,65 @@
-<<<<<<< HEAD
-{"players_lists": {"1": {"list_name": "Maxchess", "players": [{"name": "Steve", "surname": "Ray", "birthday": "03/10/1954", "gender": "Male", "rank": 1050}, {"name": "Max", "surname": "Soydas", "birthday": "04/11/1995", "gender": "Male", "rank": 1000}, {"name": "Malcolm", "surname": "Ekse", "birthday": "05/07/1949", "gender": "Male", "rank": 985}, {"name": "Jonny", "surname": "River", "birthday": "05/11/1975", "gender": "Male", "rank": 950}, {"name": "Janeth", "surname": "Laidens", "birthday": "09/08/1979", "gender": "Female", "rank": 850}, {"name": "Steve", "surname": "Stevenson", "birthday": "05/01/1994", "gender": "Male", "rank": 750}, {"name": "Jennifer", "surname": "Rithald", "birthday": "05/01/1975", "gender": "Female", "rank": 750}, {"name": "Ellie", "surname": "Mckenzie", "birthday": "04/09/1995", "gender": "Female", "rank": 450}]}}}
-=======
 {
     "players_lists": {
         "1": {
-            "list_name": "123456",
+            "list_name": "Maxchess",
             "players": [
                 {
-                    "name": "8",
-                    "surname": "8",
-                    "birthday": "8",
-                    "gender": "8",
-                    "rank": 8
-                },
-                {
-                    "name": "7",
-                    "surname": "7",
-                    "birthday": "7",
-                    "gender": "7",
-                    "rank": 7
-                },
-                {
-                    "name": "6",
-                    "surname": "6",
-                    "birthday": "6",
-                    "gender": "6",
-                    "rank": 6
-                },
-                {
-                    "name": "5",
-                    "surname": "5",
-                    "birthday": "5",
-                    "gender": "5",
-                    "rank": 5
-                },
-                {
-                    "name": "4",
-                    "surname": "4",
-                    "birthday": "4",
-                    "gender": "4",
-                    "rank": 4
-                },
-                {
-                    "name": "3",
-                    "surname": "3",
-                    "birthday": "3",
-                    "gender": "3",
-                    "rank": 3
-                },
-                {
-                    "name": "2",
-                    "surname": "2",
-                    "birthday": "2",
-                    "gender": "2",
-                    "rank": 2
-                },
-                {
-                    "name": "1",
-                    "surname": "1",
-                    "birthday": "1",
-                    "gender": "1",
-                    "rank": 1
-                }
-            ]
-        },
-        "2": {
-            "list_name": "Maxchess1",
-            "players": [
-                {
-                    "name": "Stevie",
+                    "name": "Steve",
                     "surname": "Ray",
-                    "birthday": "05/01/1964",
+                    "birthday": "03/10/1954",
                     "gender": "Male",
-                    "rank": 955
+                    "rank": 1050
                 },
                 {
                     "name": "Max",
-                    "surname": "Soy",
+                    "surname": "Soydas",
                     "birthday": "04/11/1995",
+                    "gender": "Male",
+                    "rank": 1000
+                },
+                {
+                    "name": "Malcolm",
+                    "surname": "Ekse",
+                    "birthday": "05/07/1949",
+                    "gender": "Male",
+                    "rank": 985
+                },
+                {
+                    "name": "Jonny",
+                    "surname": "River",
+                    "birthday": "05/11/1975",
                     "gender": "Male",
                     "rank": 950
                 },
                 {
-                    "name": "Lenny",
-                    "surname": "Vaughan",
-                    "birthday": "05/05/1970",
+                    "name": "Janeth",
+                    "surname": "Laidens",
+                    "birthday": "09/08/1979",
                     "gender": "Female",
                     "rank": 850
                 },
                 {
-                    "name": "Sakura",
-                    "surname": "Miyata",
-                    "birthday": "05/12/1997",
+                    "name": "Steve",
+                    "surname": "Stevenson",
+                    "birthday": "05/01/1994",
+                    "gender": "Male",
+                    "rank": 750
+                },
+                {
+                    "name": "Jennifer",
+                    "surname": "Rithald",
+                    "birthday": "05/01/1975",
                     "gender": "Female",
-                    "rank": 785
+                    "rank": 750
                 },
                 {
                     "name": "Ellie",
                     "surname": "Mckenzie",
-                    "birthday": "15/07/1996",
+                    "birthday": "04/09/1995",
                     "gender": "Female",
-                    "rank": 755
-                },
-                {
-                    "name": "Lilly",
-                    "surname": "Letris",
-                    "birthday": "05/05/1968",
-                    "gender": "Female",
-                    "rank": 755
-                },
-                {
-                    "name": "Steven",
-                    "surname": "Stevenson",
-                    "birthday": "19/11/1995",
-                    "gender": "Male",
-                    "rank": 655
-                },
-                {
-                    "name": "Johnny",
-                    "surname": "Reliss",
-                    "birthday": "14/05/2000",
-                    "gender": "Male",
                     "rank": 450
-                }
-            ]
-        },
-        "3": {
-            "list_name": "789789",
-            "players": [
-                {
-                    "name": "8",
-                    "surname": "88",
-                    "birthday": "8",
-                    "gender": "8",
-                    "rank": 8
-                },
-                {
-                    "name": "7",
-                    "surname": "7",
-                    "birthday": "7",
-                    "gender": "7",
-                    "rank": 7
-                },
-                {
-                    "name": "5",
-                    "surname": "6",
-                    "birthday": "6",
-                    "gender": "6",
-                    "rank": 6
-                },
-                {
-                    "name": "4",
-                    "surname": "5",
-                    "birthday": "5",
-                    "gender": "55",
-                    "rank": 5
-                },
-                {
-                    "name": "4",
-                    "surname": "4",
-                    "birthday": "4",
-                    "gender": "4",
-                    "rank": 4
-                },
-                {
-                    "name": "3",
-                    "surname": "3",
-                    "birthday": "3",
-                    "gender": "3",
-                    "rank": 3
-                },
-                {
-                    "name": "2",
-                    "surname": "2",
-                    "birthday": "2",
-                    "gender": "2",
-                    "rank": 2
-                },
-                {
-                    "name": "1",
-                    "surname": "1",
-                    "birthday": "1",
-                    "gender": "1",
-                    "rank": 1
                 }
             ]
         }
     }
 }
->>>>>>> d84b8a5125f2695ca4f98c5b32b1434d012ce24b

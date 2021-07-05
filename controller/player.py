@@ -117,17 +117,8 @@ class PlayerController():
     def remove_all():
         db = TinyDB('maxchess_db.json')
         q = Query()
-<<<<<<< HEAD
         TinyDB.default_table_name = 'players_list'
         if db.drop_table('players_list') == False:
-=======
-        TinyDB.default_table_name = 'players'
-<<<<<<< HEAD
-        if db.drop_table('players_lists'):
-=======
-        if db.drop_table('players') == False:
->>>>>>> eee33165c0f3dd4fd90481e4588bb874ad45d935
->>>>>>> d84b8a5125f2695ca4f98c5b32b1434d012ce24b
             print('No Players List found')
             quit()
         else:
