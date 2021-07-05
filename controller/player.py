@@ -4,7 +4,7 @@ from tinydb import TinyDB, Query, where
 from controller import clear as clr
 from view import menu
 from operator import *
-import json
+from controller import tools
 
 # input int  while ok int
 
@@ -17,9 +17,9 @@ class PlayerController():
         for i in range (n):
             print(f"\nPlease Add Player {i+1}")
             model.Player(
-                name=input("\nEnter Player Name: "),
-                surname=input("\nEnter Player Surname: "),
-                birthday=input("\nEnter Player Birthday: "),
+                name= tools.str_input('name'),
+                surname=tools.str_input('surname'),
+                birthday=tools.date_input('birthday'),
                 gender=input("\nEnter Player Gender: "),
                 rank=int(input("\nEnter Player Rank: ")),
             ).save()
@@ -51,7 +51,7 @@ class PlayerController():
         print(player_name)
         if player_name == None:
             print('\nPlayer Not Found\nTry Again !\n')
-            remove_name()
+            PlayerController.remove_name()
         else:
             print(f"\nRemove the following player ?\n\n{player_name}\n\n[1] Yes\n[2] No (other player)\n[3] Exit\n")
             option = int(input("\n\nOption Number: "))
@@ -63,7 +63,7 @@ class PlayerController():
                     quit()
                     break
                 elif option == 2:
-                    remove_name()
+                    PlayerController.remove_name()
                     break
                 elif option == 3:
                     menu.player()
@@ -74,7 +74,7 @@ class PlayerController():
                     break
                 else:
                     print('Invalid Number')
-                    remove_name()
+                    PlayerController.remove_name()
                     break
                 
 
@@ -91,7 +91,7 @@ class PlayerController():
         player_id = db.get(doc_id=id_num)
         if player_id is None:
             print('\nPlayer Not Found, Try Again !\n')
-            remove_id()
+            PlayerController.remove_id()
         else:
             print(f"\nRemove the following player ?\n\n{player_id}\n\n[1] Yes\n[2] No (other player)\n[3] Exit\n")
             option = int(input("\n\nOption Number: "))
@@ -103,14 +103,14 @@ class PlayerController():
                     quit()
                     break
                 elif option == 2:
-                    remove_id()
+                    PlayerController.remove_id()
                     break
                 elif option == 3:
                     menu.player()
                     break
                 else:
                     print('Invalid Number')
-                    remove_id()
+                    PlayerController.remove_id()
                     break
 
 
@@ -118,7 +118,7 @@ class PlayerController():
         db = TinyDB('maxchess_db.json')
         q = Query()
         TinyDB.default_table_name = 'players'
-        if db.drop_table('players') == False:
+        if db.drop_table('players_lists'):
             print('No Players List found')
             quit()
         else:

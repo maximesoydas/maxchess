@@ -1,4 +1,3 @@
-from controller.menu import tournament
 from controller import clear as clr
 from re import M
 from model import tournament as tournament_model
@@ -52,7 +51,7 @@ class TournamentController():
             round_name = f"Round{round_num}"
             # after fecthing the correct round_name
             # call the add_round() function
-            round_controller.add_round(round_name)
+            round_controller.RoundsController.add_round(round_name)
             db = TinyDB('maxchess_db.json')
             TinyDB.default_table_name = 'Rounds'
             rounds = db.all()
@@ -89,7 +88,7 @@ class TournamentController():
             round_name = f"Round{round_num}"
             # after fecthing the correct round_name
             # call the add_round() function
-            round_controller.add_round(round_name)
+            round_controller.RoundsController.add_round(round_name)
             db = TinyDB('maxchess_db.json')
             TinyDB.default_table_name = 'Rounds'
             rounds = db.all()
@@ -120,11 +119,11 @@ class TournamentController():
                 while len(rounds) < 4:
                     round_num = len(rounds)
                     print(f'Previous Tournament Found ! \nPlease Enter Round {round_num + 1} Before starting a new tournament')
-                    existing_tournament(tournament_id, round_num)
+                    TournamentController.existing_tournament(tournament_id, round_num)
             else:
-                menu.main()
+                menu.MenuController.main()
         else:
-            menu.main()
+            menu.MenuController.main()
 
 
     def remove_name():

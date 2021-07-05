@@ -1,4 +1,7 @@
 
+
+
+
 +-------+-------+-------+-------+-------+------------+------------+------------+
                           TOURNAMENT N°1
 +-------+-------+-------+-------+-------+------------+------------+------------+
@@ -35,3 +38,39 @@ ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION
     POSITION: 6  |  Mrs/Mr.Stevenson  |  RANK: 655  |  SCORE :  2.0 
     POSITION: 7  |  Mrs/Mr.Mckenzie  |  RANK: 755  |  SCORE :  1.0 
     POSITION: 8  |  Mrs/Mr.Reliss  |  RANK: 450  |  SCORE :  0 
++-------+-------+-------+-------+-------+------------+------------+------------+
+                          TOURNAMENT N°3
++-------+-------+-------+-------+-------+------------+------------+------------+
+ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
++-------+-------+-------+-------+-------+------------+------------+------------+
+#3 | Maxchess 1 | 05/05/2021 | 4 | Blitz | Maxchess 1
++-------+-------+-------+-------+-------+------------+------------+------------+
+                          FINAL    ROUND 
+                            SCOREBOARD
++-------+-------+-------+-------+-------+------------+------------+------------+ 
+    POSITION: 1  |  Mrs/Mr.Ray  |  RANK: 1050  |  SCORE :  4.0 
+    POSITION: 2  |  Mrs/Mr.Mckenzie  |  RANK: 450  |  SCORE :  3.0 
+    POSITION: 3  |  Mrs/Mr.Soydas  |  RANK: 1000  |  SCORE :  2.0 
+    POSITION: 4  |  Mrs/Mr.Ekse  |  RANK: 985  |  SCORE :  2.0 
+    POSITION: 5  |  Mrs/Mr.Stevenson  |  RANK: 750  |  SCORE :  2.0 
+    POSITION: 6  |  Mrs/Mr.Laidens  |  RANK: 850  |  SCORE :  1.0 
+    POSITION: 7  |  Mrs/Mr.Rithald  |  RANK: 750  |  SCORE :  1.0 
+    POSITION: 8  |  Mrs/Mr.River  |  RANK: 950  |  SCORE :  0 
++-------+-------+-------+-------+-------+------------+------------+------------+
+                          TOURNAMENT N°4
++-------+-------+-------+-------+-------+------------+------------+------------+
+ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
++-------+-------+-------+-------+-------+------------+------------+------------+
+#4 | Maxchess 2 | 05/09/2021 | 4 | Blitz | Maxchess
++-------+-------+-------+-------+-------+------------+------------+------------+
+                          FINAL    ROUND 
+                            SCOREBOARD
++-------+-------+-------+-------+-------+------------+------------+------------+ 
+    POSITION: 1  |  Mrs/Mr.Ekse  |  RANK: 985  |  SCORE :  3.0 
+    POSITION: 2  |  Mrs/Mr.Mckenzie  |  RANK: 450  |  SCORE :  3.0 
+    POSITION: 3  |  Mrs/Mr.Ray  |  RANK: 1050  |  SCORE :  2.0 
+    POSITION: 4  |  Mrs/Mr.River  |  RANK: 950  |  SCORE :  2.0 
+    POSITION: 5  |  Mrs/Mr.Laidens  |  RANK: 850  |  SCORE :  2.0 
+    POSITION: 6  |  Mrs/Mr.Stevenson  |  RANK: 750  |  SCORE :  2.0 
+    POSITION: 7  |  Mrs/Mr.Soydas  |  RANK: 1000  |  SCORE :  1.0 
+    POSITION: 8  |  Mrs/Mr.Rithald  |  RANK: 750  |  SCORE :  0 

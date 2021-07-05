@@ -1,7 +1,8 @@
 from controller import tournament
 
 def main():
-   tournament.check_tournament()
+   t = tournament.TournamentController
+   t.check_tournament()
    
 
 if __name__ == "__main__":

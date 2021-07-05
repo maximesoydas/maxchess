@@ -1,17 +1,17 @@
 
 
 
-  ID    |    PLAYERS LIST NAME     | 
+ ID    |    PLAYERS LIST NAME     | 
 +-------+-------+-------+-------+-------+------------+
-2     |         Maxchess1        | 
+1     |         Maxchess        | 
 +-------+-------+-------+-------+-------+------------+
 NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
 +-------+-------+-------+-------+-------+------------+
-Ray  |   05/01/1964   |   Male |   955
-Soy  |   04/11/1995   |   Male |   950
-Vaughan  |   05/05/1970   |   Female |   850
-Miyata  |   05/12/1997   |   Female |   785
-Mckenzie  |   15/07/1996   |   Female |   755
-Letris  |   05/05/1968   |   Female |   755
-Stevenson  |   19/11/1995   |   Male |   655
-Reliss  |   14/05/2000   |   Male |   450
+Ray  |   03/10/1954   |   Male |   1050
+Soydas  |   04/11/1995   |   Male |   1000
+Ekse  |   05/07/1949   |   Male |   985
+River  |   05/11/1975   |   Male |   950
+Laidens  |   09/08/1979   |   Female |   850
+Stevenson  |   05/01/1994   |   Male |   750
+Rithald  |   05/01/1975   |   Female |   750
+Mckenzie  |   04/09/1995   |   Female |   450

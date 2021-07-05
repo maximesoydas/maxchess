@@ -88,7 +88,7 @@ class RoundsController():
         creates the matches list
         '''
         # global sorted_players
-        sorted_players = sort_players(round_name, list_name)
+        sorted_players = RoundsController.sort_players(round_name, list_name)
         # # retrieve all surnames from players list
         players_list = []
 
@@ -186,14 +186,14 @@ class RoundsController():
         # Fetch the round_name
         round_name = round_name
         if round_name == "Round1":
-            list_name = get_players()
+            list_name = RoundsController.get_players()
             clr.screen()
         else:
             list_name = ""
 
-        (datetime_start, datetime_end) = set_time()
-        (matches) = set_matches(round_name, list_name)
-        (scoreboard) = set_scores(matches)
+        (datetime_start, datetime_end) = RoundsController.set_time()
+        (matches) = RoundsController.set_matches(round_name, list_name)
+        (scoreboard) = RoundsController.set_scores(matches)
 
         # Update players_list for this tournament's round
         updated_players = []

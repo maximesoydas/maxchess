@@ -7,25 +7,26 @@ from controller import rounds as round_controller
 from controller import tournament as tournament_controller
 from controller import reports as report
 from controller import clear as clr
+from controller import tools
+
 
 class MenuController():
 
     def main():
-        clr.screen()
-        menu.main()
-        option = int(input("\n\nOption : "))
+        menu.ViewMenu.main()
+        option = tools.int_input('option')
         while option != 0:
             if option == 1:
                 clr.screen()
-                player()
+                MenuController.player()
                 break
             elif option == 2:
                 clr.screen()
-                tournament()
+                MenuController.tournament()
                 break
             elif option == 3:
                 clr.screen()
-                reports()
+                MenuController.reports()
                 break
             elif option == 4:
                 clr.screen()
@@ -34,85 +35,83 @@ class MenuController():
                 """)
                 quit()
             else:
-                clr.screen()
-                print('Invalid Number')
-                menu.main()
+                tools.check_range(option, 1-4)
+                MenuController.main()
+
                 break
 
 
     def player():
-        menu.player()
-        option = int(input("\n\nOption : "))
+        menu.ViewMenu.player()
+        option = tools.int_input('option')
         while option != 0:
             if option == 1:
                 clr.screen()
-                player_controller.add(8)
+                player_controller.PlayerController.add(8)
                 break
             elif option == 2:
                 clr.screen()
-                menu.remove_players()
-                delete_option = int(input("\n\nOption Number: "))
+                menu.ViewMenu.remove_players()
+                delete_option = tools.int_input('delete_option')
                 while delete_option != 0:
                     if delete_option == 1:
                         clr.screen()
-                        player_controller.remove_id()
+                        player_controller.PlayerController.remove_id()
                         break
                     elif delete_option == 2:
                         clr.screen()
-                        player_controller.remove_name()
+                        player_controller.PlayerController.remove_name()
                         break
                     elif delete_option == 3:
                         clr.screen()
-                        player_controller.remove_all()
+                        player_controller.PlayerController.remove_all()
                         break
                     elif delete_option == 4:
                         clr.screen()
                         quit()
                         break
                     else:
-                        clr.screen()
-                        print('Invalid Number')
-                        menu.player()
+                        tools.check_range(option, 1-4)
+                        menu.ViewMenu.player()
                         break
-            elif option == 4:
+            elif option == 3:
                 clr.screen()
                 print("""
                 Thank you, Have a GREAT day!
                 """)
-                main()
+                MenuController.main()
                 break
             else:
-                clr.screen()
-                print('Invalid Number')
-                menu.player()
+                tools.check_range(option, 1-3)
+                MenuController.player()
                 break
         
 
     def tournament():
-        menu.tournament()
-        tournament_option = int(input("\n\nOption : "))
-        while tournament_option != 0:
-            if tournament_option == 1:
+        menu.ViewMenu.tournament()
+        option = tools.int_input('option')
+        while option != 0:
+            if option == 1:
                 # Start New Tournament
                 clr.screen()
-                tournament_controller.new_tournament()
+                tournament_controller.TournamentController.new_tournament()
                 break
-            elif tournament_option == 2:
+            elif option == 2:
                 clr.screen()
-                menu.remove_tournament()
-                delete_option = int(input("\n\nOption Number: "))
+                menu.ViewMenu.remove_tournament()
+                delete_option = tools.int_input('delete_option')
                 while delete_option != 0:
                     if delete_option == 1:
                         clr.screen()
-                        tournament_controller.remove_id()
+                        tournament_controller.TournamentController.remove_id()
                         break
                     elif delete_option == 2:
                         clr.screen()
-                        tournament_controller.remove_name()
+                        tournament_controller.TournamentController.remove_name()
                         break
                     elif delete_option == 3:
                         clr.screen()
-                        tournament_controller.remove_all()
+                        tournament_controller.TournamentController.remove_all()
                         break
                     elif delete_option == 4:
                         clr.screen()
@@ -124,52 +123,52 @@ class MenuController():
                         menu.player()
                         break
                 break
-            elif tournament_option == 3:
+            elif option == 3:
                 # return to main menu
                 clr.screen()
-                main() 
+                MenuController.main() 
                 break
             else:
                 clr.screen()
                 print('Invalid Number')
-                main()
+                MenuController.main()
                 break
         
     def reports():
-        menu.reports()
-        option = int(input("\n\nOption : "))
+        menu.ViewMenu.reports()
+        option = tools.int_input('option')
         while option != 0:
             if option == 1:
-                menu.players_reports()
-                players_reports_option = int(input("\n\nOption : "))
+                menu.ViewMenu.players_reports()
+                players_reports_option = tools.int_input('players_reports_option')
                 if players_reports_option == 1:
-                    report.players_latest_report()
+                    report.ReportsController.players_latest_report()
                     print("\nOn Windows You can view the html version by typing: \nstart view/tables/last_players.html")
                     quit()
                 elif players_reports_option == 2:
-                    report.players_all_reports()
+                    report.ReportsController.players_all_reports()
                     print("\nOn Windows You can view the html version by typing: \nstart view/tables/players.html")
                     quit()
                 else:
                     clr.screen()
-                    main()
+                    MenuController.main()
             elif option == 2:
-                menu.tournament_reports()
-                tournaments_reports_option = int(input("\n\nOption : "))
+                menu.ViewMenu.tournament_reports()
+                tournaments_reports_option = tools.int_input('tournaments_reports_option')
                 if tournaments_reports_option == 1:
-                    report.tournament_latest_report()
+                    report.ReportsController.tournament_latest_report()
                     print("On Windows You can view the html version by typing: \nstart view/tables/last_tournament.html")
                     quit()
                 elif tournaments_reports_option == 2:
-                    report.tournament_all_reports()
+                    report.ReportsController.tournament_all_reports()
                     print("On Windows You can view the html version by typing: \nstart view/tables/tournaments.html")
                     quit()
                 else:
                     clr.screen()
-                    main()
+                    MenuController.main()
             elif option == 3:
                 clr.screen()
-                main()
+                MenuController.main()
             elif option == 4:
                 clr.screen()
                 print("""
@@ -177,6 +176,7 @@ class MenuController():
                 """)
                 quit()
             else:
+                tools.check_range(option, 1-4)
                 print('Invalid Number')
                 break
 
