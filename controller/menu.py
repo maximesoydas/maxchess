@@ -76,9 +76,6 @@ class MenuController():
                         break
             elif option == 3:
                 clr.screen()
-                print("""
-                Thank you, Have a GREAT day!
-                """)
                 MenuController.main()
                 break
             else:

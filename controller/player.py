@@ -2,10 +2,9 @@ from model import player as model
 from model import players_list as player_model
 from tinydb import TinyDB, Query, where
 from controller import clear as clr
-from view import menu
 from operator import *
 from controller import tools
-
+from controller import menu
 # input int  while ok int
 
 class PlayerController():
@@ -50,32 +49,36 @@ class PlayerController():
         player_name = db.get((q.list_name == list_name))
         print(player_name)
         if player_name == None:
+            clr.screen()
             print('\nPlayer Not Found\nTry Again !\n')
             PlayerController.remove_name()
         else:
-            print(f"\nRemove the following player ?\n\n{player_name}\n\n[1] Yes\n[2] No (other player)\n[3] Exit\n")
-            option = int(input("\n\nOption Number: "))
+            clr.screen()
+            print(f"\nRemove the following player List ?\n\n{player_name}\n\n[1] Yes\n[2] No (other player)\n[3] Exit\n")
+            option = tools.int_input('option')
             while option != 0:
                 if option == 1:
-                    # Remove by Name & Surname
+                    # Remove by Player List Name
+                    clr.screen()
                     db.remove((q.list_name == list_name))
                     print(f'\nPlayer:\n\n{player_name}\nSuccesfully Deleted !')
                     quit()
                     break
                 elif option == 2:
+                    clr.screen()
                     PlayerController.remove_name()
                     break
                 elif option == 3:
-                    menu.player()
-                    break
-                elif option == '':
-                    print('Invalid Number')
-                    menu.player()
+                    clr.screen()
+                    menu.MenuController.player()
                     break
                 else:
-                    print('Invalid Number')
+                    tools.check_range(option, 1-3)
+                    clr.screen()
+                    print("Wrong option number, back to Delete Players List By Name\n")
                     PlayerController.remove_name()
                     break
+                    
                 
 
 
@@ -90,26 +93,33 @@ class PlayerController():
         # Seach by id
         player_id = db.get(doc_id=id_num)
         if player_id is None:
+            clr.screen()
             print('\nPlayer Not Found, Try Again !\n')
             PlayerController.remove_id()
         else:
+            clr.screen()
             print(f"\nRemove the following player ?\n\n{player_id}\n\n[1] Yes\n[2] No (other player)\n[3] Exit\n")
-            option = int(input("\n\nOption Number: "))
+            option = tools.int_input('option')
             while option != 0:
                 if option == 1:
                     # Remove by id
+                    clr.screen()
                     db.remove(doc_ids=[int(id_num)])
                     print(f'\nPlayer:\n\n{player_id}\nSuccesfully Deleted !')
                     quit()
                     break
                 elif option == 2:
+                    clr.screen()
                     PlayerController.remove_id()
                     break
                 elif option == 3:
-                    menu.player()
+                    clr.screen()
+                    menu.MenuController.player()
                     break
                 else:
-                    print('Invalid Number')
+                    tools.check_range(option, 1-3)
+                    clr.screen()
+                    print("Wrong option number, back to Delete Players List By ID\n")
                     PlayerController.remove_id()
                     break
 
