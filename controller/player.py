@@ -19,8 +19,8 @@ class PlayerController():
                 name= tools.str_input('name'),
                 surname=tools.str_input('surname'),
                 birthday=tools.date_input('birthday'),
-                gender=input("\nEnter Player Gender: "),
-                rank=int(input("\nEnter Player Rank: ")),
+                gender=tools.gender_input('gender'),
+                rank=tools.rank_input('rank'),
             ).save()
             clr.screen()
             print(f'Player {i+1} Added Successfully !')
@@ -128,9 +128,20 @@ class PlayerController():
         db = TinyDB('maxchess_db.json')
         q = Query()
         TinyDB.default_table_name = 'players_list'
-        if db.drop_table('players_list') == False:
+        if db.drop_table('players_list'):
             print('No Players List found')
-            quit()
+        else:
+            pass
+        TinyDB.default_table_name = 'players_lists'
+        if db.drop_table('players'):
+            print('No Players List found')
+        else:
+            pass
+        TinyDB.default_table_name = 'players'
+        if db.drop_table('players_lists'):
+            print('No Players List found')
+            menu.MenuController.main()
         else:
             print('All Players Lists successfully removed !')
-            quit()
+            menu.MenuController.main()
+

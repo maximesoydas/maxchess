@@ -7,11 +7,11 @@
 +-------+-------+-------+-------+-------+------------+
 NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
 +-------+-------+-------+-------+-------+------------+
-Ray  |   03/10/1954   |   Male |   1050
-Soydas  |   04/11/1995   |   Male |   1000
-Ekse  |   05/07/1949   |   Male |   985
-River  |   05/11/1975   |   Male |   950
-Laidens  |   09/08/1979   |   Female |   850
-Stevenson  |   05/01/1994   |   Male |   750
-Rithald  |   05/01/1975   |   Female |   750
-Mckenzie  |   04/09/1995   |   Female |   450
+Riperton  |   05/12/60   |   Female |   1050
+Rogan  |   None   |   Male |   1050
+Hill  |   05/01/85   |   Male |   1050
+Renolds  |   05/01/68   |   Male |   1000
+Soy  |   04/11/95   |   Male |   850
+Ray  |   None   |   Male |   850
+Six  |   06/06/66   |   Female |   656
+Steve-Leroy  |   02/02/00   |   Male |   105
