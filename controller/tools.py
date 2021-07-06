@@ -13,7 +13,7 @@ def int_input(input_name):
 
     while True:
         try:
-            input_name = int(input("\n\nOption : "))
+            input_name = int(input("\nOption : "))
             return input_name
         except ValueError:
             print("\nInvalid Input, Please enter a number")
@@ -33,17 +33,15 @@ def str_input(input_name):
 def gender_input(input_name):
     print(""" \n[1] Female \n[2] Male """)
     input_name = int_input(f"\n\n Please Choose {input_name}")
-    while input_name > 0:
+    while input_name != "Female" or "Male":
         if input_name == 1:
             return 'Female'
-            break
         elif input_name == 2:
             return 'Male'
-            break
         else:
             check_range(input_name, 1-2)
-            gender_input(input_name)
-            break 
+            return gender_input(input_name)
+            
 
 def date_input(input_name):
     input_name = input(f"\n\nPlease Enter {str(input_name.capitalize())} (dd/mm/yy) : ")
@@ -51,10 +49,8 @@ def date_input(input_name):
         try:
             datetime.datetime.strptime(input_name, "%d/%m/%y")
             return input_name
-            break
         except ValueError:
             print("\nThis is the incorrect date format. It should be DD/MM/YY")
-
             return date_input('birthday')
 
 def rank_input(input_name):

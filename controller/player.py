@@ -5,6 +5,8 @@ from controller import clear as clr
 from operator import *
 from controller import tools
 from controller import menu
+from pprint import *
+import re
 # input int  while ok int
 
 class PlayerController():
@@ -13,6 +15,7 @@ class PlayerController():
         '''
         Add Player
         '''
+        list_name=input("\nEnter The Player's List Name: ")
         for i in range (n):
             print(f"\nPlease Add Player {i+1}")
             model.Player(
@@ -28,7 +31,6 @@ class PlayerController():
         TinyDB.default_table_name = 'players'
         players_list = db.search(where('rank') > -1)
         players_list.sort(key=itemgetter('rank'), reverse=True)
-        list_name=input("\nEnter Player_List Name: ")
         player_model.Players_list(
             list_name=list_name,
             players=players_list,
@@ -54,15 +56,17 @@ class PlayerController():
             PlayerController.remove_name()
         else:
             clr.screen()
-            print(f"\nRemove the following player List ?\n\n{player_name}\n\n[1] Yes\n[2] No (other player)\n[3] Exit\n")
+            print("Remove the following Players List :")
+            print(str(player_name).replace('players', '').replace(',','').replace('{', "\n").replace('}', "\n").replace('"','').replace("'", "").replace('[', "").replace(']', ""))
+            print("[1] Yes\n[2] No (other Players List)\n[3] Exit\n")
             option = tools.int_input('option')
             while option != 0:
                 if option == 1:
                     # Remove by Player List Name
                     clr.screen()
                     db.remove((q.list_name == list_name))
-                    print(f'\nPlayer:\n\n{player_name}\nSuccesfully Deleted !')
-                    quit()
+                    print(f'\nPlayer List: {list_name} Succesfully Deleted !')
+                    menu.MenuController.main()
                     break
                 elif option == 2:
                     clr.screen()
@@ -98,7 +102,9 @@ class PlayerController():
             PlayerController.remove_id()
         else:
             clr.screen()
-            print(f"\nRemove the following player ?\n\n{player_id}\n\n[1] Yes\n[2] No (other player)\n[3] Exit\n")
+            print("Remove the following Players List :")
+            print(str(player_id).replace('players', '').replace(',','').replace('{', "\n").replace('}', "\n").replace('"','').replace("'", "").replace('[', "").replace(']', ""))
+            print("[1] Yes\n[2] No (other Players List)\n[3] Exit\n")
             option = tools.int_input('option')
             while option != 0:
                 if option == 1:
@@ -144,4 +150,16 @@ class PlayerController():
         else:
             print('All Players Lists successfully removed !')
             menu.MenuController.main()
+        
+    def remove_unfinished():
+        """
+        remove unfinished players list
+        """
+        db = TinyDB('maxchess_db.json')
+        q = Query()
+        TinyDB.default_table_name = 'players'
+        if db.drop_table('players'):
+            print('No Players List found')
+        else:
+            pass
 

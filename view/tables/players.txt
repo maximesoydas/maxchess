@@ -3,15 +3,17 @@
 
  ID    |    PLAYERS LIST NAME     | 
 +-------+-------+-------+-------+-------+------------+
-1     |         Maxchess        | 
+3     |         Maxchess 3        | 
 +-------+-------+-------+-------+-------+------------+
 NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
 +-------+-------+-------+-------+-------+------------+
-Riperton  |   05/12/60   |   Female |   1050
-Rogan  |   None   |   Male |   1050
-Hill  |   05/01/85   |   Male |   1050
-Renolds  |   05/01/68   |   Male |   1000
+Soy  |   04/11/95   |   Female |   850
 Soy  |   04/11/95   |   Male |   850
-Ray  |   None   |   Male |   850
-Six  |   06/06/66   |   Female |   656
-Steve-Leroy  |   02/02/00   |   Male |   105
+Steve  |   04/11/85   |   Male |   789
+Johnny  |   04/11/85   |   Male |   785
+Mckenzie  |   04/11/45   |   Female |   785
+Pun  |   04/11/83   |   Female |   785
+Steve  |   04/11/95   |   Male |   780
+Hill  |   04/11/78   |   Male |   780
+Ray  |   04/11/95   |   Male |   750
+Real  |   04/11/95   |   Male |   750
