@@ -21,7 +21,7 @@ class PlayerController():
             model.Player(
                 name= tools.str_input('name'),
                 surname=tools.str_input('surname'),
-                birthday=tools.date_input('birthday'),
+                birthday=tools.birthday_input('birthday'),
                 gender=tools.gender_input('gender'),
                 rank=tools.rank_input('rank'),
             ).save()
@@ -93,7 +93,8 @@ class PlayerController():
         db = TinyDB('maxchess_db.json')
         q = Query()
         TinyDB.default_table_name = 'players_lists'
-        id_num = int(input("\nEnter Player List ID : "))
+        clr.screen()
+        id_num = tools.id_input("id_num")
         # Seach by id
         player_id = db.get(doc_id=id_num)
         if player_id is None:
@@ -112,7 +113,7 @@ class PlayerController():
                     clr.screen()
                     db.remove(doc_ids=[int(id_num)])
                     print(f'\nPlayer:\n\n{player_id}\nSuccesfully Deleted !')
-                    quit()
+                    menu.MenuController.player()
                     break
                 elif option == 2:
                     clr.screen()

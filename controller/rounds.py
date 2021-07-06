@@ -4,6 +4,7 @@ from tinydb import TinyDB, Query, where
 import datetime
 from operator import *
 from controller import clear as clr
+from controller import tools
 
 
 
@@ -69,9 +70,10 @@ class RoundsController():
         Also, Asks how many seconds before the start of round
         '''
         # time start
-
-        start_secs = input("\nEnter Number Of Seconds Before Start : ")
-        print('\nTiming Method : BLITZ\n')
+        clr.screen()
+        start_secs = 10
+        print('\nTiming Method : BLITZ')
+        print("10 seconds before start of Round")
         now = datetime.datetime.now()
         start = now + datetime.timedelta(seconds = int(start_secs))
         datetime_start = start.strftime("%m/%d/%Y %H:%M:%S")
@@ -125,6 +127,7 @@ class RoundsController():
         {matches[3][0][0]} {matches[3][0][1]} VS {matches[3][1][0]} {matches[3][1][1]}\n
         ''')
         enter_score = input(f"\nPress 'ENTER' To Set the Scores for {round_name}\n")
+        clr.screen()
         return matches
 
 
@@ -132,22 +135,28 @@ class RoundsController():
 
         for (player1, player2) in matches:
             # get players names
-            player1_name = player1[1]
-            player2_name = player2[1]
-            print(f'\nScore of match:\n {player1_name} vs {player2_name} ?\n')
-            winner = input(f"\nWho won the match:\n\n[1] for {player1_name}\n[2] for {player2_name}\n[0] for Even \n\n Option Number : ")
-            if winner == '1':
-                player1[5] += 1.0
-            # if 2 : player2 += 1
-            elif winner == '2':
-                player2[5] += 1.0
-            # if 0 : 0.5 each (even)
-            elif winner == '0':
-                player1[5] += 0.5
-                player2[5] += 0.5 
-            else:
-                print("Wrong option number !")
-                quit
+            player1_name = player1[0]
+            player2_name = player2[0]
+            # get players surnames
+            player1_surname = player1[1]
+            player2_surname = player2[1]
+            clr.screen()
+            print(f'\nScore of match:\n\n{player1_name} {player1_surname} vs {player2_name} {player2_surname}\n')
+            winner = 0
+            while winner not in (1,2,3):
+                winner = tools.winner_input(player1_name, player2_name, player1_surname, player2_surname)
+                if winner == 1:
+                    player1[5] += 1.0
+                # if 2 : player2 += 1
+                elif winner == 2:
+                    player2[5] += 1.0
+                # if 0 : 0.5 each (even)
+                elif winner == 3:
+                    player1[5] += 0.5
+                    player2[5] += 0.5 
+                else:
+                   print("wrong option number")
+                
 
         scoreboard = matches
         return scoreboard
@@ -155,7 +164,9 @@ class RoundsController():
     def get_players():
 
         print('''
-        [1] Use Existing Players
+        Please Enter Players List:
+
+        [1] Use Existing Players List
         [2] Create 8 New Players
         ''')
         players_option_nb = int(input("\n\nOption : "))
@@ -170,13 +181,13 @@ class RoundsController():
                 else:
                     clr.screen()
                     print(f"\nPlayer list {list_name} Doesn't exist please Try Again !")
-                    get_players()
+                    RoundsController.get_players()
             elif players_option_nb == 2:
-                list_name = player_controller.add(8)
+                list_name = player_controller.PlayerController.add(8)
                 break
             else:
                 print('Invalid Number')
-                add_round()
+                RoundsController.add_round()
                 break
         print("this is list name !!!!!!!!!")
         return list_name

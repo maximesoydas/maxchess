@@ -1,1 +1,65 @@
-{"players_lists": {"3": {"list_name": "Maxchess 3", "players": [{"name": "MAx", "surname": "Soy", "birthday": "04/11/95", "gender": "Female", "rank": 850}, {"name": "Max", "surname": "Soy", "birthday": "04/11/95", "gender": "Male", "rank": 850}, {"name": "Johnny", "surname": "Steve", "birthday": "04/11/85", "gender": "Male", "rank": 789}, {"name": "John", "surname": "Johnny", "birthday": "04/11/85", "gender": "Male", "rank": 785}, {"name": "Ellie", "surname": "Mckenzie", "birthday": "04/11/45", "gender": "Female", "rank": 785}, {"name": "Karina", "surname": "Pun", "birthday": "04/11/83", "gender": "Female", "rank": 785}, {"name": "Max", "surname": "Steve", "birthday": "04/11/95", "gender": "Male", "rank": 780}, {"name": "Will", "surname": "Hill", "birthday": "04/11/78", "gender": "Male", "rank": 780}, {"name": "Steve", "surname": "Ray", "birthday": "04/11/95", "gender": "Male", "rank": 750}, {"name": "Steve", "surname": "Real", "birthday": "04/11/95", "gender": "Male", "rank": 750}]}}}
+{
+    "players_lists": {
+        "1": {
+            "list_name": "Maxchess 1",
+            "players": [
+                {
+                    "name": "Stevie",
+                    "surname": "Ray",
+                    "birthday": "04/10/59",
+                    "gender": "Male",
+                    "rank": 1000
+                },
+                {
+                    "name": "Will",
+                    "surname": "Hill",
+                    "birthday": "05/05/01",
+                    "gender": "Male",
+                    "rank": 855
+                },
+                {
+                    "name": "Maxime",
+                    "surname": "Soydas",
+                    "birthday": "04/11/95",
+                    "gender": "Male",
+                    "rank": 850
+                },
+                {
+                    "name": "Karuna",
+                    "surname": "Pun",
+                    "birthday": "09/07/83",
+                    "gender": "Female",
+                    "rank": 750
+                },
+                {
+                    "name": "Mistery",
+                    "surname": "Kapol",
+                    "birthday": "05/08/98",
+                    "gender": "Female",
+                    "rank": 480
+                },
+                {
+                    "name": "Steve",
+                    "surname": "Carrousel",
+                    "birthday": "01/12/69",
+                    "gender": "Male",
+                    "rank": 450
+                },
+                {
+                    "name": "Margareth",
+                    "surname": "Methilda",
+                    "birthday": "05/11/57",
+                    "gender": "Female",
+                    "rank": 450
+                },
+                {
+                    "name": "Ellie",
+                    "surname": "Mckenzie",
+                    "birthday": "04/04/94",
+                    "gender": "Female",
+                    "rank": 150
+                }
+            ]
+        }
+    }
+}

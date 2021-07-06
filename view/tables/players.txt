@@ -3,17 +3,15 @@
 
  ID    |    PLAYERS LIST NAME     | 
 +-------+-------+-------+-------+-------+------------+
-3     |         Maxchess 3        | 
+1     |         Maxchess 1        | 
 +-------+-------+-------+-------+-------+------------+
 NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
 +-------+-------+-------+-------+-------+------------+
-Soy  |   04/11/95   |   Female |   850
-Soy  |   04/11/95   |   Male |   850
-Steve  |   04/11/85   |   Male |   789
-Johnny  |   04/11/85   |   Male |   785
-Mckenzie  |   04/11/45   |   Female |   785
-Pun  |   04/11/83   |   Female |   785
-Steve  |   04/11/95   |   Male |   780
-Hill  |   04/11/78   |   Male |   780
-Ray  |   04/11/95   |   Male |   750
-Real  |   04/11/95   |   Male |   750
+Ray  |   04/10/59   |   Male |   1000
+Hill  |   05/05/01   |   Male |   855
+Soydas  |   04/11/95   |   Male |   850
+Pun  |   09/07/83   |   Female |   750
+Kapol  |   05/08/98   |   Female |   480
+Carrousel  |   01/12/69   |   Male |   450
+Methilda  |   05/11/57   |   Female |   450
+Mckenzie  |   04/04/94   |   Female |   150

@@ -5,6 +5,7 @@ from controller import rounds as round_controller
 from tinydb import TinyDB, Query, where
 from view import menu
 from controller import menu
+from controller import tools
 from operator import *
 from pprint import *
 
@@ -22,12 +23,12 @@ class TournamentController():
         Add Tournament
         '''
         # Fetch basic tournament info from inputs
-        name=input("\nEnter Tournament Name: ")
-        place=input("\nEnter Tournament Place: ")
-        date=input("\nEnter Tournament Date (dd/mm/yyyy): ")
+        name=tools.str_input('name')
+        place=tools.str_input('place')
+        date=tools.date_input('date')
         rounds_number=4
         timing_method="Blitz"
-        description=input("Enter Description:")
+        description=tools.str_input('description')
         # first set the round_table empty then append round by round in the for loop
         rounds_table = []
         # delete previous tournaments Rounds table
@@ -71,7 +72,7 @@ class TournamentController():
         best_player_surname = tournament_data['rounds'][-1]['players'][0]['surname']
         print('Tournament Updated Successfully')
         print(f"Winner of this Tournament is {best_player_name} {best_player_surname}")
-        quit()
+        menu.ViewMenu.main()
 
 
 
@@ -104,7 +105,7 @@ class TournamentController():
         best_player_surname = tournament_data['rounds'][-1]['players'][0]['surname']
         print('Tournament Updated Successfully')
         print(f"Winner of this Tournament is {best_player_name} {best_player_surname}")
-        quit()
+        menu.ViewMenu.main()
 
 
     def check_tournament():
@@ -138,36 +139,32 @@ class TournamentController():
         if tournament == None:
             clr.screen()
             print('\nTournament Not Found\nTry Again !\n')
-            remove_name()
+            TournamentController.remove_name()
         else:
             clr.screen()
-            print("\nRemove the following Tournament ?\n\n")
-            pprint(f"{tournament}")
-            print("\n\n[1] Yes \n[2] No (other tournament) \n[3] Exit \n")
-            option = int(input("\n\nOption Number: "))
+            print(f"\nRemove Tournament '{tournament_name}':")
+            print("[1] Yes\n[2] No (other Tournament)\n[3] Exit\n")
+            option = tools.int_input('option')
             while option != 0:
                 if option == 1:
                     clr.screen()
                     # Remove by Name & Surname
                     db.remove((q.name == tournament_name))
                     print(f'\nTournament Name {tournament_name}\nSuccesfully Deleted !')
-                    quit()
+                    menu.MenuController.main()
                     break
                 elif option == 2:
                     clr.screen()
-                    remove_name()
+                    TournamentController.remove_name()
                     break
                 elif option == 3:
                     clr.screen()
-                    menu.tournament()
-                    break
-                elif option == '':
-                    print('Invalid Number')
-                    remove_name()
+                    menu.MenuController.tournament()
                     break
                 else:
-                    print('Invalid Number')
-                    remove_name()
+                    clr.screen()
+                    print("Wrong option number, back to Delete Tournament By Name\n")
+                    TournamentController.remove_name()
                     break
                 
 
@@ -179,35 +176,37 @@ class TournamentController():
         db = TinyDB('maxchess_db.json')
         q = Query()
         TinyDB.default_table_name = 'tournament'
-        id_num = int(input("\nEnter Tournament ID or Position: "))
+        clr.screen()
+        id_num = tools.id_input("id_num")
         # Seach by id
         tournament_id = db.get(doc_id=id_num)
         if tournament_id is None:
             print('\nPlayer Not Found, Try Again !\n')
-            remove_id()
+            TournamentController.remove_id()
         else:
-            pprint(f"\nRemove the following Tournament ?\n\n{tournament_id}\n\n[1] Yes\n[2] No (other tournament)\n[3] Exit\n")
-            option = int(input("\n\nOption Number: "))
+            print(f"\nRemove Tournament Number {id_num}:")
+            print("[1] Yes\n[2] No (other Tournament)\n[3] Exit\n")
+            option = tools.int_input('option')
             while option != 0:
                 if option == 1:
                     # Remove by id
+                    clr.screen()
                     db.remove(doc_ids=[int(id_num)])
                     print(f'\Tournament:\n\nTournament {id_num}\nSuccesfully Deleted !')
-                    quit()
+                    menu.MenuController.player()
                     break
                 elif option == 2:
-                    remove_id()
+                    TournamentController.remove_id()
                     break
                 elif option == 3:
-                    menu.tournament()
-                    break
-                elif option == '':
-                    print('Invalid Number')
-                    remove_name()
+                    clr.screen()
+                    menu.MenuController.tournament()
                     break
                 else:
-                    print('Invalid Number')
-                    remove_id()
+                    tools.check_range(option, 1-3)
+                    clr.screen()
+                    print("Wrong option number, back to Delete Tournament By ID\n")
+                    TournamentController.remove_id()
                     break
 
 
