@@ -72,7 +72,7 @@ class TournamentController():
         best_player_surname = tournament_data['rounds'][-1]['players'][0]['surname']
         print('Tournament Updated Successfully')
         print(f"Winner of this Tournament is {best_player_name} {best_player_surname}")
-        menu.ViewMenu.main()
+        menu.MenuController.main()
 
 
 

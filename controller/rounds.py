@@ -5,6 +5,8 @@ import datetime
 from operator import *
 from controller import clear as clr
 from controller import tools
+from time import sleep
+import pprint
 
 
 
@@ -114,12 +116,42 @@ class RoundsController():
             ]
         else:
             #Check if player has already fought another player before
+            db = TinyDB('maxchess_db.json')
+            TinyDB.default_table_name = 'tournament'
+            round_num = round_name.replace('Round', '')
+            round_name = f'Round{int(round_num) - 1}'
+            previous_matches = db.search(where('rounds')[-1]['name'] == round_name)
+            previous_matches = previous_matches[-1]['rounds'][-1]['matches']
+                
             matches = [
             (players_list[0],players_list[1]),
             (players_list[2],players_list[3]),
             (players_list[4],players_list[5]),
             (players_list[6],players_list[7]),
             ]
+            compare_matches = []
+            for match in matches:
+                i = 0
+                x = 1
+                # print(match[0], match[1])
+                compare_matches.append([[match[:2][i][0], match[:2][i][1], match[:2][i][5]], [match[:2][x][0], match[:2][x][1], match[:2][x][5]]])
+            print('compare matches\n')
+            print(compare_matches)
+            print('previous matches\n')
+            print(previous_matches)
+            print('compare matchups\n')
+            for match, match2 in zip(compare_matches, previous_matches):
+                print(match)
+                print(match2)
+                if match == match2:
+                    print('matchups are same')
+                    matches = [
+                    (players_list[0],players_list[2]),
+                    (players_list[1],players_list[3]),
+                    (players_list[4],players_list[6]),
+                    (players_list[5],players_list[7]),
+                    ]
+
         print(f'''
         \n\nThe Next Matches are Sorted by Ranks and Score:\n\n
         {matches[0][0][0]} {matches[0][0][1]} VS {matches[0][1][0]} {matches[0][1][1]}\n
@@ -130,7 +162,6 @@ class RoundsController():
         enter_score = input(f"\nPress 'ENTER' To Set the Scores for {round_name}\n")
         clr.screen()
         return matches
-
 
     def set_scores(matches):
 
@@ -207,6 +238,7 @@ class RoundsController():
         (matches) = RoundsController.set_matches(round_name, list_name)
         (scoreboard) = RoundsController.set_scores(matches)
 
+        
         # Update players_list for this tournament's round
         updated_players = []
         for i in range(4):
@@ -230,8 +262,8 @@ class RoundsController():
         '''
         matches_list = []
         for match in (scoreboard):
-            matches_list.append([match[0][1], match[0][5]])
-            matches_list.append([match[1][1], match[1][5]])
+            matches_list.append([match[0][0], match[0][1], match[0][5]])
+            matches_list.append([match[1][0],match[1][1], match[1][5]])
     
         round_matches = [
             (matches_list[0],matches_list[1]),
