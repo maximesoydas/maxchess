@@ -38,6 +38,7 @@ class PlayerController():
         db = TinyDB('maxchess_db.json')
         TinyDB.default_table_name = 'players'
         db.drop_table('players')
+        #return to menu.main
         return list_name
 
     def remove_name():

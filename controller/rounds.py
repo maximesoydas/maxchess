@@ -113,6 +113,7 @@ class RoundsController():
             (players_list[3],players_list[7]),
             ]
         else:
+            #Check if player has already fought another player before
             matches = [
             (players_list[0],players_list[1]),
             (players_list[2],players_list[3]),

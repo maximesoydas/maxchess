@@ -141,11 +141,11 @@ class MenuController():
                 if players_reports_option == 1:
                     report.ReportsController.players_latest_report()
                     print("\nOn Windows You can view the html version by typing: \nstart view/tables/last_players.html")
-                    quit()
+                    MenuController.reports()
                 elif players_reports_option == 2:
                     report.ReportsController.players_all_reports()
                     print("\nOn Windows You can view the html version by typing: \nstart view/tables/players.html")
-                    quit()
+                    MenuController.reports()
                 else:
                     clr.screen()
                     MenuController.main()
@@ -155,25 +155,20 @@ class MenuController():
                 if tournaments_reports_option == 1:
                     report.ReportsController.tournament_latest_report()
                     print("On Windows You can view the html version by typing: \nstart view/tables/last_tournament.html")
-                    quit()
+                    MenuController.reports()
                 elif tournaments_reports_option == 2:
                     report.ReportsController.tournament_all_reports()
                     print("On Windows You can view the html version by typing: \nstart view/tables/tournaments.html")
-                    quit()
+                    MenuController.reports()
                 else:
                     clr.screen()
                     MenuController.main()
             elif option == 3:
                 clr.screen()
                 MenuController.main()
-            elif option == 4:
-                clr.screen()
-                print("""
-                Thank you, Have a GREAT day!
-                """)
-                quit()
             else:
                 tools.check_range(option, 1-4)
                 print('Invalid Number')
+                MenuController.reports()
                 break
 

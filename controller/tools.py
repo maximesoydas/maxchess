@@ -2,6 +2,8 @@ from controller import clear as clr
 import re
 import datetime
 
+#tools
+
 def check_range(input_name, ranger):
     while input_name not in range(ranger):
         clr.screen()
@@ -67,7 +69,7 @@ def birthday_input(input_name):
     input_name = input(f"\n\nPlease Enter {str(input_name.capitalize())} (dd/mm/yy) : ")
     while True:
         try:
-            datetime.datetime.strptime(input_name, "%d/%m/%y")
+            datetime.datetime.strptime(input_name, "%d/%m/%y") 
             return input_name
         except ValueError:
             print("\nThis is an incorrect date format. It should be DD/MM/YY")
