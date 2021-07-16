@@ -7,6 +7,7 @@ from controller import clear as clr
 from controller import tools
 from time import sleep
 import pprint
+from itertools import islice
 
 
 
@@ -91,10 +92,12 @@ class RoundsController():
         '''
         creates the matches list
         '''
-        # global sorted_players
+        # Fetch the sorted players (by score and rank)
         sorted_players = RoundsController.sort_players(round_name, list_name)
-        # # retrieve all surnames from players list
+        # used to append sorted players properly
         players_list = []
+        # used to append previous_matches from db and definitive matches of current round
+        all_previous_matches = []
 
         for i in sorted_players:
             surname = i['surname']
@@ -108,50 +111,141 @@ class RoundsController():
             players_list.append([name, surname, birthday, gender, i["rank"], score])
             
         if round_name == 'Round1':
+            # for round 1 half players list sorted by rank
             matches = [
             (players_list[0],players_list[4]),
             (players_list[1],players_list[5]),
             (players_list[2],players_list[6]),
             (players_list[3],players_list[7]),
             ]
-        else:
-            #Check if player has already fought another player before
-            db = TinyDB('maxchess_db.json')
-            TinyDB.default_table_name = 'tournament'
-            round_num = round_name.replace('Round', '')
-            round_name = f'Round{int(round_num) - 1}'
-            previous_matches = db.search(where('rounds')[-1]['name'] == round_name)
-            previous_matches = previous_matches[-1]['rounds'][-1]['matches']
-                
+            for match in matches:
+                # print(match[0], match[1])
+                all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
+        elif round_name == "Round2":
+            #Check if player has already fought another player before in Round1
+            #Get ALL previous round matches -> compare to new matches -> if same matches found -> re-organise the matches
+            
+            # Matches organised by score and rank
             matches = [
             (players_list[0],players_list[1]),
             (players_list[2],players_list[3]),
             (players_list[4],players_list[5]),
             (players_list[6],players_list[7]),
             ]
+
+            # fetch previous matches from db
+            db = TinyDB('maxchess_db.json')
+            TinyDB.default_table_name = 'tournament'
+            round_num = round_name.replace('Round', '')
+            round_nam = f'Round{int(round_num) - 1}'
+            previous_matches = db.search(where('rounds')[-1]['name'] == round_nam)
+            previous_matches = previous_matches[-1]['rounds'][-1]['matches']
+            # put previous matches into a new list (to be updated with Round2's definitive matches)
+            for match in previous_matches:
+                all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
+            for match in matches:
+                # print(match[0], match[1])
+                all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
+            return matches, all_previous_matches
+            
+        
+        else:
+
+            # Matches organised by score and rank
+            matches = [
+            (players_list[0],players_list[1]),
+            (players_list[2],players_list[3]),
+            (players_list[4],players_list[5]),
+            (players_list[6],players_list[7]),
+            ]
+
+            # add matches into a comparing list
             compare_matches = []
             for match in matches:
-                i = 0
-                x = 1
-                # print(match[0], match[1])
-                compare_matches.append([[match[:2][i][0], match[:2][i][1], match[:2][i][5]], [match[:2][x][0], match[:2][x][1], match[:2][x][5]]])
-            print('compare matches\n')
+                compare_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
+
+            db = TinyDB('maxchess_db.json')
+            TinyDB.default_table_name = 'tournament'
+            round_num = round_name.replace('Round', '')
+            round_nam = f'Round{int(round_num) - 1}'
+            last_matches = db.search(where('rounds')[-1]['name'] == round_nam)
+            last_matches = last_matches[-1]['rounds'][-1]['previous_matches']
+            all_previous_matches.append(last_matches)
+            all_previous_matches = all_previous_matches[0]
+
+            first_matches = all_previous_matches[0:4]
+            print(first_matches)
+            second_matches = all_previous_matches[4:8]
+            print(second_matches)
+            last_matches = all_previous_matches[8:12]
+            print(last_matches)
+            print("actual matches")
             print(compare_matches)
-            print('previous matches\n')
-            print(previous_matches)
-            print('compare matchups\n')
-            for match, match2 in zip(compare_matches, previous_matches):
-                print(match)
-                print(match2)
+            for match, match2 in zip(compare_matches, first_matches):
+                # if match already happened previously 
+                # print('first matches')
                 if match == match2:
+                    print(match)
+                    print(match2)
                     print('matchups are same')
+                    # reorganise the matches
                     matches = [
-                    (players_list[0],players_list[2]),
-                    (players_list[1],players_list[3]),
-                    (players_list[4],players_list[6]),
-                    (players_list[5],players_list[7]),
+                    (players_list[0],players_list[3]),
+                    (players_list[1],players_list[4]),
+                    (players_list[2],players_list[5]),
+                    (players_list[6],players_list[7]),
                     ]
 
+                    for match in matches:
+                    # update all_previous_matches with this round's definitive matches
+                        all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
+                else:
+                    # N = 4
+                    # last_four_matches = list(islice(reversed(all_previous_matches[0]), 0, N))
+                    # last_four_matches.reverse()
+                    # print('second matches')
+
+                   
+                    for match, match2 in zip(compare_matches, second_matches):
+                        # if match already happened previously 
+                        if match == match2:
+                            print(match)
+                            print(match2)
+                            print('matchups are same')
+                            # reorganise the matches
+                            matches = [
+                            (players_list[0],players_list[3]),
+                            (players_list[1],players_list[4]),
+                            (players_list[2],players_list[5]),
+                            (players_list[6],players_list[7]),
+                            ]
+
+                            for match in matches:
+                            # update all_previous_matches with this round's definitive matches
+                                all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
+                        else:
+                            # print("Last Matches")                      
+                            for match, match2 in zip(compare_matches, last_matches):
+                               # if match already happened previously 
+                                if match == match2:
+                                    print(match)
+                                    print(match2)
+                                    print('matchups are same')
+                                    # reorganise the matches
+                                    matches = [
+                                    (players_list[0],players_list[3]),
+                                    (players_list[1],players_list[4]),
+                                    (players_list[2],players_list[5]),
+                                    (players_list[6],players_list[7]),
+                                    ]
+
+                                    for match in matches:
+                                    # update all_previous_matches with this round's definitive matches
+                                        all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
+            return matches, all_previous_matches
+    
+        print('\n RETURN RETURN')
+        # print(all_previous_matches)
         print(f'''
         \n\nThe Next Matches are Sorted by Ranks and Score:\n\n
         {matches[0][0][0]} {matches[0][0][1]} VS {matches[0][1][0]} {matches[0][1][1]}\n
@@ -160,8 +254,9 @@ class RoundsController():
         {matches[3][0][0]} {matches[3][0][1]} VS {matches[3][1][0]} {matches[3][1][1]}\n
         ''')
         enter_score = input(f"\nPress 'ENTER' To Set the Scores for {round_name}\n")
-        clr.screen()
-        return matches
+        # clr.screen()
+        # print(all_previous_matches)
+        return matches, all_previous_matches
 
     def set_scores(matches):
 
@@ -172,7 +267,7 @@ class RoundsController():
             # get players surnames
             player1_surname = player1[1]
             player2_surname = player2[1]
-            clr.screen()
+            # clr.screen()
             print(f'\nScore of match:\n\n{player1_name} {player1_surname} vs {player2_name} {player2_surname}\n')
             winner = 0
             while winner not in (1,2,3):
@@ -235,7 +330,7 @@ class RoundsController():
             list_name = ""
 
         (datetime_start, datetime_end) = RoundsController.set_time()
-        (matches) = RoundsController.set_matches(round_name, list_name)
+        (matches, all_previous_matches) = RoundsController.set_matches(round_name, list_name)
         (scoreboard) = RoundsController.set_scores(matches)
 
         
@@ -277,6 +372,7 @@ class RoundsController():
             datetime_start= datetime_start,
             datetime_end= datetime_end,
             matches= round_matches,
+            previous_matches= all_previous_matches,
             players= updated_players
         ).save()
 
