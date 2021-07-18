@@ -3,16 +3,16 @@
 
 ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
 +-------+-------+-------+-------+-------+------------+------------+------------+
-#1 | Maxchess 1 | 08/07/21 | 4 | Blitz | Maxchess 1 Tournoi a paris
+#1 | Max | 04/11/2021 | 4 | Blitz | M
 +-------+-------+-------+-------+-------+------------+------------+------------+
                           FINAL    ROUND 
                             SCOREBOARD
 +-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Soy  |  RANK: 850  |  SCORE :  3.0 
-    POSITION: 2  |  Mrs/Mr.Johnson  |  RANK: 152  |  SCORE :  3.0 
-    POSITION: 3  |  Mrs/Mr.Mckenzie  |  RANK: 785  |  SCORE :  2.5 
-    POSITION: 4  |  Mrs/Mr.Jacob  |  RANK: 456  |  SCORE :  2.5 
-    POSITION: 5  |  Mrs/Mr.Una  |  RANK: 456  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Steve  |  RANK: 50  |  SCORE :  1.5 
-    POSITION: 7  |  Mrs/Mr.steve  |  RANK: 456  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Soydas  |  RANK: 789  |  SCORE :  0.5 
+    POSITION: 1  |  Mrs/Mr.Una  |  RANK: 456  |  SCORE :  4.0 
+    POSITION: 2  |  Mrs/Mr.Soy  |  RANK: 850  |  SCORE :  3.0 
+    POSITION: 3  |  Mrs/Mr.Soydas  |  RANK: 789  |  SCORE :  2.0 
+    POSITION: 4  |  Mrs/Mr.Steve  |  RANK: 456  |  SCORE :  2.0 
+    POSITION: 5  |  Mrs/Mr.Jacob  |  RANK: 456  |  SCORE :  2.0 
+    POSITION: 6  |  Mrs/Mr.Steve  |  RANK: 50  |  SCORE :  2.0 
+    POSITION: 7  |  Mrs/Mr.Mckenzie  |  RANK: 785  |  SCORE :  1.0 
+    POSITION: 8  |  Mrs/Mr.Johnson  |  RANK: 152  |  SCORE :  0 
