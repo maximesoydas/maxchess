@@ -8,7 +8,7 @@ from controller import tools
 from time import sleep
 import pprint
 from itertools import islice
-
+import random
 
 
 class RoundsController():
@@ -87,7 +87,42 @@ class RoundsController():
 
         return (datetime_start, datetime_end)
 
+    def check_matches(compare_matches, all_previous_matches, players_list, matches, xnum, outcome):
         
+            print(xnum)
+            for match in compare_matches:
+                match.sort()
+                print(match)
+                # print(all_previous_matches)
+                if match in all_previous_matches:
+                    print(match)
+                    outcome.append('not unique')
+                    print(f'{match} already played before')
+                    matches = [
+                   sorted((players_list[xnum[0]],players_list[xnum[1]])),
+                   sorted((players_list[xnum[2]],players_list[xnum[3]])),
+                   sorted((players_list[xnum[4]],players_list[xnum[5]])),
+                   sorted((players_list[xnum[6]],players_list[xnum[7]])),
+                    ]
+                    # print(matches)
+                    compare_matches = []
+                    for match in matches:
+                        compare_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
+                    print(compare_matches)
+                    print("first round outcome")
+                    print(outcome)
+                    return matches, all_previous_matches, compare_matches, outcome, xnum
+                else:
+                    outcome.append('unique')
+                    print("first round outcome")
+                    print(outcome)
+                
+            return matches, all_previous_matches, compare_matches, outcome, xnum
+
+            
+            
+
+
     def set_matches(round_name, list_name):
         '''
         creates the matches list
@@ -108,29 +143,34 @@ class RoundsController():
                 score = 0
             else:
                 score = i['score']
-            players_list.append([name, surname, birthday, gender, i["rank"], score])
-            
+            players_list.append([name.title(), surname.title(), birthday, gender, i["rank"], score])
+
+        # used to append previous_matches from db and matches of current round
+        all_previous_matches = []
+        
         if round_name == 'Round1':
             # for round 1 half players list sorted by rank
             matches = [
-            (players_list[0],players_list[4]),
-            (players_list[1],players_list[5]),
-            (players_list[2],players_list[6]),
-            (players_list[3],players_list[7]),
+            sorted((players_list[0],players_list[4])),
+            sorted((players_list[1],players_list[5])),
+            sorted((players_list[2],players_list[6])),
+            sorted((players_list[3],players_list[7])),
             ]
+            print(matches)
             for match in matches:
                 # print(match[0], match[1])
                 all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
+    
         elif round_name == "Round2":
             #Check if player has already fought another player before in Round1
             #Get ALL previous round matches -> compare to new matches -> if same matches found -> re-organise the matches
             
             # Matches organised by score and rank
             matches = [
-            (players_list[0],players_list[1]),
-            (players_list[2],players_list[3]),
-            (players_list[4],players_list[5]),
-            (players_list[6],players_list[7]),
+            sorted((players_list[0],players_list[1])),
+            sorted((players_list[2],players_list[3])),
+            sorted((players_list[4],players_list[5])),
+            sorted((players_list[6],players_list[7])),
             ]
 
             # fetch previous matches from db
@@ -146,17 +186,15 @@ class RoundsController():
             for match in matches:
                 # print(match[0], match[1])
                 all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
-            return matches, all_previous_matches
-            
-        
+
         else:
 
             # Matches organised by score and rank
             matches = [
-            (players_list[0],players_list[1]),
-            (players_list[2],players_list[3]),
-            (players_list[4],players_list[5]),
-            (players_list[6],players_list[7]),
+            sorted((players_list[0],players_list[1])),
+            sorted((players_list[2],players_list[3])),
+            sorted((players_list[4],players_list[5])),
+            sorted((players_list[6],players_list[7])),
             ]
 
             # add matches into a comparing list
@@ -172,79 +210,23 @@ class RoundsController():
             last_matches = last_matches[-1]['rounds'][-1]['previous_matches']
             all_previous_matches.append(last_matches)
             all_previous_matches = all_previous_matches[0]
+            all_prevs_matches = all_previous_matches
 
-            first_matches = all_previous_matches[0:4]
-            print(first_matches)
-            second_matches = all_previous_matches[4:8]
-            print(second_matches)
-            last_matches = all_previous_matches[8:12]
-            print(last_matches)
-            print("actual matches")
-            print(compare_matches)
-            for match, match2 in zip(compare_matches, first_matches):
-                # if match already happened previously 
-                # print('first matches')
-                if match == match2:
-                    print(match)
-                    print(match2)
-                    print('matchups are same')
-                    # reorganise the matches
-                    matches = [
-                    (players_list[0],players_list[3]),
-                    (players_list[1],players_list[4]),
-                    (players_list[2],players_list[5]),
-                    (players_list[6],players_list[7]),
-                    ]
+            outcome = []
+            while outcome != ['unique', 'unique', 'unique', 'unique']:
+                all_previous_matches = all_prevs_matches
+                outcome = []
+                xnum = []
+                # Set a length of the list to 10
+                xnum = random.sample(range(0, 8), 8)
+                print(xnum)
+                (matches, all_previous_matches, compare_matches, outcome, xnum) = RoundsController.check_matches(compare_matches,all_previous_matches, players_list, matches, xnum, outcome)
+                print(all_previous_matches)
 
-                    for match in matches:
-                    # update all_previous_matches with this round's definitive matches
-                        all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
-                else:
-                    # N = 4
-                    # last_four_matches = list(islice(reversed(all_previous_matches[0]), 0, N))
-                    # last_four_matches.reverse()
-                    # print('second matches')
-
-                   
-                    for match, match2 in zip(compare_matches, second_matches):
-                        # if match already happened previously 
-                        if match == match2:
-                            print(match)
-                            print(match2)
-                            print('matchups are same')
-                            # reorganise the matches
-                            matches = [
-                            (players_list[0],players_list[3]),
-                            (players_list[1],players_list[4]),
-                            (players_list[2],players_list[5]),
-                            (players_list[6],players_list[7]),
-                            ]
-
-                            for match in matches:
-                            # update all_previous_matches with this round's definitive matches
-                                all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
-                        else:
-                            # print("Last Matches")                      
-                            for match, match2 in zip(compare_matches, last_matches):
-                               # if match already happened previously 
-                                if match == match2:
-                                    print(match)
-                                    print(match2)
-                                    print('matchups are same')
-                                    # reorganise the matches
-                                    matches = [
-                                    (players_list[0],players_list[3]),
-                                    (players_list[1],players_list[4]),
-                                    (players_list[2],players_list[5]),
-                                    (players_list[6],players_list[7]),
-                                    ]
-
-                                    for match in matches:
-                                    # update all_previous_matches with this round's definitive matches
-                                        all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
-            return matches, all_previous_matches
-    
-        print('\n RETURN RETURN')
+                print(outcome)
+            for match in matches:
+                # print(match[0], match[1])
+                all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
         # print(all_previous_matches)
         print(f'''
         \n\nThe Next Matches are Sorted by Ranks and Score:\n\n
