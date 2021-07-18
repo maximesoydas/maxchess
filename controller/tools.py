@@ -66,23 +66,23 @@ def gender_input(input_name):
             
 
 def birthday_input(input_name):
-    input_name = input(f"\n\nPlease Enter {str(input_name.capitalize())} (dd/mm/yy) : ")
+    input_name = input(f"\n\nPlease Enter {str(input_name.capitalize())} (dd/mm/yyyy) : ")
     while True:
         try:
-            datetime.datetime.strptime(input_name, "%d/%m/%y") 
+            datetime.datetime.strptime(input_name, "%d/%m/%Y") 
             return input_name
         except ValueError:
-            print("\nThis is an incorrect date format. It should be DD/MM/YY")
+            print("\nThis is an incorrect date format. It should be DD/MM/YYYY")
             return birthday_input('birthday')
 
 def date_input(input_name):
-    input_name = input(f"\n\nPlease Enter {str(input_name.capitalize())} (dd/mm/yy) : ")
+    input_name = input(f"\n\nPlease Enter {str(input_name.capitalize())} (dd/mm/yyyy) : ")
     while True:
         try:
-            datetime.datetime.strptime(input_name, "%d/%m/%y")
+            datetime.datetime.strptime(input_name, "%d/%m/%Y")
             return input_name
         except ValueError:
-            print("\nThis is the incorrect date format. It should be DD/MM/YY")
+            print("\nThis is the incorrect date format. It should be DD/MM/YYYY")
             return birthday_input('date')
 
 def rank_input(input_name):
