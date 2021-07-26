@@ -89,33 +89,27 @@ class RoundsController():
 
     def check_matches(compare_matches, all_previous_matches, players_list, matches, xnum, outcome):
         
-            print(xnum)
+            
             for match in compare_matches:
                 match.sort()
-                print(match)
                 # print(all_previous_matches)
                 if match in all_previous_matches:
-                    print(match)
                     outcome.append('not unique')
-                    print(f'{match} already played before')
+                    # print(f'\n{match[0]} {match[1]} \n\n Already played before \n\n Creating unique matches...')
                     matches = [
-                   sorted((players_list[xnum[0]],players_list[xnum[1]])),
-                   sorted((players_list[xnum[2]],players_list[xnum[3]])),
-                   sorted((players_list[xnum[4]],players_list[xnum[5]])),
-                   sorted((players_list[xnum[6]],players_list[xnum[7]])),
+                    sorted((players_list[xnum[0]],players_list[xnum[1]])),
+                    sorted((players_list[xnum[2]],players_list[xnum[3]])),
+                    sorted((players_list[xnum[4]],players_list[xnum[5]])),
+                    sorted((players_list[xnum[6]],players_list[xnum[7]])),
                     ]
                     # print(matches)
                     compare_matches = []
                     for match in matches:
                         compare_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
-                    print(compare_matches)
-                    print("first round outcome")
-                    print(outcome)
                     return matches, all_previous_matches, compare_matches, outcome, xnum
                 else:
                     outcome.append('unique')
-                    print("first round outcome")
-                    print(outcome)
+
                 
             return matches, all_previous_matches, compare_matches, outcome, xnum
 
@@ -156,7 +150,6 @@ class RoundsController():
             sorted((players_list[2],players_list[6])),
             sorted((players_list[3],players_list[7])),
             ]
-            print(matches)
             for match in matches:
                 # print(match[0], match[1])
                 all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
@@ -219,17 +212,13 @@ class RoundsController():
                 xnum = []
                 # Set a length of the list to 10
                 xnum = random.sample(range(0, 8), 8)
-                print(xnum)
                 (matches, all_previous_matches, compare_matches, outcome, xnum) = RoundsController.check_matches(compare_matches,all_previous_matches, players_list, matches, xnum, outcome)
-                print(all_previous_matches)
-
-                print(outcome)
             for match in matches:
-                # print(match[0], match[1])
+
                 all_previous_matches.append([[match[:2][0][0], match[:2][0][1]], [match[:2][1][0], match[:2][1][1]]])
-        # print(all_previous_matches)
+
         print(f'''
-        \n\nThe Next Matches are Sorted by Ranks and Score:\n\n
+        \n\nThe Next Matches are Sorted by Ranks and Score,\n\nIf Matches already played, unique matches are created:\n\n
         {matches[0][0][0]} {matches[0][0][1]} VS {matches[0][1][0]} {matches[0][1][1]}\n
         {matches[1][0][0]} {matches[1][0][1]} VS {matches[1][1][0]} {matches[1][1][1]}\n
         {matches[2][0][0]} {matches[2][0][1]} VS {matches[2][1][0]} {matches[2][1][1]}\n
@@ -298,7 +287,6 @@ class RoundsController():
                 print('Invalid Number')
                 RoundsController.add_round()
                 break
-        print("this is list name !!!!!!!!!")
         return list_name
 
     def add_round(round_name):
