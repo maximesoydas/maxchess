@@ -8,6 +8,7 @@ from controller import menu
 from controller import tools
 from operator import *
 from pprint import *
+from time import sleep
 
 
 class TournamentController():
@@ -61,9 +62,8 @@ class TournamentController():
             db.drop_table('Rounds')
             db = TinyDB('maxchess_db.json')
             TinyDB.default_table_name = 'tournament'
-            this_tournament= db.get(Query().name == name)
-            this_tournament.doc_id
-            document_id= this_tournament.doc_id
+            table = db.table('tournament')
+            document_id = len(table)
             # update the tournament table's rounds to the rounds_table list
             # db.update({'rounds': rounds_table}, Query().rounds.exists(), doc_ids=[document_id])
             db.update({'rounds': rounds}, Query().rounds.exists(), doc_ids=[document_id])

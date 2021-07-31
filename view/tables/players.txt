@@ -3,15 +3,15 @@
 
  ID    |    PLAYERS LIST NAME     | 
 +-------+-------+-------+-------+-------+------------+
-1     |         Maxchess 1        | 
+1     |         Maxime        | 
 +-------+-------+-------+-------+-------+------------+
 NAME  | SURNAME  | BIRTHDAY  |  GENDER  | RANK  
 +-------+-------+-------+-------+-------+------------+
-Ray  |   04/10/59   |   Male |   1000
-Hill  |   05/05/01   |   Male |   855
-Soydas  |   04/11/95   |   Male |   850
-Pun  |   09/07/83   |   Female |   750
-Kapol  |   05/08/98   |   Female |   480
-Carrousel  |   01/12/69   |   Male |   450
-Methilda  |   05/11/57   |   Female |   450
-Mckenzie  |   04/04/94   |   Female |   150
+Vannais  |   01/01/1991   |   Male |   750
+Soydas  |   04/11/1995   |   Male |   500
+Leroy  |   09/02/1983   |   Male |   500
+Niccoise  |   04/01/1995   |   Female |   500
+Renard  |   07/07/1978   |   Female |   400
+Lacque  |   04/10/1995   |   Male |   400
+Dupuis  |   01/02/2001   |   Male |   400
+Franc  |   03/03/2003   |   Male |   2

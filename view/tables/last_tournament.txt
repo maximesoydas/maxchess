@@ -3,16 +3,16 @@
 
 ID  |  NAME  |  DATE  |  ROUND NUMBER  |  TIME METHOD  |  DESCRIPTION  
 +-------+-------+-------+-------+-------+------------+------------+------------+
-#1 | Max | 04/11/2021 | 4 | Blitz | M
+#1 | Maxchess | 04/11/1995 | 4 | Blitz | Maxchess 1
 +-------+-------+-------+-------+-------+------------+------------+------------+
                           FINAL    ROUND 
                             SCOREBOARD
 +-------+-------+-------+-------+-------+------------+------------+------------+ 
-    POSITION: 1  |  Mrs/Mr.Una  |  RANK: 456  |  SCORE :  4.0 
-    POSITION: 2  |  Mrs/Mr.Soy  |  RANK: 850  |  SCORE :  3.0 
-    POSITION: 3  |  Mrs/Mr.Soydas  |  RANK: 789  |  SCORE :  2.0 
-    POSITION: 4  |  Mrs/Mr.Steve  |  RANK: 456  |  SCORE :  2.0 
-    POSITION: 5  |  Mrs/Mr.Jacob  |  RANK: 456  |  SCORE :  2.0 
-    POSITION: 6  |  Mrs/Mr.Steve  |  RANK: 50  |  SCORE :  2.0 
-    POSITION: 7  |  Mrs/Mr.Mckenzie  |  RANK: 785  |  SCORE :  1.0 
-    POSITION: 8  |  Mrs/Mr.Johnson  |  RANK: 152  |  SCORE :  0 
+    POSITION: 1  |  Mrs/Mr.Soydas  |  RANK: 500  |  SCORE :  3.0 
+    POSITION: 2  |  Mrs/Mr.Franc  |  RANK: 2  |  SCORE :  3.0 
+    POSITION: 3  |  Mrs/Mr.Vannais  |  RANK: 750  |  SCORE :  2.0 
+    POSITION: 4  |  Mrs/Mr.Leroy  |  RANK: 500  |  SCORE :  2.0 
+    POSITION: 5  |  Mrs/Mr.Renard  |  RANK: 400  |  SCORE :  2.0 
+    POSITION: 6  |  Mrs/Mr.Dupuis  |  RANK: 400  |  SCORE :  2.0 
+    POSITION: 7  |  Mrs/Mr.Niccoise  |  RANK: 500  |  SCORE :  1.0 
+    POSITION: 8  |  Mrs/Mr.Lacque  |  RANK: 400  |  SCORE :  1.0 
